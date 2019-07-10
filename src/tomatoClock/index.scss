@@ -1,0 +1,128 @@
+.main {
+	background-color: #003164;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+
+	.progressArea {
+		position: absolute;
+		right: 18vw;
+		width: 36vw;
+		height: 36vw;
+		i {
+			font-size: 8vw;
+			color: #fff;
+			cursor: pointer;
+		}
+		.CircularProgressbar {
+			border: 3px solid #FF4384;
+			border-radius: 50%;
+		}
+		.CircularProgressbar-trail {
+			fill-opacity: 1;
+			fill: #FF4384;
+		}		
+	}
+}
+
+.main_todo {
+	background-color: #FFEDF7;
+	flex: 2;
+	height: 100vh;
+	padding: 45px 20% 45px 10%;
+
+	.add_mission {
+		color: #FF4384;
+		position: relative;
+		input {
+		 	font-size: 13px;
+		 	border: none;
+		 	color: #FF4384;
+		 	border-radius: 0;
+		 	height: calc(1.5em + 0.75rem + 5px);
+		}
+		 ::-webkit-input-placeholder {		 	
+		 	font-style: italic;
+		 	font-weight: bold;
+		 	color: #FF4383;
+		 }
+		 ::-moz-placeholder {
+		 	color: #FF4383;
+		 }		 
+		 &.input_blue {
+	 		input {
+	 			color: #00A7FF;
+	 		}
+		 	::-webkit-input-placeholder {
+				color: #00A7FF;		 		
+			}
+		 	::-moz-placeholder {
+		 		color: #00A7FF;
+		 	}
+		}
+		i {
+			font-size: 16px;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			cursor: pointer;
+		}
+	}
+	.mission_lists {
+		color: #003164;
+		font-weight: bold;
+		font-size: 15px;
+		i {
+			color: #003164;
+			font-size: 18px;
+			cursor: pointer;
+		}
+
+		.mission {
+			.mission_content {
+				border-bottom: 1px solid #ddd;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+
+				.mission_name {
+					margin: 5px 0;
+					display: flex;
+					align-items: center;
+					i {
+						margin-right: 3px;
+					}
+				}
+			}
+
+			.time {
+				color: #FF4384;
+				font-size: 7rem;
+				font-weight: bold;
+				margin: 5% 0 30%;
+			}
+		}
+
+		.more {
+			font-size: 13px;
+			color: #FF4384;
+			text-align: right;
+			margin-top: 5px;
+			cursor: pointer;
+		}
+	}
+}
+
+.main_menu {
+	flex: 1;
+	height: 100vh;
+	padding: 45px 10%;
+	i {
+		color: #fff;
+		font-size: 30px;
+		padding: 20px 0;
+		cursor: pointer;
+	}
+}
+
+
