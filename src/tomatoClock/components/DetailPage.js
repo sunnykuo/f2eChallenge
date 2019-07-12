@@ -36,10 +36,10 @@ export default class DetailPage extends Component {
 )}
 }
 
-DetailPage.propTypes = {
-	type: PropTypes.number.isRequried,
-	switchPage: PropTypes.func.isRequried
-}
+// DetailPage.propTypes = {
+// 	type: PropTypes.number.isRequried,
+// 	switchPage: PropTypes.func.isRequried
+// }
 // DetailPage.propTypes = {
 // 	options: PropTypes.arrayOf(
 // 		PropTypes.string.isRequried

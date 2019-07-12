@@ -15,8 +15,8 @@ class TomatoClock extends Component {
 		this.handleRefreshClick = this.handleRefreshClick.bind(this) 
 		this.handleDetailPage = this.handleDetailPage.bind(this)
 		this.state = {
-			showDetail: true,
-			detailType: 1
+			showDetail: false,
+			detailType: 0
 		}
 	}
 
