@@ -1,0 +1,36 @@
+.section_analytics {
+	.focus_time {
+		margin-bottom: 45px;
+	}
+
+	.total_times {
+		font-size: 12px;
+		margin: 10px 0;
+
+		.times {
+			font-size: 40px;
+			color: #FF4384;
+			margin-top: 10px;
+		}
+		span {
+			color: rgba(255, 255, 255, .2);
+			font-size: 12px;
+			margin-left: 5px;
+		}
+	}
+	.period {
+		font-size: 12px;
+		font-weight: normal;
+		i {
+			font-size: 17px;
+			cursor: pointer;
+			vertical-align: middle;
+		}
+		span {
+			margin: 0 5px;
+		}
+	}
+	.chart_area {
+		margin-top: 10px;
+	}
+}

@@ -1,0 +1,104 @@
+.detailPage {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #003164;
+    color: #fff;	
+    padding: 45px 0 0;
+    overflow: hidden;
+    .menus {
+    	width: 40vw;
+    	position: relative;
+    	margin-left: 8%;
+
+    	.menu_icons {
+    		color: rgba(255, 255, 255, .2);
+    		font-size: 27px;
+    		i {
+    			margin-right: 8px;
+    			vertical-align: top;
+    		}
+    		.menu_item {
+    			margin-bottom: 10%;
+    			cursor: pointer;
+    		}
+    		.active {
+    			color: #FF4384;
+    		}
+    	}
+
+    	.button_area {
+    		position: absolute;
+    		bottom: -135px;
+			background-color: #FFEDF7;
+			width: 270px;
+			height: 270px;
+			border-radius: 50%;
+			text-align: center;
+
+			.start_button {
+				background-color: #003164;
+				border-radius: 50%;
+				padding: 5px;
+				display: inline-block;
+				position: relative;
+				top: -40px;
+				cursor: pointer;				
+
+				.start_button_inner {
+					display: inline-block;
+					border: 1px solid #FF4384;
+					padding: 5px;
+					border-radius: 50%;
+				}
+				i {
+					background-color: #FF4384;
+					border-radius: 50%;
+					font-size: 2.5rem;
+					color: #fff;
+					padding: 1vw;
+				}
+			}
+
+			.time {
+				color: #FF4384;
+				font-size: 3rem;
+				margin-top: -13%;
+			}
+
+			.content {
+				color: #003164;
+				font-size: 12px;
+				padding: 10px;
+			}
+    	}
+    }
+
+    .details {
+    	width: 60vw;
+    	padding: 0 16% 0 1%;
+
+		.tab {
+			background-color: rgba(255, 255, 255, .2);
+			padding: 10px;
+			margin-bottom: 5px;
+		}    	
+    }
+
+    .close_button {
+    	position: absolute;
+    	top: 45px;
+    	right: 8%;
+    	font-size: 35px;
+    	cursor: pointer;
+    }
+
+    .project_name {
+	    position: fixed;
+	    bottom: 45px;
+	    right: 8%; 
+	}
+
+}

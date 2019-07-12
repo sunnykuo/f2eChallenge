@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { selectSubreddit, fetchPostsIfNeeded, invalidateSubreddit } from './actions'
-import Picker from './components/Picker'
+import DetailPage from './components/DetailPage'
 import Posts from './components/Posts' 
 import PropTypes from 'prop-types'
 import { withRouter } from "react-router-dom";
@@ -13,7 +13,11 @@ class TomatoClock extends Component {
 		super(props)
 		this.handleChange = this.handleChange.bind(this)
 		this.handleRefreshClick = this.handleRefreshClick.bind(this) 
-		this.state = {}
+		this.handleDetailPage = this.handleDetailPage.bind(this)
+		this.state = {
+			showDetail: true,
+			detailType: 1
+		}
 	}
 
 	componentDidMount() {
@@ -28,6 +32,7 @@ class TomatoClock extends Component {
 	// 	}
 	// }
 
+	// replace componentWillReceiveProps at react16
 	static getDerivedStateFromProps(props, state) {
 
 		if (!state) return null;
@@ -50,6 +55,13 @@ class TomatoClock extends Component {
 		dispatch(fetchPostsIfNeeded(selectedSubreddit))
 	}
 
+	handleDetailPage(status, type = 0) {
+		this.setState({
+			showDetail: status,
+			detailType: type
+		})
+	}	
+
 	render() {
 		const { selectedSubreddit, posts, isFetching, lastUpdated } = this.props
 		return (
@@ -61,10 +73,12 @@ class TomatoClock extends Component {
 					</div>
 					<div className="mission_lists flex-fill">
 						<div className="mission">
-							<div className="mission_content">
+							<div className="mission_content current">
 								<div className="mission_name">
 									<i className="material-icons">radio_button_unchecked</i>
-									<span>The first thing to do today</span>
+									<div>
+										<div>The first thing to do today</div>
+									</div>
 								</div>
 							</div>
 							<div className="time">25:00</div>
@@ -73,7 +87,7 @@ class TomatoClock extends Component {
 							<div className="mission_content">
 								<div className="mission_name">
 									<i className="material-icons">radio_button_unchecked</i>
-									<span>The first thing to do today</span>
+									<span>The second thing to do today</span>
 								</div>
 								<i className="startButton material-icons">play_circle_outline</i>
 							</div>
@@ -82,23 +96,25 @@ class TomatoClock extends Component {
 							<div className="mission_content">
 								<div className="mission_name">
 									<i className="material-icons">radio_button_unchecked</i>
-									<span>The first thing to do today</span>
+									<span>The third thing to do today</span>
 								</div>
 								<i className="startButton material-icons">play_circle_outline</i>
 							</div>
 						</div>	
-						<div className="more">MORE</div>											
+						<div className="more">more</div>											
 					</div>
 				</div>
-				<div className="main_menu">
+				<div className="main_menu d-flex flex-column justify-content-between">
 					<div className="menu_icons d-flex flex-column justify-content-around align-items-end">
-						<i className="material-icons">format_list_bulleted</i>
-						<i className="material-icons">insert_chart</i>
-						<i className="material-icons">library_music</i>
+						<i className="material-icons" onClick={() => this.handleDetailPage(true,0)}>format_list_bulleted</i>
+						<i className="material-icons" onClick={() => this.handleDetailPage(true,1)}>insert_chart</i>
+						<i className="material-icons" onClick={() => this.handleDetailPage(true,2)}>library_music</i>
 					</div>
+					<div className="project_name">pomodoro</div>
 				</div>
 				<div className="progressArea">
 			      <CircularProgressbarWithChildren 
+			      	className="circular_progress"
 			      	value={0}
 			      	strokeWidth={5}			      	
 					styles={buildStyles({
@@ -106,8 +122,12 @@ class TomatoClock extends Component {
 						trailColor: "transparent"
 					})}>
 			      	<i className="material-icons">play_circle_filled</i>
+			      	<i className="material-icons dot">stop</i>
 			      </CircularProgressbarWithChildren>				
 				</div>
+				{this.state.showDetail &&
+					<DetailPage type={this.state.detailType} switchPage={this.handleDetailPage} />					
+				}
 			</div>
 		)
 	}

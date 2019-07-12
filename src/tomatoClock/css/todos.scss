@@ -1,0 +1,31 @@
+.section_todo {
+
+	.add_mission input {
+		margin-bottom: 0;
+	}
+
+	.todos {
+		margin-top: 45px;
+		
+		.tab {
+			cursor: pointer;
+			padding: 5px 10px;
+		}		
+
+	}
+
+	.done .mission_name span {
+		text-decoration: line-through;
+	}
+}
+.lists {
+	font-size: 12px;
+	color: #fff;
+
+	i {
+		font-size: 17px;
+	}
+	.mission_content {
+		border-color: rgba(255, 255, 255, .2);
+	}
+}

@@ -6,6 +6,7 @@ module.exports = {
 	entry: './src/index.js',
 	output: {
     	path: path.resolve(__dirname, 'dist'),
+    	publicPath: '/',    	
     	filename: 'bundle.js'
 	},
   	module: {
@@ -36,7 +37,19 @@ module.exports = {
 		        	}
 		        ]				
 			},			
-			{ test: /\.(png|woff|woff2|eot|ttf|svg)$/, use: ['file-loader'] }
+			{ 
+				test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'fonts/',							
+							publicPath: 'dist/fonts/',
+						}
+					}
+				] 
+			}
 	  	]
 	},
 	devServer: {

@@ -1,0 +1,155 @@
+.main {
+	background-color: #003164;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+
+	.add_mission {
+		color: #FF4384;
+		position: relative;
+		input {
+		 	font-size: 13px;
+		 	border: none;
+		 	color: #FF4384;
+		 	border-radius: 0;
+		 	height: calc(1.5em + 0.75rem + 5px);
+		 	margin-bottom: 5%;
+		}
+		 ::-webkit-input-placeholder {		 	
+		 	font-style: italic;
+		 	font-weight: bold;
+		 	color: #FF4383;
+		 }
+		 ::-moz-placeholder {
+		 	color: #FF4383;
+		 }		 
+		 &.input_blue {
+	 		input {
+	 			color: #00A7FF;
+	 		}
+		 	::-webkit-input-placeholder {
+				color: #00A7FF;		 		
+			}
+		 	::-moz-placeholder {
+		 		color: #00A7FF;
+		 	}
+		}
+		i {
+			font-size: 16px;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			cursor: pointer;
+		}
+	}
+
+	.progressArea {
+		position: absolute;
+		right: 18vw;
+		width: 36vw;
+		height: 36vw;
+		i {
+			font-size: 8vw;
+			color: #fff;
+			cursor: pointer;
+
+			&.dot {
+				cursor: default;
+				font-size: 1.8vw;
+				position: absolute;
+				top: 55%;
+				right: 35%;
+			}
+		}
+		.CircularProgressbar {
+			border: 3px solid #FF4384;
+			border-radius: 50%;
+		}
+		.CircularProgressbar-trail {
+			fill-opacity: 1;
+			fill: #FF4384;
+		}		
+	}
+}
+
+.main_todo {
+	background-color: #FFEDF7;
+	width: 64vw;
+	height: 100vh;
+	padding: 45px 20% 45px 8%;
+
+	.mission_lists {
+		color: #003164;
+		font-size: 13px;
+		i {
+			color: #003164;
+			font-size: 19px;
+		}
+
+		.mission .time {
+			color: #FF4384;
+			font-size: 7rem;
+			margin: 5% 0 30%;
+		}
+
+		.more {
+			font-size: 13px;
+			color: #FF4384;
+			text-align: right;
+			margin-top: 5px;
+			cursor: pointer;
+		}
+	}
+}
+
+.main_menu {
+	width: 36vw;
+	height: 100vh;
+	padding: 45px 8%;
+	i {
+		color: #fff;
+		font-size: 30px;
+		padding: 20px 0;
+		cursor: pointer;
+	}
+}
+
+.mission_content {
+	border-bottom: 1px solid #ddd;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+	&.current {
+		border: none;
+		font-size: 1.3rem;
+
+		.mission_name i {
+			font-size: 2rem;
+		}
+	}
+
+	.mission_name {
+		margin: 6px 0;
+		display: flex;
+		align-items: center;
+		i {
+			margin-right: 3px;
+		}
+	}
+
+	.startButton {
+		cursor: pointer;
+	}
+}
+
+.project_name {  
+    color: #fff;
+    writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;    
+    font-size: 20px;	
+}
+
+
