@@ -1,0 +1,16 @@
+.section_ringtones {
+	.ringtone_option {
+		width: 33%;
+		font-size: 12px;
+		margin: 5px 0;
+		i {
+			font-size: 17px;
+			vertical-align: middle;
+			margin-right: 5px;
+			cursor: pointer;
+		}
+	}
+	.ringtones_break {
+		margin-top: 30px;
+	}
+}

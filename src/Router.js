@@ -8,8 +8,6 @@ import {
 import Home from './containers/Home/Home';
 import TomatoClock from './tomatoClock';
 
-import './App.scss'
-
 const Router = () => (
     <HashRouter>
         <div>

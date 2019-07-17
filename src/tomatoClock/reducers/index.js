@@ -1,56 +1,40 @@
 import { combineReducers } from 'redux'
 
-import { SELECT_SUBREDDIT, INVALIDATE_SUBREDDIT, REQUEST_POSTS, RECEIVE_POSTS } from '../constants/constants'
+import { ADD_MISSION, UPDATE_MISSION_STATUS, UPDATE_BREAK_STATUS, UPDATE_RINGTONES } from '../constants/constants'
 
-
-const selectedSubreddit = (state = 'reactjs', action) => {
-	switch (action.type) {
-		case SELECT_SUBREDDIT: 
-			return action.subreddit
-		default:
-			return state
-	}
-}
 
 const initialState = {
-	isFetching: false,
-	didInvalidate: false,
-	items: []
+	missions: [],
+	ringtones: {
+		work: 'none',
+		break: 'none'
+	},
+	breakTime: {
+		status: false,
+		time: 5
+	}
 }
-const posts = (state = initialState, action) => {
+
+const missionReducer = (state = initialState, action) => {
 	switch (action.type) {
-		case INVALIDATE_SUBREDDIT: 
-			return Object.assign({}, state, {didInvalidate: true})
-		case REQUEST_POSTS:
-			return Object.assign({}, state, {isFetching: true, didInvalidate: false})
-		case RECEIVE_POSTS:
+		case ADD_MISSION:
+			let missions = state.missions;
+			missions.push(action.mission)			
 			return Object.assign({}, state, {
-		        isFetching: false,
-		        didInvalidate: false,
-		        items: action.posts,
-		        lastUpdated: action.receivedAt
-	      	})
+				missions
+			})
+		// case REQUEST_POSTS:
+		// 	return Object.assign({}, state, {isFetching: true, didInvalidate: false})
+		// case RECEIVE_POSTS:
+		// 	return Object.assign({}, state, {
+		//         isFetching: false,
+		//         didInvalidate: false,
+		//         items: action.posts,
+		//         lastUpdated: action.receivedAt
+	 //      	})
 		default:
 			return state
 	}
 }
 
-const postsBySubreddit = (state = {}, action) => {
-	switch (action.type) {
-		case INVALIDATE_SUBREDDIT:
-		case RECEIVE_POSTS:
-		case REQUEST_POSTS:
-			return Object.assign({}, state, {
-				[action.subreddit]: posts(state[action.subreddit], action)
-			})
-	default:
-	  return state
-	}
-}
-
-const exampleReducer = combineReducers({
-	postsBySubreddit,
-	selectedSubreddit
-})
-
-export default exampleReducer
+export default missionReducer

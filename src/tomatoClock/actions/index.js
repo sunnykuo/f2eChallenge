@@ -1,52 +1,21 @@
-import 'isomorphic-fetch'
-import { SELECT_SUBREDDIT, INVALIDATE_SUBREDDIT, REQUEST_POSTS, RECEIVE_POSTS } from '../constants/constants'
+import { ADD_MISSION, UPDATE_MISSION_STATUS, UPDATE_BREAK_STATUS, UPDATE_RINGTONES } from '../constants/constants'
 
-export const selectSubreddit = subreddit => ({
-	type: SELECT_SUBREDDIT,
-	subreddit
+export const addMission = mission => ({
+	type: ADD_MISSION,
+	mission
 })
 
-export const invalidateSubreddit = subreddit => ({
-	type: INVALIDATE_SUBREDDIT,
-	subreddit
+export const updateMissionStatus = mission => ({
+	type: UPDATE_MISSION_STATUS,
+	mission
 })
 
-const requestPosts = subreddit => ({
-	type: REQUEST_POSTS,
-	subreddit
+export const updateBreakStatus = breakStatus => ({
+	type: UPDATE_BREAK_STATUS,
+	breakStatus
 })
 
-const receivePosts = (subreddit, json) => ({
-	type: RECEIVE_POSTS,
-	subreddit,
-	posts: json.data.children.map(child => child.data),
-	receivedAt: Date.now()
+export const updateRingTones = ringtones => ({
+	type: UPDATE_RINGTONES,
+	ringtones
 })
-
-const fetchPosts = subreddit => {
-	return dispatch => {
-		dispatch(requestPosts(subreddit))
-		return fetch(`http://www.reddit.com/r/${subreddit}.json`)
-			.then(response => response.json())
-			.then(json => dispatch(receivePosts(subreddit, json)))
-	}
-}
-
-const shouldFetchPosts = (state, subreddit) => {
- 	const posts = state.exampleReducer.postsBySubreddit[subreddit]
-	if (!posts) {
-		return true
-	} else if (posts.isFetching) {
-		return false
-	} else {
-		return posts.didInvalidate
-	}
-}
-
-export const fetchPostsIfNeeded = subreddit => {
-	return (dispatch, getState) => {
-		if (shouldFetchPosts(getState(), subreddit)) {
-			return dispatch(fetchPosts(subreddit))
-		}
-	}
-}

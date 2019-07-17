@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { selectSubreddit, fetchPostsIfNeeded, invalidateSubreddit } from './actions'
+import { addMission, updateMissionStatus, updateBreakStatus } from './actions'
 import DetailPage from './components/DetailPage'
-import Posts from './components/Posts' 
+import MainTodos from './components/MainTodos' 
+import RightMenu from './components/RightMenu'
 import PropTypes from 'prop-types'
-import { withRouter } from "react-router-dom";
-import './index.scss';
+import { withRouter } from "react-router-dom"
 import { CircularProgressbarWithChildren, buildStyles } from 'react-circular-progressbar';
+import './index.scss'
 
 class TomatoClock extends Component {
 	constructor(props) {
@@ -14,6 +15,7 @@ class TomatoClock extends Component {
 		this.handleChange = this.handleChange.bind(this)
 		this.handleRefreshClick = this.handleRefreshClick.bind(this) 
 		this.handleDetailPage = this.handleDetailPage.bind(this)
+		this.handleAdd = this.handleAdd.bind(this)
 		this.state = {
 			showDetail: false,
 			detailType: 0
@@ -21,8 +23,8 @@ class TomatoClock extends Component {
 	}
 
 	componentDidMount() {
-		const { dispatch, selectedSubreddit } = this.props
-		dispatch(fetchPostsIfNeeded(selectedSubreddit))
+		// const { dispatch, selectedSubreddit } = this.props
+		// dispatch(fetchPostsIfNeeded(selectedSubreddit))
 	}
 
 	// componentWillReceiveProps(nextProps) {
@@ -34,25 +36,25 @@ class TomatoClock extends Component {
 
 	// replace componentWillReceiveProps at react16
 	static getDerivedStateFromProps(props, state) {
-
-		if (!state) return null;
-		if (props.selectedSubreddit !== state.selectedSubreddit) {
-			const { dispatch, selectedSubreddit } = props
-			dispatch(fetchPostsIfNeeded(selectedSubreddit))
-			return null;
-		}		
+		console.log(props)
+		// if (!state.missionReducer) return null;
+		// if (props.missionReducer !== state.missionReducer) {
+		// 	const { dispatch, selectedSubreddit } = props
+		// 	dispatch(fetchPostsIfNeeded(selectedSubreddit))
+		// 	return null;
+		// }		
 	}
 
 	handleChange(nextSubreddit) {
-		this.props.dispatch(selectSubreddit(nextSubreddit))
+		// this.props.dispatch(selectSubreddit(nextSubreddit))
 	}
 
 	handleRefreshClick(e) {
-		e.preventDefault()
+		// e.preventDefault()
 
-		const { dispatch, selectedSubreddit } = this.props
-		dispatch(invalidateSubreddit(selectedSubreddit))
-		dispatch(fetchPostsIfNeeded(selectedSubreddit))
+		// const { dispatch, selectedSubreddit } = this.props
+		// dispatch(invalidateSubreddit(selectedSubreddit))
+		// dispatch(fetchPostsIfNeeded(selectedSubreddit))
 	}
 
 	handleDetailPage(status, type = 0) {
@@ -62,56 +64,17 @@ class TomatoClock extends Component {
 		})
 	}	
 
+	handleAdd(newMission) {
+		this.props.handleAdd(newMission);
+	}
+
 	render() {
-		const { selectedSubreddit, posts, isFetching, lastUpdated } = this.props
+		const { dispatch, breakTime, missions, ringtones } = this.props
+		console.log(missions)
 		return (
 			<div className="main d-flex justify-content-center align-items-center">
-				<div className="main_todo d-flex flex-column">
-					<div className="add_mission flex-fill">
-						<input type="text" className="form-control" placeholder="ADD A NEW MISSION..."/>
-						<i className="material-icons">add</i>
-					</div>
-					<div className="mission_lists flex-fill">
-						<div className="mission">
-							<div className="mission_content current">
-								<div className="mission_name">
-									<i className="material-icons">radio_button_unchecked</i>
-									<div>
-										<div>The first thing to do today</div>
-									</div>
-								</div>
-							</div>
-							<div className="time">25:00</div>
-						</div>
-						<div className="mission">
-							<div className="mission_content">
-								<div className="mission_name">
-									<i className="material-icons">radio_button_unchecked</i>
-									<span>The second thing to do today</span>
-								</div>
-								<i className="startButton material-icons">play_circle_outline</i>
-							</div>
-						</div>
-						<div className="mission">
-							<div className="mission_content">
-								<div className="mission_name">
-									<i className="material-icons">radio_button_unchecked</i>
-									<span>The third thing to do today</span>
-								</div>
-								<i className="startButton material-icons">play_circle_outline</i>
-							</div>
-						</div>	
-						<div className="more">more</div>											
-					</div>
-				</div>
-				<div className="main_menu d-flex flex-column justify-content-between">
-					<div className="menu_icons d-flex flex-column justify-content-around align-items-end">
-						<i className="material-icons" onClick={() => this.handleDetailPage(true,0)}>format_list_bulleted</i>
-						<i className="material-icons" onClick={() => this.handleDetailPage(true,1)}>insert_chart</i>
-						<i className="material-icons" onClick={() => this.handleDetailPage(true,2)}>library_music</i>
-					</div>
-					<div className="project_name">pomodoro</div>
-				</div>
+				<MainTodos handleAdd={this.handleAdd} missions={missions} breakTime={breakTime}/>
+				<RightMenu switchPage={this.handleDetailPage} />
 				<div className="progressArea">
 			      <CircularProgressbarWithChildren 
 			      	className="circular_progress"
@@ -134,26 +97,28 @@ class TomatoClock extends Component {
 }
 
 TomatoClock.propTypes = {
-  selectedSubreddit: PropTypes.string.isRequired,
-  posts: PropTypes.array.isRequired,
-  isFetching: PropTypes.bool.isRequired,
-  lastUpdated: PropTypes.number,
-  dispatch: PropTypes.func.isRequired
+	breakTime: PropTypes.object.isRequired,
+	missions: PropTypes.array.isRequired,
+	ringtones: PropTypes.object.isRequired
 }
 
 function mapStateToProps(state) {
-	const { selectedSubreddit, postsBySubreddit } = state.exampleReducer
-	const { isFetching, lastUpdated, items: posts } = postsBySubreddit[selectedSubreddit] || {
-		isFetching: true,
-		items: []
-	} 
+	const { breakTime, missions, ringtones } = state.missionReducer
 
 	return {
-		selectedSubreddit,
-		posts,
-		isFetching,
-		lastUpdated		
+		breakTime,
+		missions,
+		ringtones		
 	}
 }
 
-export default withRouter(connect(mapStateToProps)(TomatoClock));
+//for connect
+const mapDispatchToProps = (dispatch) => {
+    return {
+        handleAdd: (newMission) => {
+            dispatch(addMission(newMission));
+        }
+    };
+};
+
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(TomatoClock));
