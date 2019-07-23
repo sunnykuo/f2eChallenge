@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addMission, updateMissionStatus, updateBreakStatus } from './actions'
+import { addMission, updateBreakStatus } from './actions'
 import DetailPage from './components/DetailPage'
 import MainTodos from './components/MainTodos' 
 import RightMenu from './components/RightMenu'
@@ -36,7 +36,6 @@ class TomatoClock extends Component {
 
 	// replace componentWillReceiveProps at react16
 	static getDerivedStateFromProps(props, state) {
-		console.log(props)
 		// if (!state.missionReducer) return null;
 		// if (props.missionReducer !== state.missionReducer) {
 		// 	const { dispatch, selectedSubreddit } = props
@@ -69,11 +68,10 @@ class TomatoClock extends Component {
 	}
 
 	render() {
-		const { dispatch, breakTime, missions, ringtones } = this.props
-		console.log(missions)
+		const { missions, breakTime, ringtones } = this.props
 		return (
 			<div className="main d-flex justify-content-center align-items-center">
-				<MainTodos handleAdd={this.handleAdd} missions={missions} breakTime={breakTime}/>
+				<MainTodos switchPage={this.handleDetailPage} handleAdd={this.handleAdd} missions={missions} breakTime={breakTime}/>
 				<RightMenu switchPage={this.handleDetailPage} />
 				<div className="progressArea">
 			      <CircularProgressbarWithChildren 
@@ -89,7 +87,7 @@ class TomatoClock extends Component {
 			      </CircularProgressbarWithChildren>				
 				</div>
 				{this.state.showDetail &&
-					<DetailPage type={this.state.detailType} switchPage={this.handleDetailPage} />					
+					<DetailPage data={this.props} type={this.state.detailType} switchPage={this.handleDetailPage} />					
 				}
 			</div>
 		)
@@ -104,21 +102,16 @@ TomatoClock.propTypes = {
 
 function mapStateToProps(state) {
 	const { breakTime, missions, ringtones } = state.missionReducer
-
 	return {
 		breakTime,
 		missions,
-		ringtones		
+		ringtones	
 	}
 }
 
 //for connect
-const mapDispatchToProps = (dispatch) => {
-    return {
-        handleAdd: (newMission) => {
-            dispatch(addMission(newMission));
-        }
-    };
-};
+const mapDispatchToProps = dispatch => ({
+	handleAdd: newMission => dispatch(addMission(newMission))
+});
 
 export default withRouter(connect(mapStateToProps,mapDispatchToProps)(TomatoClock));

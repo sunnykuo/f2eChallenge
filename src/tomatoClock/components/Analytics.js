@@ -5,7 +5,7 @@ import { Bar } from 'react-chartjs-2';
 
 export default class Analytics extends Component {
 	render() {
-		// const { value, onChange, options} = this.props
+		const { missions } = this.props
 		let chartData = [{
 			data: [10,8,16,22,5],
 			backgroundColor: [
@@ -15,7 +15,11 @@ export default class Analytics extends Component {
 				'#FF4384',
 				'#fff'
 			],
-		}]		
+		}]
+		let todayCompletedMission = [];
+		todayCompletedMission = missions.filter((item) => {
+			return item.completedTime === 1500;
+		})
 	return(
 	<div className="section_analytics">
 		<div className="focus_time">
@@ -23,7 +27,7 @@ export default class Analytics extends Component {
 			<div className="total_times d-flex">
 				<div className="flex-fill">
 					<div className="title">today</div>
-					<div className="times">20<span>/tomato</span></div>
+					<div className="times">{todayCompletedMission.length}<span>/tomato</span></div>
 				</div>
 				<div className="flex-fill">
 					<div className="title">week</div>

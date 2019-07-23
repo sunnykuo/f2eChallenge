@@ -16,6 +16,7 @@
 		 	border-radius: 0;
 		 	height: calc(1.5em + 0.75rem + 5px);
 		 	margin-bottom: 5%;
+		 	padding-right: 2.3em;
 		}
 		 ::-webkit-input-placeholder {		 	
 		 	font-style: italic;
@@ -83,6 +84,7 @@
 	.mission_lists {
 		color: #003164;
 		font-size: 13px;
+		word-break: break-word;
 		i {
 			color: #003164;
 			font-size: 19px;
@@ -137,6 +139,7 @@
 		align-items: center;
 		i {
 			margin-right: 3px;
+			cursor: pointer;
 		}
 	}
 
