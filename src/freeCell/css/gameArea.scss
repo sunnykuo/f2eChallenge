@@ -1,0 +1,45 @@
+.gameArea {
+	width: 100%;
+	margin-top: 3vh;
+	.gameArea_head {
+		.rect {
+			width: 85px;
+			height: 115px;
+			border-radius: 10px;
+		}
+		.tempArea {
+			margin-right: 5px;
+			.rect {
+				border: 4px solid rgba(252,205,141, .4);
+				margin-right: 15px;
+			}
+		}
+		.collectArea .rect {
+			background: linear-gradient(#FFE08E, #6F4628); 
+			margin-left: 15px;
+			padding: 4px;
+			position: relative;
+			&:after {
+			    content: '';
+			    background-color: #000;
+			    width: 77px;
+			    height: 107px;
+			    position: absolute;
+			    border-radius: 10px;
+			}
+		}
+	}
+
+	.gameArea_card {
+		.cardline {
+			margin: 20px 10px 0;
+			position: relative;
+			flex: 1;
+			.card {
+				position: absolute;
+				width: 90px;
+				z-index: 1;
+			}
+		}
+	}
+}

@@ -23,7 +23,8 @@ module.exports = {
 	  			}
 	  		},
 			{
-				test: /\.scss$/, include: [path.resolve(__dirname, 'src')],
+				test: /\.scss$/, 
+				include: [path.resolve(__dirname, 'src')],
 		        use: [
 		        	{ loader: 'style-loader'},
 		        	{
@@ -38,7 +39,7 @@ module.exports = {
 		        ]				
 			},			
 			{ 
-				test: /\.(png|woff|woff2|eot|ttf|svg)$/, 
+				test: /\.(woff|woff2|eot|ttf)$/, 
 				use: [
 					{
 						loader: 'file-loader',
@@ -49,16 +50,45 @@ module.exports = {
 						}
 					}
 				] 
-			},			
+			},
 			{ 
-				test: /\.mp3$/,
+				test: /\.svg$/, 
+				include: [path.resolve(__dirname, 'src/freeCell/svg')],
 				use: [
 					{
 						loader: 'file-loader',
 						options: {
 							name: '[name].[ext]',
-							outputPath: 'ringtones/',							
-							publicPath: 'dist/ringtones/',
+							outputPath: 'freeCell/svg/',							
+							publicPath: 'dist/freeCell/svg/',
+						}
+					}
+				] 
+			},			
+			{
+				test: /\.(png|jpg|svg)$/, 
+				include: [path.resolve(__dirname, 'src/freeCell/image')],
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'freeCell/image/',							
+							publicPath: 'dist/freeCell/image/',
+						}
+					}
+				] 
+			},						
+			{ 
+				test: /\.mp3$/,
+				include: [path.resolve(__dirname, 'src/tomatoClock')],
+				use: [
+					{
+						loader: 'file-loader',
+						options: {
+							name: '[name].[ext]',
+							outputPath: 'tomatoClock/ringtones/',							
+							publicPath: 'dist/tomatoClock/ringtones/',
 						}
 					}
 				] 

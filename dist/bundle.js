@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "6969541a620ed7d95e84";
+/******/ 	var hotCurrentHash = "f52a6735b4a2ed0945cc";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -4618,6 +4618,17 @@ eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loa
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/lib/loader.js!./src/freeCell/index.scss":
+/*!**************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/sass-loader/lib/loader.js!./src/freeCell/index.scss ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".main {\\n  background-color: #000;\\n  width: 100vw;\\n  height: 100vh;\\n  position: relative;\\n  text-transform: uppercase;\\n  font-weight: bold;\\n  padding: 3% 0 3% 5%;\\n  color: #E6BF8D; }\\n  .main .mainArea .header {\\n    width: 100%; }\\n    .main .mainArea .header .leftSide img {\\n      width: 20vw; }\\n    .main .mainArea .header .leftSide span {\\n      margin-left: 10px; }\\n    .main .mainArea .header .rightSide {\\n      font-size: 19px; }\\n      .main .mainArea .header .rightSide .score {\\n        margin-left: 3vw; }\\n  .main .menuArea {\\n    padding: 5%; }\\n    .main .menuArea img {\\n      margin-bottom: 3vh;\\n      cursor: pointer; }\\n\\n.gameArea {\\n  width: 100%;\\n  margin-top: 3vh; }\\n  .gameArea .gameArea_head .rect {\\n    width: 85px;\\n    height: 115px;\\n    border-radius: 10px; }\\n  .gameArea .gameArea_head .tempArea {\\n    margin-right: 5px; }\\n    .gameArea .gameArea_head .tempArea .rect {\\n      border: 4px solid rgba(252, 205, 141, 0.4);\\n      margin-right: 15px; }\\n  .gameArea .gameArea_head .collectArea .rect {\\n    background: linear-gradient(#FFE08E, #6F4628);\\n    margin-left: 15px;\\n    padding: 4px;\\n    position: relative; }\\n    .gameArea .gameArea_head .collectArea .rect:after {\\n      content: '';\\n      background-color: #000;\\n      width: 77px;\\n      height: 107px;\\n      position: absolute;\\n      border-radius: 10px; }\\n  .gameArea .gameArea_card .cardline {\\n    margin: 20px 10px 0;\\n    position: relative;\\n    flex: 1; }\\n    .gameArea .gameArea_card .cardline .card {\\n      position: absolute;\\n      width: 90px;\\n      z-index: 1; }\\n\", \"\"]);\n\n\n//# sourceURL=webpack:///./src/freeCell/index.scss?./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/sass-loader/lib/loader.js");
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/lib/loader.js!./src/tomatoClock/index.scss":
 /*!*****************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??ref--5-1!./node_modules/sass-loader/lib/loader.js!./src/tomatoClock/index.scss ***!
@@ -8281,7 +8292,7 @@ eval("\nvar content = __webpack_require__(/*! !../node_modules/css-loader/dist/c
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _containers_Home_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./containers/Home/Home */ \"./src/containers/Home/Home.js\");\n/* harmony import */ var _tomatoClock__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tomatoClock */ \"./src/tomatoClock/index.js\");\n\n\n\n\n\nvar Router = function Router() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"HashRouter\"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"ul\", {\n    className: \"category\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Link\"], {\n    to: \"/\"\n  }, \"\\u56DE\\u5230\\u9996\\u9801\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Link\"], {\n    to: \"/tomatoClock\"\n  }, \"\\u8543\\u8304\\u9418\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"hr\", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n    exact: true,\n    path: \"/\",\n    component: _containers_Home_Home__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n    path: \"/tomatoClock\",\n    component: _tomatoClock__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n  })));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Router);\n\n//# sourceURL=webpack:///./src/Router.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _containers_Home_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./containers/Home/Home */ \"./src/containers/Home/Home.js\");\n/* harmony import */ var _tomatoClock__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./tomatoClock */ \"./src/tomatoClock/index.js\");\n/* harmony import */ var _freeCell__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./freeCell */ \"./src/freeCell/index.js\");\n\n\n\n\n\n\nvar Router = function Router() {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"HashRouter\"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"ul\", {\n    className: \"category\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Link\"], {\n    to: \"/\"\n  }, \"\\u56DE\\u5230\\u9996\\u9801\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Link\"], {\n    to: \"/tomatoClock\"\n  }, \"\\u8543\\u8304\\u9418\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"li\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Link\"], {\n    to: \"/freeCell\"\n  }, \"\\u65B0\\u63A5\\u9F8D\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"hr\", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n    exact: true,\n    path: \"/\",\n    component: _containers_Home_Home__WEBPACK_IMPORTED_MODULE_2__[\"default\"]\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n    path: \"/tomatoClock\",\n    component: _tomatoClock__WEBPACK_IMPORTED_MODULE_3__[\"default\"]\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[\"Route\"], {\n    path: \"/freeCell\",\n    component: _freeCell__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n  })));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Router);\n\n//# sourceURL=webpack:///./src/Router.js?");
 
 /***/ }),
 
@@ -8293,7 +8304,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return configureStore; });\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ \"./node_modules/redux-thunk/es/index.js\");\n/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-logger */ \"./node_modules/redux-logger/dist/redux-logger.js\");\n/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _example_reducers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./example/reducers */ \"./src/example/reducers/index.js\");\n/* harmony import */ var _tomatoClock_reducers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tomatoClock/reducers */ \"./src/tomatoClock/reducers/index.js\");\n\n\n\n\n\nvar allReducers = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  exampleReducer: _example_reducers__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  missionReducer: _tomatoClock_reducers__WEBPACK_IMPORTED_MODULE_4__[\"default\"]\n});\nvar loggerMiddleware = Object(redux_logger__WEBPACK_IMPORTED_MODULE_2__[\"createLogger\"])();\nvar composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || redux__WEBPACK_IMPORTED_MODULE_0__[\"compose\"];\nvar enhancer = composeEnhancers(Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"applyMiddleware\"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__[\"default\"], loggerMiddleware) // other store enhancers if any\n);\nfunction configureStore(preloadedState) {\n  return Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"createStore\"])(allReducers, preloadedState, enhancer);\n}\n\n//# sourceURL=webpack:///./src/configureStore.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return configureStore; });\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ \"./node_modules/redux-thunk/es/index.js\");\n/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-logger */ \"./node_modules/redux-logger/dist/redux-logger.js\");\n/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _example_reducers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./example/reducers */ \"./src/example/reducers/index.js\");\n/* harmony import */ var _tomatoClock_reducers__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tomatoClock/reducers */ \"./src/tomatoClock/reducers/index.js\");\n/* harmony import */ var _freeCell_reducers__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./freeCell/reducers */ \"./src/freeCell/reducers/index.js\");\n\n\n\n\n\n\nvar allReducers = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  exampleReducer: _example_reducers__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  missionReducer: _tomatoClock_reducers__WEBPACK_IMPORTED_MODULE_4__[\"default\"],\n  freeCellReducer: _freeCell_reducers__WEBPACK_IMPORTED_MODULE_5__[\"default\"]\n});\nvar loggerMiddleware = Object(redux_logger__WEBPACK_IMPORTED_MODULE_2__[\"createLogger\"])();\nvar composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || redux__WEBPACK_IMPORTED_MODULE_0__[\"compose\"];\nvar enhancer = composeEnhancers(Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"applyMiddleware\"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__[\"default\"], loggerMiddleware) // other store enhancers if any\n);\nfunction configureStore(preloadedState) {\n  return Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"createStore\"])(allReducers, preloadedState, enhancer);\n}\n\n//# sourceURL=webpack:///./src/configureStore.js?");
 
 /***/ }),
 
@@ -8351,6 +8362,716 @@ eval("module.exports = \"dist/fonts/Roboto-Bold.ttf\";\n\n//# sourceURL=webpack:
 /***/ (function(module, exports) {
 
 eval("module.exports = \"dist/fonts/Roboto-Regular.ttf\";\n\n//# sourceURL=webpack:///./src/fonts/Roboto-Regular.ttf?");
+
+/***/ }),
+
+/***/ "./src/freeCell/actions/index.js":
+/*!***************************************!*\
+  !*** ./src/freeCell/actions/index.js ***!
+  \***************************************/
+/*! exports provided: getInitCardLines, updateMissionTime */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"getInitCardLines\", function() { return getInitCardLines; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"updateMissionTime\", function() { return updateMissionTime; });\n/* harmony import */ var _constants_constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants/constants */ \"./src/freeCell/constants/constants.js\");\n/* harmony import */ var _constants_constants__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_constants_constants__WEBPACK_IMPORTED_MODULE_0__);\n\nvar getInitCardLines = function getInitCardLines() {\n  return function (dispatch, getState) {\n    return dispatch(fetchCards(getState()));\n  };\n};\nvar updateMissionTime = function updateMissionTime(idx, time) {\n  return {\n    type: _constants_constants__WEBPACK_IMPORTED_MODULE_0__[\"UPDATE_MISSION_TIME\"],\n    index: idx,\n    time: time\n  };\n};\n\nvar receiveCardLines = function receiveCardLines(cardLines) {\n  return {\n    type: _constants_constants__WEBPACK_IMPORTED_MODULE_0__[\"GET_INIT_CARDLINES\"],\n    cardLines: cardLines\n  };\n};\n\nvar fetchCards = function fetchCards(state) {\n  return function (dispatch) {\n    return getInitialCardLine(state.freeCellReducer.cards, state.freeCellReducer.cardLines).then(function (json) {\n      return dispatch(receiveCardLines(json));\n    });\n  };\n};\n\nvar getRandom = function getRandom(min, max) {\n  return Math.floor(Math.random() * max) + min;\n};\n\nvar getNotFullLine = function getNotFullLine(lines, max) {\n  var notFullLines = [];\n\n  for (var key in lines) {\n    if (lines[key].length < max) {\n      notFullLines.push(key);\n    }\n  }\n\n  var randomLine = notFullLines[getRandom(0, notFullLines.length - 1)];\n  return randomLine;\n};\n\nvar getRandomLine = function getRandomLine(lines, card) {\n  return new Promise(function (resolve, reject) {\n    var currentLines = Object.assign({}, lines);\n    var curretCard = Object.assign({}, card);\n    var randomLine = \"line\" + getRandom(1, 8);\n    var fulledLines = [];\n\n    for (var key in currentLines) {\n      if (currentLines[key].length === 7) {\n        fulledLines.push(currentLines[key]);\n      }\n    }\n\n    if (fulledLines.length === 4) {\n      if (currentLines[randomLine].length >= 6) {\n        randomLine = getNotFullLine(currentLines, 6);\n      }\n    } else if (currentLines[randomLine].length >= 7) {\n      randomLine = getNotFullLine(currentLines, 7);\n    }\n\n    curretCard.currentPosition = randomLine;\n    currentLines[randomLine].push(curretCard);\n    resolve(currentLines);\n  });\n};\n\nvar getInitialCardLine = function getInitialCardLine(cards, cardlines) {\n  return new Promise(function (resolve, reject) {\n    var cardsPromise = Promise.resolve([]);\n\n    for (var i = 0; i < cards.length; i++) {\n      (function (card) {\n        cardsPromise = cardsPromise.then(function (result) {\n          var lines = cardlines;\n\n          if (result.length > 0) {\n            lines = result;\n          }\n\n          return getRandomLine(lines, card).then(function (resultLines) {\n            return resultLines;\n          });\n        });\n      })(cards[i]);\n    }\n\n    ;\n    return cardsPromise.then(function (cardlinesResult) {\n      resolve(cardlinesResult);\n    })[\"catch\"](function (err) {\n      reject(err);\n    });\n  });\n};\n\n//# sourceURL=webpack:///./src/freeCell/actions/index.js?");
+
+/***/ }),
+
+/***/ "./src/freeCell/components/Cards.js":
+/*!******************************************!*\
+  !*** ./src/freeCell/components/Cards.js ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _svg_Cards_tr_1_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../svg/Cards/tr_1.svg */ \"./src/freeCell/svg/Cards/tr_1.svg\");\n/* harmony import */ var _svg_Cards_tr_1_svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_1_svg__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _svg_Cards_tr_2_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../svg/Cards/tr_2.svg */ \"./src/freeCell/svg/Cards/tr_2.svg\");\n/* harmony import */ var _svg_Cards_tr_2_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_2_svg__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _svg_Cards_tr_3_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../svg/Cards/tr_3.svg */ \"./src/freeCell/svg/Cards/tr_3.svg\");\n/* harmony import */ var _svg_Cards_tr_3_svg__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_3_svg__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _svg_Cards_tr_4_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../svg/Cards/tr_4.svg */ \"./src/freeCell/svg/Cards/tr_4.svg\");\n/* harmony import */ var _svg_Cards_tr_4_svg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_4_svg__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _svg_Cards_tr_5_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../svg/Cards/tr_5.svg */ \"./src/freeCell/svg/Cards/tr_5.svg\");\n/* harmony import */ var _svg_Cards_tr_5_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_5_svg__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _svg_Cards_tr_6_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../svg/Cards/tr_6.svg */ \"./src/freeCell/svg/Cards/tr_6.svg\");\n/* harmony import */ var _svg_Cards_tr_6_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_6_svg__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _svg_Cards_tr_7_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../svg/Cards/tr_7.svg */ \"./src/freeCell/svg/Cards/tr_7.svg\");\n/* harmony import */ var _svg_Cards_tr_7_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_7_svg__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _svg_Cards_tr_8_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../svg/Cards/tr_8.svg */ \"./src/freeCell/svg/Cards/tr_8.svg\");\n/* harmony import */ var _svg_Cards_tr_8_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_8_svg__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _svg_Cards_tr_9_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../svg/Cards/tr_9.svg */ \"./src/freeCell/svg/Cards/tr_9.svg\");\n/* harmony import */ var _svg_Cards_tr_9_svg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_9_svg__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var _svg_Cards_tr_10_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../svg/Cards/tr_10.svg */ \"./src/freeCell/svg/Cards/tr_10.svg\");\n/* harmony import */ var _svg_Cards_tr_10_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_10_svg__WEBPACK_IMPORTED_MODULE_9__);\n/* harmony import */ var _svg_Cards_tr_11_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../svg/Cards/tr_11.svg */ \"./src/freeCell/svg/Cards/tr_11.svg\");\n/* harmony import */ var _svg_Cards_tr_11_svg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_11_svg__WEBPACK_IMPORTED_MODULE_10__);\n/* harmony import */ var _svg_Cards_tr_12_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../svg/Cards/tr_12.svg */ \"./src/freeCell/svg/Cards/tr_12.svg\");\n/* harmony import */ var _svg_Cards_tr_12_svg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_12_svg__WEBPACK_IMPORTED_MODULE_11__);\n/* harmony import */ var _svg_Cards_tr_13_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../svg/Cards/tr_13.svg */ \"./src/freeCell/svg/Cards/tr_13.svg\");\n/* harmony import */ var _svg_Cards_tr_13_svg__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_tr_13_svg__WEBPACK_IMPORTED_MODULE_12__);\n/* harmony import */ var _svg_Cards_pi_1_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../svg/Cards/pi_1.svg */ \"./src/freeCell/svg/Cards/pi_1.svg\");\n/* harmony import */ var _svg_Cards_pi_1_svg__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_1_svg__WEBPACK_IMPORTED_MODULE_13__);\n/* harmony import */ var _svg_Cards_pi_2_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../svg/Cards/pi_2.svg */ \"./src/freeCell/svg/Cards/pi_2.svg\");\n/* harmony import */ var _svg_Cards_pi_2_svg__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_2_svg__WEBPACK_IMPORTED_MODULE_14__);\n/* harmony import */ var _svg_Cards_pi_3_svg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../svg/Cards/pi_3.svg */ \"./src/freeCell/svg/Cards/pi_3.svg\");\n/* harmony import */ var _svg_Cards_pi_3_svg__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_3_svg__WEBPACK_IMPORTED_MODULE_15__);\n/* harmony import */ var _svg_Cards_pi_4_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../svg/Cards/pi_4.svg */ \"./src/freeCell/svg/Cards/pi_4.svg\");\n/* harmony import */ var _svg_Cards_pi_4_svg__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_4_svg__WEBPACK_IMPORTED_MODULE_16__);\n/* harmony import */ var _svg_Cards_pi_5_svg__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../svg/Cards/pi_5.svg */ \"./src/freeCell/svg/Cards/pi_5.svg\");\n/* harmony import */ var _svg_Cards_pi_5_svg__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_5_svg__WEBPACK_IMPORTED_MODULE_17__);\n/* harmony import */ var _svg_Cards_pi_6_svg__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../svg/Cards/pi_6.svg */ \"./src/freeCell/svg/Cards/pi_6.svg\");\n/* harmony import */ var _svg_Cards_pi_6_svg__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_6_svg__WEBPACK_IMPORTED_MODULE_18__);\n/* harmony import */ var _svg_Cards_pi_7_svg__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../svg/Cards/pi_7.svg */ \"./src/freeCell/svg/Cards/pi_7.svg\");\n/* harmony import */ var _svg_Cards_pi_7_svg__WEBPACK_IMPORTED_MODULE_19___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_7_svg__WEBPACK_IMPORTED_MODULE_19__);\n/* harmony import */ var _svg_Cards_pi_8_svg__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../svg/Cards/pi_8.svg */ \"./src/freeCell/svg/Cards/pi_8.svg\");\n/* harmony import */ var _svg_Cards_pi_8_svg__WEBPACK_IMPORTED_MODULE_20___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_8_svg__WEBPACK_IMPORTED_MODULE_20__);\n/* harmony import */ var _svg_Cards_pi_9_svg__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../svg/Cards/pi_9.svg */ \"./src/freeCell/svg/Cards/pi_9.svg\");\n/* harmony import */ var _svg_Cards_pi_9_svg__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_9_svg__WEBPACK_IMPORTED_MODULE_21__);\n/* harmony import */ var _svg_Cards_pi_10_svg__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../svg/Cards/pi_10.svg */ \"./src/freeCell/svg/Cards/pi_10.svg\");\n/* harmony import */ var _svg_Cards_pi_10_svg__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_10_svg__WEBPACK_IMPORTED_MODULE_22__);\n/* harmony import */ var _svg_Cards_pi_11_svg__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../svg/Cards/pi_11.svg */ \"./src/freeCell/svg/Cards/pi_11.svg\");\n/* harmony import */ var _svg_Cards_pi_11_svg__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_11_svg__WEBPACK_IMPORTED_MODULE_23__);\n/* harmony import */ var _svg_Cards_pi_12_svg__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../svg/Cards/pi_12.svg */ \"./src/freeCell/svg/Cards/pi_12.svg\");\n/* harmony import */ var _svg_Cards_pi_12_svg__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_12_svg__WEBPACK_IMPORTED_MODULE_24__);\n/* harmony import */ var _svg_Cards_pi_13_svg__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../svg/Cards/pi_13.svg */ \"./src/freeCell/svg/Cards/pi_13.svg\");\n/* harmony import */ var _svg_Cards_pi_13_svg__WEBPACK_IMPORTED_MODULE_25___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_pi_13_svg__WEBPACK_IMPORTED_MODULE_25__);\n/* harmony import */ var _svg_Cards_cc_1_svg__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../svg/Cards/cc_1.svg */ \"./src/freeCell/svg/Cards/cc_1.svg\");\n/* harmony import */ var _svg_Cards_cc_1_svg__WEBPACK_IMPORTED_MODULE_26___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_1_svg__WEBPACK_IMPORTED_MODULE_26__);\n/* harmony import */ var _svg_Cards_cc_2_svg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../svg/Cards/cc_2.svg */ \"./src/freeCell/svg/Cards/cc_2.svg\");\n/* harmony import */ var _svg_Cards_cc_2_svg__WEBPACK_IMPORTED_MODULE_27___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_2_svg__WEBPACK_IMPORTED_MODULE_27__);\n/* harmony import */ var _svg_Cards_cc_3_svg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../svg/Cards/cc_3.svg */ \"./src/freeCell/svg/Cards/cc_3.svg\");\n/* harmony import */ var _svg_Cards_cc_3_svg__WEBPACK_IMPORTED_MODULE_28___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_3_svg__WEBPACK_IMPORTED_MODULE_28__);\n/* harmony import */ var _svg_Cards_cc_4_svg__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../svg/Cards/cc_4.svg */ \"./src/freeCell/svg/Cards/cc_4.svg\");\n/* harmony import */ var _svg_Cards_cc_4_svg__WEBPACK_IMPORTED_MODULE_29___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_4_svg__WEBPACK_IMPORTED_MODULE_29__);\n/* harmony import */ var _svg_Cards_cc_5_svg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../svg/Cards/cc_5.svg */ \"./src/freeCell/svg/Cards/cc_5.svg\");\n/* harmony import */ var _svg_Cards_cc_5_svg__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_5_svg__WEBPACK_IMPORTED_MODULE_30__);\n/* harmony import */ var _svg_Cards_cc_6_svg__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../svg/Cards/cc_6.svg */ \"./src/freeCell/svg/Cards/cc_6.svg\");\n/* harmony import */ var _svg_Cards_cc_6_svg__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_6_svg__WEBPACK_IMPORTED_MODULE_31__);\n/* harmony import */ var _svg_Cards_cc_7_svg__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ../svg/Cards/cc_7.svg */ \"./src/freeCell/svg/Cards/cc_7.svg\");\n/* harmony import */ var _svg_Cards_cc_7_svg__WEBPACK_IMPORTED_MODULE_32___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_7_svg__WEBPACK_IMPORTED_MODULE_32__);\n/* harmony import */ var _svg_Cards_cc_8_svg__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ../svg/Cards/cc_8.svg */ \"./src/freeCell/svg/Cards/cc_8.svg\");\n/* harmony import */ var _svg_Cards_cc_8_svg__WEBPACK_IMPORTED_MODULE_33___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_8_svg__WEBPACK_IMPORTED_MODULE_33__);\n/* harmony import */ var _svg_Cards_cc_9_svg__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ../svg/Cards/cc_9.svg */ \"./src/freeCell/svg/Cards/cc_9.svg\");\n/* harmony import */ var _svg_Cards_cc_9_svg__WEBPACK_IMPORTED_MODULE_34___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_9_svg__WEBPACK_IMPORTED_MODULE_34__);\n/* harmony import */ var _svg_Cards_cc_10_svg__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ../svg/Cards/cc_10.svg */ \"./src/freeCell/svg/Cards/cc_10.svg\");\n/* harmony import */ var _svg_Cards_cc_10_svg__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_10_svg__WEBPACK_IMPORTED_MODULE_35__);\n/* harmony import */ var _svg_Cards_cc_11_svg__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ../svg/Cards/cc_11.svg */ \"./src/freeCell/svg/Cards/cc_11.svg\");\n/* harmony import */ var _svg_Cards_cc_11_svg__WEBPACK_IMPORTED_MODULE_36___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_11_svg__WEBPACK_IMPORTED_MODULE_36__);\n/* harmony import */ var _svg_Cards_cc_12_svg__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ../svg/Cards/cc_12.svg */ \"./src/freeCell/svg/Cards/cc_12.svg\");\n/* harmony import */ var _svg_Cards_cc_12_svg__WEBPACK_IMPORTED_MODULE_37___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_12_svg__WEBPACK_IMPORTED_MODULE_37__);\n/* harmony import */ var _svg_Cards_cc_13_svg__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! ../svg/Cards/cc_13.svg */ \"./src/freeCell/svg/Cards/cc_13.svg\");\n/* harmony import */ var _svg_Cards_cc_13_svg__WEBPACK_IMPORTED_MODULE_38___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_cc_13_svg__WEBPACK_IMPORTED_MODULE_38__);\n/* harmony import */ var _svg_Cards_ca_1_svg__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ../svg/Cards/ca_1.svg */ \"./src/freeCell/svg/Cards/ca_1.svg\");\n/* harmony import */ var _svg_Cards_ca_1_svg__WEBPACK_IMPORTED_MODULE_39___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_1_svg__WEBPACK_IMPORTED_MODULE_39__);\n/* harmony import */ var _svg_Cards_ca_2_svg__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ../svg/Cards/ca_2.svg */ \"./src/freeCell/svg/Cards/ca_2.svg\");\n/* harmony import */ var _svg_Cards_ca_2_svg__WEBPACK_IMPORTED_MODULE_40___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_2_svg__WEBPACK_IMPORTED_MODULE_40__);\n/* harmony import */ var _svg_Cards_ca_3_svg__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! ../svg/Cards/ca_3.svg */ \"./src/freeCell/svg/Cards/ca_3.svg\");\n/* harmony import */ var _svg_Cards_ca_3_svg__WEBPACK_IMPORTED_MODULE_41___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_3_svg__WEBPACK_IMPORTED_MODULE_41__);\n/* harmony import */ var _svg_Cards_ca_4_svg__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! ../svg/Cards/ca_4.svg */ \"./src/freeCell/svg/Cards/ca_4.svg\");\n/* harmony import */ var _svg_Cards_ca_4_svg__WEBPACK_IMPORTED_MODULE_42___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_4_svg__WEBPACK_IMPORTED_MODULE_42__);\n/* harmony import */ var _svg_Cards_ca_5_svg__WEBPACK_IMPORTED_MODULE_43__ = __webpack_require__(/*! ../svg/Cards/ca_5.svg */ \"./src/freeCell/svg/Cards/ca_5.svg\");\n/* harmony import */ var _svg_Cards_ca_5_svg__WEBPACK_IMPORTED_MODULE_43___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_5_svg__WEBPACK_IMPORTED_MODULE_43__);\n/* harmony import */ var _svg_Cards_ca_6_svg__WEBPACK_IMPORTED_MODULE_44__ = __webpack_require__(/*! ../svg/Cards/ca_6.svg */ \"./src/freeCell/svg/Cards/ca_6.svg\");\n/* harmony import */ var _svg_Cards_ca_6_svg__WEBPACK_IMPORTED_MODULE_44___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_6_svg__WEBPACK_IMPORTED_MODULE_44__);\n/* harmony import */ var _svg_Cards_ca_7_svg__WEBPACK_IMPORTED_MODULE_45__ = __webpack_require__(/*! ../svg/Cards/ca_7.svg */ \"./src/freeCell/svg/Cards/ca_7.svg\");\n/* harmony import */ var _svg_Cards_ca_7_svg__WEBPACK_IMPORTED_MODULE_45___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_7_svg__WEBPACK_IMPORTED_MODULE_45__);\n/* harmony import */ var _svg_Cards_ca_8_svg__WEBPACK_IMPORTED_MODULE_46__ = __webpack_require__(/*! ../svg/Cards/ca_8.svg */ \"./src/freeCell/svg/Cards/ca_8.svg\");\n/* harmony import */ var _svg_Cards_ca_8_svg__WEBPACK_IMPORTED_MODULE_46___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_8_svg__WEBPACK_IMPORTED_MODULE_46__);\n/* harmony import */ var _svg_Cards_ca_9_svg__WEBPACK_IMPORTED_MODULE_47__ = __webpack_require__(/*! ../svg/Cards/ca_9.svg */ \"./src/freeCell/svg/Cards/ca_9.svg\");\n/* harmony import */ var _svg_Cards_ca_9_svg__WEBPACK_IMPORTED_MODULE_47___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_9_svg__WEBPACK_IMPORTED_MODULE_47__);\n/* harmony import */ var _svg_Cards_ca_10_svg__WEBPACK_IMPORTED_MODULE_48__ = __webpack_require__(/*! ../svg/Cards/ca_10.svg */ \"./src/freeCell/svg/Cards/ca_10.svg\");\n/* harmony import */ var _svg_Cards_ca_10_svg__WEBPACK_IMPORTED_MODULE_48___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_10_svg__WEBPACK_IMPORTED_MODULE_48__);\n/* harmony import */ var _svg_Cards_ca_11_svg__WEBPACK_IMPORTED_MODULE_49__ = __webpack_require__(/*! ../svg/Cards/ca_11.svg */ \"./src/freeCell/svg/Cards/ca_11.svg\");\n/* harmony import */ var _svg_Cards_ca_11_svg__WEBPACK_IMPORTED_MODULE_49___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_11_svg__WEBPACK_IMPORTED_MODULE_49__);\n/* harmony import */ var _svg_Cards_ca_12_svg__WEBPACK_IMPORTED_MODULE_50__ = __webpack_require__(/*! ../svg/Cards/ca_12.svg */ \"./src/freeCell/svg/Cards/ca_12.svg\");\n/* harmony import */ var _svg_Cards_ca_12_svg__WEBPACK_IMPORTED_MODULE_50___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_12_svg__WEBPACK_IMPORTED_MODULE_50__);\n/* harmony import */ var _svg_Cards_ca_13_svg__WEBPACK_IMPORTED_MODULE_51__ = __webpack_require__(/*! ../svg/Cards/ca_13.svg */ \"./src/freeCell/svg/Cards/ca_13.svg\");\n/* harmony import */ var _svg_Cards_ca_13_svg__WEBPACK_IMPORTED_MODULE_51___default = /*#__PURE__*/__webpack_require__.n(_svg_Cards_ca_13_svg__WEBPACK_IMPORTED_MODULE_51__);\n// for (let i=1; i <=13; i++) {\n// \timport `cc_${i}` from `../svg/Cards/cc_${i}.svg`\n// \timport `ca_${i}` from `../svg/Cards/ca_${i}.svg`\n// \timport `pi_${i}` from `../svg/Cards/cc_${i}.svg`\n// \timport `tr_${i}` from `../svg/Cards/cc_${i}.svg`\n// }\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/freeCell/components/Cards.js?");
+
+/***/ }),
+
+/***/ "./src/freeCell/components/GameArea.js":
+/*!*********************************************!*\
+  !*** ./src/freeCell/components/GameArea.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _components_Cards__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Cards */ \"./src/freeCell/components/Cards.js\");\n/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../actions */ \"./src/freeCell/actions/index.js\");\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n\n\n\n\n\nvar GameArea =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(GameArea, _Component);\n\n  function GameArea(props) {\n    _classCallCheck(this, GameArea);\n\n    return _possibleConstructorReturn(this, _getPrototypeOf(GameArea).call(this, props)); // this.handleAddMission = this.handleAddMission.bind(this)\n    // this.handleCompleteMission = this.handleCompleteMission.bind(this)\n  }\n\n  _createClass(GameArea, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {\n      var dispatch = this.props.dispatch;\n      dispatch(Object(_actions__WEBPACK_IMPORTED_MODULE_5__[\"getInitCardLines\"])());\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var cardLines = this.props.cardLines;\n      if (cardLines.length === 0) return;\n      var cardComponent = [];\n\n      for (var key in cardLines) {\n        cardComponent.push(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(CardComponent, {\n          key: key,\n          line: key,\n          cards: cardLines[key]\n        }));\n      }\n\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"gameArea\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"gameArea_head d-flex justify-content-between flex-wrap\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"tempArea d-flex\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        ref: \"temp1\",\n        className: \"rect\"\n      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        ref: \"temp2\",\n        className: \"rect\"\n      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        ref: \"temp3\",\n        className: \"rect\"\n      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        ref: \"temp4\",\n        className: \"rect\"\n      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"collectArea d-flex\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        ref: \"collect1\",\n        className: \"rect\"\n      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        ref: \"collect2\",\n        className: \"rect\"\n      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        ref: \"collect3\",\n        className: \"rect\"\n      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        ref: \"collect4\",\n        className: \"rect\"\n      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"gameArea_card d-flex\"\n      }, cardComponent));\n    }\n  }]);\n\n  return GameArea;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]);\n\nvar CardComponent =\n/*#__PURE__*/\nfunction (_Component2) {\n  _inherits(CardComponent, _Component2);\n\n  function CardComponent() {\n    _classCallCheck(this, CardComponent);\n\n    return _possibleConstructorReturn(this, _getPrototypeOf(CardComponent).apply(this, arguments));\n  }\n\n  _createClass(CardComponent, [{\n    key: \"render\",\n    value: function render() {\n      var _this$props = this.props,\n          line = _this$props.line,\n          cards = _this$props.cards;\n      var topPosition = 0;\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        ref: line,\n        className: \"cardline\"\n      }, cards.map(function (card, index) {\n        topPosition += 25;\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n          key: index,\n          className: \"card\",\n          style: {\n            top: \"\".concat(topPosition, \"px\")\n          }\n        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n          src: \"./dist/freeCell/svg/\".concat(card.name, \".svg\"),\n          width: \"100%\"\n        }));\n      }));\n    }\n  }]);\n\n  return CardComponent;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]); // DetailPage.propTypes = {\n// \toptions: PropTypes.arrayOf(\n// \t\tPropTypes.string.isRequried\n// \t).isRequried,\t\n// \tvalue: PropTypes.string.isRequried,\n// \tonChange: PropTypes.func.isRequried\n// }\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[\"withRouter\"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"connect\"])()(GameArea)));\n\n//# sourceURL=webpack:///./src/freeCell/components/GameArea.js?");
+
+/***/ }),
+
+/***/ "./src/freeCell/components/RightMenu.js":
+/*!**********************************************!*\
+  !*** ./src/freeCell/components/RightMenu.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return RightMenu; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _image_hint_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../image/hint.png */ \"./src/freeCell/image/hint.png\");\n/* harmony import */ var _image_hint_png__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_image_hint_png__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _image_undo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../image/undo.png */ \"./src/freeCell/image/undo.png\");\n/* harmony import */ var _image_undo_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_image_undo_png__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _image_newGame_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../image/newGame.svg */ \"./src/freeCell/image/newGame.svg\");\n/* harmony import */ var _image_newGame_svg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_image_newGame_svg__WEBPACK_IMPORTED_MODULE_4__);\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n\n\n\n\nvar RightMenu =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(RightMenu, _Component);\n\n  function RightMenu() {\n    _classCallCheck(this, RightMenu);\n\n    return _possibleConstructorReturn(this, _getPrototypeOf(RightMenu).apply(this, arguments));\n  }\n\n  _createClass(RightMenu, [{\n    key: \"render\",\n    value: function render() {\n      // const { switchPage } = this.props\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"menuArea d-flex flex-column\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n        src: _image_undo_png__WEBPACK_IMPORTED_MODULE_3___default.a,\n        width: \"30px\"\n      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n        src: _image_hint_png__WEBPACK_IMPORTED_MODULE_2___default.a,\n        width: \"30px\"\n      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n        src: _image_newGame_svg__WEBPACK_IMPORTED_MODULE_4___default.a,\n        width: \"30px\"\n      }));\n    }\n  }]);\n\n  return RightMenu;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]); // DetailPage.propTypes = {\n// \ttype: PropTypes.number.isRequried,\n// \tswitchPage: PropTypes.func.isRequried\n// }\n\n\n\n\n//# sourceURL=webpack:///./src/freeCell/components/RightMenu.js?");
+
+/***/ }),
+
+/***/ "./src/freeCell/constants/constants.js":
+/*!*********************************************!*\
+  !*** ./src/freeCell/constants/constants.js ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var GET_INIT_CARDLINES = 'GET_INIT_CARDLINES';\nvar UPDATE_MISSION_TIME = 'UPDATE_MISSION_TIME';\nvar UPDATE_CURRENT_MISSION = 'UPDATE_CURRENT_MISSION';\nvar UPDATE_BREAK_STATUS = 'UPDATE_BREAK_STATUS';\nvar UPDATE_RINGTONES = 'UPDATE_RINGTONES';\nmodule.exports = {\n  GET_INIT_CARDLINES: GET_INIT_CARDLINES,\n  UPDATE_MISSION_TIME: UPDATE_MISSION_TIME,\n  UPDATE_CURRENT_MISSION: UPDATE_CURRENT_MISSION,\n  UPDATE_BREAK_STATUS: UPDATE_BREAK_STATUS,\n  UPDATE_RINGTONES: UPDATE_RINGTONES\n};\n\n//# sourceURL=webpack:///./src/freeCell/constants/constants.js?");
+
+/***/ }),
+
+/***/ "./src/freeCell/image/freeCell_logo.png":
+/*!**********************************************!*\
+  !*** ./src/freeCell/image/freeCell_logo.png ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/image/freeCell_logo.png\";\n\n//# sourceURL=webpack:///./src/freeCell/image/freeCell_logo.png?");
+
+/***/ }),
+
+/***/ "./src/freeCell/image/hint.png":
+/*!*************************************!*\
+  !*** ./src/freeCell/image/hint.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/image/hint.png\";\n\n//# sourceURL=webpack:///./src/freeCell/image/hint.png?");
+
+/***/ }),
+
+/***/ "./src/freeCell/image/newGame.svg":
+/*!****************************************!*\
+  !*** ./src/freeCell/image/newGame.svg ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/image/newGame.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/image/newGame.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/image/undo.png":
+/*!*************************************!*\
+  !*** ./src/freeCell/image/undo.png ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/image/undo.png\";\n\n//# sourceURL=webpack:///./src/freeCell/image/undo.png?");
+
+/***/ }),
+
+/***/ "./src/freeCell/index.js":
+/*!*******************************!*\
+  !*** ./src/freeCell/index.js ***!
+  \*******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./actions */ \"./src/freeCell/actions/index.js\");\n/* harmony import */ var _components_GameArea__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/GameArea */ \"./src/freeCell/components/GameArea.js\");\n/* harmony import */ var _components_RightMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/RightMenu */ \"./src/freeCell/components/RightMenu.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/esm/react-router-dom.js\");\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./index.scss */ \"./src/freeCell/index.scss\");\n/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _image_freeCell_logo_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./image/freeCell_logo.png */ \"./src/freeCell/image/freeCell_logo.png\");\n/* harmony import */ var _image_freeCell_logo_png__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_image_freeCell_logo_png__WEBPACK_IMPORTED_MODULE_8__);\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n\n\n\n\n\n\n\n\nvar FreeCell =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(FreeCell, _Component);\n\n  function FreeCell(props) {\n    var _this;\n\n    _classCallCheck(this, FreeCell);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(FreeCell).call(this, props));\n    _this.handleChange = _this.handleChange.bind(_assertThisInitialized(_this));\n    _this.handleRefreshClick = _this.handleRefreshClick.bind(_assertThisInitialized(_this));\n    _this.handleDetailPage = _this.handleDetailPage.bind(_assertThisInitialized(_this));\n    _this.handleAdd = _this.handleAdd.bind(_assertThisInitialized(_this));\n    _this.state = {\n      showDetail: false,\n      detailType: 0\n    };\n    return _this;\n  }\n\n  _createClass(FreeCell, [{\n    key: \"componentDidMount\",\n    value: function componentDidMount() {} // const { dispatch, selectedSubreddit } = this.props\n    // dispatch(fetchPostsIfNeeded(selectedSubreddit))\n    // componentWillReceiveProps(nextProps) {\n    // \tif (nextProps.selectedSubreddit !== this.props.selectedSubreddit) {\n    // \t\tconst { dispatch, selectedSubreddit } = nextProps\n    // \t\tdispatch(fetchPostsIfNeeded(selectedSubreddit))\n    // \t}\n    // }\n    // replace componentWillReceiveProps at react16\n\n  }, {\n    key: \"handleChange\",\n    value: function handleChange(nextSubreddit) {// this.props.dispatch(selectSubreddit(nextSubreddit))\n    }\n  }, {\n    key: \"handleRefreshClick\",\n    value: function handleRefreshClick(e) {// e.preventDefault()\n      // const { dispatch, selectedSubreddit } = this.props\n      // dispatch(invalidateSubreddit(selectedSubreddit))\n      // dispatch(fetchPostsIfNeeded(selectedSubreddit))\n    }\n  }, {\n    key: \"handleDetailPage\",\n    value: function handleDetailPage(status) {\n      var type = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;\n      this.setState({\n        showDetail: status,\n        detailType: type\n      });\n    }\n  }, {\n    key: \"handleAdd\",\n    value: function handleAdd(newMission) {// this.props.handleAdd(newMission);\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      var _this$props = this.props,\n          cards = _this$props.cards,\n          cardLines = _this$props.cardLines;\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"main d-flex justify-content-between\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"mainArea flex-fill\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"header d-flex justify-content-between align-items-center flex-wrap\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"leftSide\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"img\", {\n        src: _image_freeCell_logo_png__WEBPACK_IMPORTED_MODULE_8___default.a,\n        width: \"50vw\"\n      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", null, \"#6384730\")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"rightSide d-flex\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"time\"\n      }, \"Time: 00:00\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"score\"\n      }, \"Score: 00\"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_GameArea__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n        cardLines: cardLines\n      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_RightMenu__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null));\n    }\n  }], [{\n    key: \"getDerivedStateFromProps\",\n    value: function getDerivedStateFromProps(props, state) {// if (!state.missionReducer) return null;\n      // if (props.missionReducer !== state.missionReducer) {\n      // \tconst { dispatch, selectedSubreddit } = props\n      // \tdispatch(fetchPostsIfNeeded(selectedSubreddit))\n      // \treturn null;\n      // }\t\t\n    }\n  }]);\n\n  return FreeCell;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]); // FreeCell.propTypes = {\n// \tbreakTime: PropTypes.object.isRequired,\n// \tmissions: PropTypes.array.isRequired,\n// \tringtones: PropTypes.object.isRequired\n// }\n\n\nfunction mapStateToProps(state) {\n  var _state$freeCellReduce = state.freeCellReducer,\n      cards = _state$freeCellReduce.cards,\n      cardLines = _state$freeCellReduce.cardLines;\n  return {\n    cards: cards,\n    cardLines: cardLines\n  };\n} //for connect\n\n\nvar mapDispatchToProps = function mapDispatchToProps(dispatch) {\n  return {// getInitCardLines: () => dispatch(getInitCardLines())\n  };\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_6__[\"withRouter\"])(Object(react_redux__WEBPACK_IMPORTED_MODULE_1__[\"connect\"])(mapStateToProps, mapDispatchToProps)(FreeCell)));\n\n//# sourceURL=webpack:///./src/freeCell/index.js?");
+
+/***/ }),
+
+/***/ "./src/freeCell/index.scss":
+/*!*********************************!*\
+  !*** ./src/freeCell/index.scss ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("\nvar content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-1!../../node_modules/sass-loader/lib/loader.js!./index.scss */ \"./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/lib/loader.js!./src/freeCell/index.scss\");\n\nif(typeof content === 'string') content = [[module.i, content, '']];\n\nvar transform;\nvar insertInto;\n\n\n\nvar options = {\"hmr\":true}\n\noptions.transform = transform\noptions.insertInto = undefined;\n\nvar update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ \"./node_modules/style-loader/lib/addStyles.js\")(content, options);\n\nif(content.locals) module.exports = content.locals;\n\nif(true) {\n\tmodule.hot.accept(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-1!../../node_modules/sass-loader/lib/loader.js!./index.scss */ \"./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/lib/loader.js!./src/freeCell/index.scss\", function() {\n\t\tvar newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--5-1!../../node_modules/sass-loader/lib/loader.js!./index.scss */ \"./node_modules/css-loader/dist/cjs.js?!./node_modules/sass-loader/lib/loader.js!./src/freeCell/index.scss\");\n\n\t\tif(typeof newContent === 'string') newContent = [[module.i, newContent, '']];\n\n\t\tvar locals = (function(a, b) {\n\t\t\tvar key, idx = 0;\n\n\t\t\tfor(key in a) {\n\t\t\t\tif(!b || a[key] !== b[key]) return false;\n\t\t\t\tidx++;\n\t\t\t}\n\n\t\t\tfor(key in b) idx--;\n\n\t\t\treturn idx === 0;\n\t\t}(content.locals, newContent.locals));\n\n\t\tif(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');\n\n\t\tupdate(newContent);\n\t});\n\n\tmodule.hot.dispose(function() { update(); });\n}\n\n//# sourceURL=webpack:///./src/freeCell/index.scss?");
+
+/***/ }),
+
+/***/ "./src/freeCell/reducers/index.js":
+/*!****************************************!*\
+  !*** ./src/freeCell/reducers/index.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ \"./node_modules/redux/es/redux.js\");\n/* harmony import */ var _constants_constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants/constants */ \"./src/freeCell/constants/constants.js\");\n/* harmony import */ var _constants_constants__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_constants_constants__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\nvar getCards = function getCards() {\n  var cards = [];\n\n  for (var i = 1; i <= 13; i++) {\n    cards.push({\n      name: 'cc_' + i,\n      currentPosition: null,\n      lastPosition: null,\n      lastOrder: 0\n    });\n    cards.push({\n      name: 'ca_' + i,\n      currentPosition: null,\n      lastPosition: null,\n      lastOrder: 0\n    });\n    cards.push({\n      name: 'tr_' + i,\n      currentPosition: null,\n      lastPosition: null,\n      lastOrder: 0\n    });\n    cards.push({\n      name: 'pi_' + i,\n      currentPosition: null,\n      lastPosition: null,\n      lastOrder: 0\n    });\n  }\n\n  return cards;\n};\n\nvar initialState = {\n  cards: getCards(),\n  cardLines: {\n    line1: [],\n    line2: [],\n    line3: [],\n    line4: [],\n    line5: [],\n    line6: [],\n    line7: [],\n    line8: []\n  }\n};\n\nvar cardLines = function cardLines() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState.cardLines;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    case _constants_constants__WEBPACK_IMPORTED_MODULE_1__[\"GET_INIT_CARDLINES\"]:\n      return Object.assign({}, state, action.cardLines);\n    // case UPDATE_MISSION_TIME:\n    // \treturn state.map((todo, i) => \n    // \t\ti === action.index ? (action.time === 1500 ? { ...todo, completedTime: action.time, current: false} : { ...todo, completedTime: action.time}) : todo\n    // \t)\t\t\n\n    default:\n      return state;\n  }\n};\n\nvar cards = function cards() {\n  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState.cards;\n  var action = arguments.length > 1 ? arguments[1] : undefined;\n\n  switch (action.type) {\n    // case UPDATE_MISSION_TIME:\n    // \treturn state.map((todo, i) => \n    // \t\ti === action.index ? (action.time === 1500 ? { ...todo, completedTime: action.time, current: false} : { ...todo, completedTime: action.time}) : todo\n    // \t)\t\t\n    default:\n      return state;\n  }\n};\n\nvar freeCellReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__[\"combineReducers\"])({\n  cards: cards,\n  cardLines: cardLines\n});\n/* harmony default export */ __webpack_exports__[\"default\"] = (freeCellReducer);\n\n//# sourceURL=webpack:///./src/freeCell/reducers/index.js?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_1.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_1.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_1.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_1.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_10.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_10.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_10.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_10.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_11.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_11.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_11.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_11.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_12.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_12.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_12.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_12.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_13.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_13.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_13.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_13.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_2.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_2.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_2.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_2.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_3.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_3.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_3.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_3.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_4.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_4.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_4.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_4.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_5.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_5.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_5.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_5.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_6.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_6.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_6.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_6.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_7.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_7.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_7.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_7.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_8.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_8.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_8.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_8.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/ca_9.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/ca_9.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/ca_9.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/ca_9.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_1.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_1.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_1.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_1.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_10.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_10.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_10.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_10.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_11.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_11.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_11.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_11.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_12.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_12.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_12.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_12.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_13.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_13.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_13.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_13.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_2.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_2.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_2.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_2.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_3.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_3.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_3.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_3.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_4.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_4.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_4.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_4.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_5.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_5.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_5.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_5.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_6.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_6.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_6.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_6.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_7.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_7.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_7.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_7.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_8.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_8.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_8.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_8.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/cc_9.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/cc_9.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/cc_9.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/cc_9.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_1.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_1.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_1.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_1.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_10.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_10.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_10.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_10.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_11.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_11.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_11.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_11.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_12.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_12.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_12.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_12.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_13.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_13.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_13.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_13.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_2.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_2.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_2.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_2.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_3.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_3.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_3.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_3.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_4.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_4.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_4.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_4.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_5.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_5.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_5.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_5.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_6.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_6.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_6.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_6.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_7.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_7.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_7.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_7.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_8.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_8.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_8.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_8.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/pi_9.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/pi_9.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/pi_9.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/pi_9.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_1.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_1.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_1.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_1.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_10.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_10.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_10.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_10.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_11.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_11.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_11.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_11.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_12.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_12.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_12.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_12.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_13.svg":
+/*!******************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_13.svg ***!
+  \******************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_13.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_13.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_2.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_2.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_2.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_2.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_3.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_3.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_3.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_3.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_4.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_4.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_4.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_4.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_5.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_5.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_5.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_5.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_6.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_6.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_6.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_6.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_7.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_7.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_7.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_7.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_8.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_8.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_8.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_8.svg?");
+
+/***/ }),
+
+/***/ "./src/freeCell/svg/Cards/tr_9.svg":
+/*!*****************************************!*\
+  !*** ./src/freeCell/svg/Cards/tr_9.svg ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = \"dist/freeCell/svg/tr_9.svg\";\n\n//# sourceURL=webpack:///./src/freeCell/svg/Cards/tr_9.svg?");
 
 /***/ }),
 
@@ -8434,7 +9155,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Ringtones; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_sound__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-sound */ \"./node_modules/react-sound/lib/index.js\");\n/* harmony import */ var react_sound__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_sound__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../actions */ \"./src/tomatoClock/actions/index.js\");\n/* harmony import */ var _ringtones_Alarm_mp3__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ringtones/Alarm.mp3 */ \"./src/tomatoClock/ringtones/Alarm.mp3\");\n/* harmony import */ var _ringtones_Alarm_mp3__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Alarm_mp3__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _ringtones_Alert_mp3__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ringtones/Alert.mp3 */ \"./src/tomatoClock/ringtones/Alert.mp3\");\n/* harmony import */ var _ringtones_Alert_mp3__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Alert_mp3__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _ringtones_Beep_mp3__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ringtones/Beep.mp3 */ \"./src/tomatoClock/ringtones/Beep.mp3\");\n/* harmony import */ var _ringtones_Beep_mp3__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Beep_mp3__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _ringtones_Bell_mp3__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ringtones/Bell.mp3 */ \"./src/tomatoClock/ringtones/Bell.mp3\");\n/* harmony import */ var _ringtones_Bell_mp3__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Bell_mp3__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _ringtones_Bugle_mp3__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ringtones/Bugle.mp3 */ \"./src/tomatoClock/ringtones/Bugle.mp3\");\n/* harmony import */ var _ringtones_Bugle_mp3__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Bugle_mp3__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var _ringtones_Clock_mp3__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ringtones/Clock.mp3 */ \"./src/tomatoClock/ringtones/Clock.mp3\");\n/* harmony import */ var _ringtones_Clock_mp3__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Clock_mp3__WEBPACK_IMPORTED_MODULE_9__);\n/* harmony import */ var _ringtones_Digital_mp3__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../ringtones/Digital.mp3 */ \"./src/tomatoClock/ringtones/Digital.mp3\");\n/* harmony import */ var _ringtones_Digital_mp3__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Digital_mp3__WEBPACK_IMPORTED_MODULE_10__);\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar Ringtones =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(Ringtones, _Component);\n\n  function Ringtones(props) {\n    var _this;\n\n    _classCallCheck(this, Ringtones);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(Ringtones).call(this, props));\n    _this.handleControlSound = _this.handleControlSound.bind(_assertThisInitialized(_this));\n    _this.state = {\n      playStatus: 'stop',\n      playId: 0\n    };\n    return _this;\n  }\n\n  _createClass(Ringtones, [{\n    key: \"handleControlSound\",\n    value: function handleControlSound(id, status) {\n      this.setState({\n        playStatus: status,\n        playId: id\n      });\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      // const { value, onChange, options} = this.props\n      var ringtones_option = [{\n        name: 'none',\n        ringtone: ''\n      }, {\n        name: 'default',\n        ringtone: 'alarm'\n      }, {\n        name: 'alert',\n        ringtone: 'alert'\n      }, {\n        name: 'beep',\n        ringtone: 'beep'\n      }, {\n        name: 'bell',\n        ringtone: 'bell'\n      }, {\n        name: 'bugle',\n        ringtone: 'bugle'\n      }, {\n        name: 'clock',\n        ringtone: 'clock'\n      }, {\n        name: 'digital',\n        ringtone: 'digital'\n      }];\n      var self = this;\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"section_ringtones\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"ringtones_work\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"tab\"\n      }, \"work\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"options d-flex align-items-center flex-wrap\"\n      }, ringtones_option.map(function (item, i) {\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n          key: i,\n          className: \"ringtone_option\"\n        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n          className: \"material-icons\",\n          onClick: function onClick() {\n            return self.handleControlSound(i, 'play');\n          }\n        }, \"radio_button_unchecked\"), item.name, item.name !== \"none\" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_sound__WEBPACK_IMPORTED_MODULE_2___default.a, {\n          url: \"./dist/ringtones/\".concat(item.ringtone, \".mp3\"),\n          playStatus: \"\".concat(self.state.playId === i && self.state.playStatus == 'play' ? react_sound__WEBPACK_IMPORTED_MODULE_2___default.a.status.PLAYING : react_sound__WEBPACK_IMPORTED_MODULE_2___default.a.status.STOPPED),\n          onPlaying: function onPlaying(_ref) {\n            var position = _ref.position,\n                duration = _ref.duration;\n\n            if (position >= 5000) {\n              self.handleControlSound(i, 'stop');\n            }\n          }\n        }));\n      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"ringtones_break\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"tab\"\n      }, \"break\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"options d-flex align-items-center flex-wrap\"\n      }, ringtones_option.map(function (item, i) {\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n          key: i,\n          className: \"ringtone_option\"\n        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n          className: \"material-icons\",\n          onClick: function onClick() {\n            return self.handleControlSound(i, 'play');\n          }\n        }, \"radio_button_unchecked\"), item.name, item.name !== \"none\" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_sound__WEBPACK_IMPORTED_MODULE_2___default.a, {\n          url: \"./dist/ringtones/\".concat(item.ringtone, \".mp3\"),\n          playStatus: \"\".concat(self.state.playId === i && self.state.playStatus == 'play' ? react_sound__WEBPACK_IMPORTED_MODULE_2___default.a.status.PLAYING : react_sound__WEBPACK_IMPORTED_MODULE_2___default.a.status.STOPPED),\n          onPlaying: function onPlaying(_ref2) {\n            var position = _ref2.position,\n                duration = _ref2.duration;\n\n            if (position >= 5000) {\n              self.handleControlSound(i, 'stop');\n            }\n          }\n        }));\n      }))));\n    }\n  }]);\n\n  return Ringtones;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]); // DetailPage.propTypes = {\n// \toptions: PropTypes.arrayOf(\n// \t\tPropTypes.string.isRequried\n// \t).isRequried,\t\n// \tvalue: PropTypes.string.isRequried,\n// \tonChange: PropTypes.func.isRequried\n// }\n\n\n\n\n//# sourceURL=webpack:///./src/tomatoClock/components/Ringtones.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Ringtones; });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ \"./node_modules/prop-types/index.js\");\n/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react_sound__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-sound */ \"./node_modules/react-sound/lib/index.js\");\n/* harmony import */ var react_sound__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_sound__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../actions */ \"./src/tomatoClock/actions/index.js\");\n/* harmony import */ var _ringtones_Alarm_mp3__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../ringtones/Alarm.mp3 */ \"./src/tomatoClock/ringtones/Alarm.mp3\");\n/* harmony import */ var _ringtones_Alarm_mp3__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Alarm_mp3__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _ringtones_Alert_mp3__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../ringtones/Alert.mp3 */ \"./src/tomatoClock/ringtones/Alert.mp3\");\n/* harmony import */ var _ringtones_Alert_mp3__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Alert_mp3__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _ringtones_Beep_mp3__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../ringtones/Beep.mp3 */ \"./src/tomatoClock/ringtones/Beep.mp3\");\n/* harmony import */ var _ringtones_Beep_mp3__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Beep_mp3__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _ringtones_Bell_mp3__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../ringtones/Bell.mp3 */ \"./src/tomatoClock/ringtones/Bell.mp3\");\n/* harmony import */ var _ringtones_Bell_mp3__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Bell_mp3__WEBPACK_IMPORTED_MODULE_7__);\n/* harmony import */ var _ringtones_Bugle_mp3__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../ringtones/Bugle.mp3 */ \"./src/tomatoClock/ringtones/Bugle.mp3\");\n/* harmony import */ var _ringtones_Bugle_mp3__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Bugle_mp3__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var _ringtones_Clock_mp3__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ringtones/Clock.mp3 */ \"./src/tomatoClock/ringtones/Clock.mp3\");\n/* harmony import */ var _ringtones_Clock_mp3__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Clock_mp3__WEBPACK_IMPORTED_MODULE_9__);\n/* harmony import */ var _ringtones_Digital_mp3__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../ringtones/Digital.mp3 */ \"./src/tomatoClock/ringtones/Digital.mp3\");\n/* harmony import */ var _ringtones_Digital_mp3__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_ringtones_Digital_mp3__WEBPACK_IMPORTED_MODULE_10__);\nfunction _typeof(obj) { if (typeof Symbol === \"function\" && typeof Symbol.iterator === \"symbol\") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === \"function\" && obj.constructor === Symbol && obj !== Symbol.prototype ? \"symbol\" : typeof obj; }; } return _typeof(obj); }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nfunction _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === \"object\" || typeof call === \"function\")) { return call; } return _assertThisInitialized(self); }\n\nfunction _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }\n\nfunction _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError(\"this hasn't been initialised - super() hasn't been called\"); } return self; }\n\nfunction _inherits(subClass, superClass) { if (typeof superClass !== \"function\" && superClass !== null) { throw new TypeError(\"Super expression must either be null or a function\"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }\n\nfunction _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar Ringtones =\n/*#__PURE__*/\nfunction (_Component) {\n  _inherits(Ringtones, _Component);\n\n  function Ringtones(props) {\n    var _this;\n\n    _classCallCheck(this, Ringtones);\n\n    _this = _possibleConstructorReturn(this, _getPrototypeOf(Ringtones).call(this, props));\n    _this.handleControlSound = _this.handleControlSound.bind(_assertThisInitialized(_this));\n    _this.state = {\n      playStatus: 'stop',\n      playId: 0\n    };\n    return _this;\n  }\n\n  _createClass(Ringtones, [{\n    key: \"handleControlSound\",\n    value: function handleControlSound(id, status) {\n      this.setState({\n        playStatus: status,\n        playId: id\n      });\n    }\n  }, {\n    key: \"render\",\n    value: function render() {\n      // const { value, onChange, options} = this.props\n      var ringtones_option = [{\n        name: 'none',\n        ringtone: ''\n      }, {\n        name: 'default',\n        ringtone: 'alarm'\n      }, {\n        name: 'alert',\n        ringtone: 'alert'\n      }, {\n        name: 'beep',\n        ringtone: 'beep'\n      }, {\n        name: 'bell',\n        ringtone: 'bell'\n      }, {\n        name: 'bugle',\n        ringtone: 'bugle'\n      }, {\n        name: 'clock',\n        ringtone: 'clock'\n      }, {\n        name: 'digital',\n        ringtone: 'digital'\n      }];\n      var self = this;\n      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"section_ringtones\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"ringtones_work\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"tab\"\n      }, \"work\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"options d-flex align-items-center flex-wrap\"\n      }, ringtones_option.map(function (item, i) {\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n          key: i,\n          className: \"ringtone_option\"\n        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n          className: \"material-icons\",\n          onClick: function onClick() {\n            return self.handleControlSound(i, 'play');\n          }\n        }, \"radio_button_unchecked\"), item.name, item.name !== \"none\" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_sound__WEBPACK_IMPORTED_MODULE_2___default.a, {\n          url: \"./dist/tomatoClock/ringtones/\".concat(item.ringtone, \".mp3\"),\n          playStatus: \"\".concat(self.state.playId === i && self.state.playStatus == 'play' ? react_sound__WEBPACK_IMPORTED_MODULE_2___default.a.status.PLAYING : react_sound__WEBPACK_IMPORTED_MODULE_2___default.a.status.STOPPED),\n          onPlaying: function onPlaying(_ref) {\n            var position = _ref.position,\n                duration = _ref.duration;\n\n            if (position >= 5000) {\n              self.handleControlSound(i, 'stop');\n            }\n          }\n        }));\n      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"ringtones_break\"\n      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"tab\"\n      }, \"break\"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n        className: \"options d-flex align-items-center flex-wrap\"\n      }, ringtones_option.map(function (item, i) {\n        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n          key: i,\n          className: \"ringtone_option\"\n        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"i\", {\n          className: \"material-icons\",\n          onClick: function onClick() {\n            return self.handleControlSound(i, 'play');\n          }\n        }, \"radio_button_unchecked\"), item.name, item.name !== \"none\" && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_sound__WEBPACK_IMPORTED_MODULE_2___default.a, {\n          url: \"./dist/tomatoClock/ringtones/\".concat(item.ringtone, \".mp3\"),\n          playStatus: \"\".concat(self.state.playId === i && self.state.playStatus == 'play' ? react_sound__WEBPACK_IMPORTED_MODULE_2___default.a.status.PLAYING : react_sound__WEBPACK_IMPORTED_MODULE_2___default.a.status.STOPPED),\n          onPlaying: function onPlaying(_ref2) {\n            var position = _ref2.position,\n                duration = _ref2.duration;\n\n            if (position >= 5000) {\n              self.handleControlSound(i, 'stop');\n            }\n          }\n        }));\n      }))));\n    }\n  }]);\n\n  return Ringtones;\n}(react__WEBPACK_IMPORTED_MODULE_0__[\"Component\"]); // DetailPage.propTypes = {\n// \toptions: PropTypes.arrayOf(\n// \t\tPropTypes.string.isRequried\n// \t).isRequried,\t\n// \tvalue: PropTypes.string.isRequried,\n// \tonChange: PropTypes.func.isRequried\n// }\n\n\n\n\n//# sourceURL=webpack:///./src/tomatoClock/components/Ringtones.js?");
 
 /***/ }),
 
@@ -8503,7 +9224,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var redu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"dist/ringtones/Alarm.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Alarm.mp3?");
+eval("module.exports = \"dist/tomatoClock/ringtones/Alarm.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Alarm.mp3?");
 
 /***/ }),
 
@@ -8514,7 +9235,7 @@ eval("module.exports = \"dist/ringtones/Alarm.mp3\";\n\n//# sourceURL=webpack://
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"dist/ringtones/Alert.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Alert.mp3?");
+eval("module.exports = \"dist/tomatoClock/ringtones/Alert.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Alert.mp3?");
 
 /***/ }),
 
@@ -8525,7 +9246,7 @@ eval("module.exports = \"dist/ringtones/Alert.mp3\";\n\n//# sourceURL=webpack://
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"dist/ringtones/Beep.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Beep.mp3?");
+eval("module.exports = \"dist/tomatoClock/ringtones/Beep.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Beep.mp3?");
 
 /***/ }),
 
@@ -8536,7 +9257,7 @@ eval("module.exports = \"dist/ringtones/Beep.mp3\";\n\n//# sourceURL=webpack:///
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"dist/ringtones/Bell.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Bell.mp3?");
+eval("module.exports = \"dist/tomatoClock/ringtones/Bell.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Bell.mp3?");
 
 /***/ }),
 
@@ -8547,7 +9268,7 @@ eval("module.exports = \"dist/ringtones/Bell.mp3\";\n\n//# sourceURL=webpack:///
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"dist/ringtones/Bugle.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Bugle.mp3?");
+eval("module.exports = \"dist/tomatoClock/ringtones/Bugle.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Bugle.mp3?");
 
 /***/ }),
 
@@ -8558,7 +9279,7 @@ eval("module.exports = \"dist/ringtones/Bugle.mp3\";\n\n//# sourceURL=webpack://
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"dist/ringtones/Clock.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Clock.mp3?");
+eval("module.exports = \"dist/tomatoClock/ringtones/Clock.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Clock.mp3?");
 
 /***/ }),
 
@@ -8569,7 +9290,7 @@ eval("module.exports = \"dist/ringtones/Clock.mp3\";\n\n//# sourceURL=webpack://
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("module.exports = \"dist/ringtones/Digital.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Digital.mp3?");
+eval("module.exports = \"dist/tomatoClock/ringtones/Digital.mp3\";\n\n//# sourceURL=webpack:///./src/tomatoClock/ringtones/Digital.mp3?");
 
 /***/ })
 

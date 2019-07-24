@@ -54,7 +54,7 @@ export default class Ringtones extends Component {
 					<div key={i} className="ringtone_option">
 						<i className="material-icons" onClick={() => self.handleControlSound(i, 'play')}>radio_button_unchecked</i>{item.name}
 						{item.name !== "none" && 
-							<Sound url={`./dist/ringtones/${item.ringtone}.mp3`} playStatus={`${self.state.playId === i && self.state.playStatus == 'play' ? Sound.status.PLAYING : Sound.status.STOPPED}`} 
+							<Sound url={`./dist/tomatoClock/ringtones/${item.ringtone}.mp3`} playStatus={`${self.state.playId === i && self.state.playStatus == 'play' ? Sound.status.PLAYING : Sound.status.STOPPED}`} 
 							onPlaying={({position,duration}) => { 
 								if(position>=5000) {self.handleControlSound(i,'stop')}}}/>
 						}
@@ -70,7 +70,7 @@ export default class Ringtones extends Component {
 					<div key={i} className="ringtone_option">
 						<i className="material-icons" onClick={() => self.handleControlSound(i, 'play')}>radio_button_unchecked</i>{item.name}
 						{item.name !== "none" && 
-							<Sound url={`./dist/ringtones/${item.ringtone}.mp3`} playStatus={`${self.state.playId === i && self.state.playStatus == 'play' ? Sound.status.PLAYING : Sound.status.STOPPED}`} 
+							<Sound url={`./dist/tomatoClock/ringtones/${item.ringtone}.mp3`} playStatus={`${self.state.playId === i && self.state.playStatus == 'play' ? Sound.status.PLAYING : Sound.status.STOPPED}`} 
 							onPlaying={({position,duration}) => { 
 								if(position>=5000) {self.handleControlSound(i,'stop')}}}/>
 						}
