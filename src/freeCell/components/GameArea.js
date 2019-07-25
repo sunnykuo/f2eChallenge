@@ -2,8 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { withRouter } from "react-router-dom"
-import '../components/Cards'
+import '../components/CardsResource'
 import { getInitCardLines } from '../actions'
+import Card from '../components/Card'
 
 
 class GameArea extends Component {
@@ -21,10 +22,6 @@ class GameArea extends Component {
 	render() {
 		const { cardLines } = this.props
 		if (cardLines.length === 0) return;
-		let cardComponent = [];
-		for (let key in cardLines) {
-			cardComponent.push(<CardComponent key={key} line={key} cards={cardLines[key]} />)
-		}
 	return(
 		<div className="gameArea">
 			<div className="gameArea_head d-flex justify-content-between flex-wrap">
@@ -42,24 +39,14 @@ class GameArea extends Component {
 				</div>
 			</div>
 			<div className="gameArea_card d-flex">
-			{cardComponent}										
+			{Object.keys(cardLines).map((lineKey, index) => {
+					return <Card lineIndex={index} key={lineKey} line={lineKey} cards={cardLines[lineKey]} />
+				})				
+			}	
+								
 			</div>						
 		</div>
 )}
-}
-
-class CardComponent extends Component {
-	render() {
-		const { line, cards } = this.props;
-		let topPosition = 0;
-	return (
-		<div ref={line} className="cardline">
-			{cards.map((card, index) => {
-				topPosition += 25
-				return <div key={index} className="card" style={{top: `${topPosition}px`}}><img src={`./dist/freeCell/svg/${card.name}.svg`} width="100%" /></div>
-			})}
-		</div>
-	)}
 }
 
 // DetailPage.propTypes = {

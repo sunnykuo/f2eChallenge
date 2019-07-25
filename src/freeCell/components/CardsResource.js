@@ -1,9 +1,3 @@
-// for (let i=1; i <=13; i++) {
-// 	import `cc_${i}` from `../svg/Cards/cc_${i}.svg`
-// 	import `ca_${i}` from `../svg/Cards/ca_${i}.svg`
-// 	import `pi_${i}` from `../svg/Cards/cc_${i}.svg`
-// 	import `tr_${i}` from `../svg/Cards/cc_${i}.svg`
-// }
 import tr_1 from '../svg/Cards/tr_1.svg'
 import tr_2 from '../svg/Cards/tr_2.svg'
 import tr_3 from '../svg/Cards/tr_3.svg'
@@ -59,3 +53,5 @@ import ca_10 from '../svg/Cards/ca_10.svg'
 import ca_11 from '../svg/Cards/ca_11.svg'
 import ca_12 from '../svg/Cards/ca_12.svg'
 import ca_13 from '../svg/Cards/ca_13.svg'
+
+

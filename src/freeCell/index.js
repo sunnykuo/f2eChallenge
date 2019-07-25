@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { addMission, updateBreakStatus } from './actions'
 import GameArea from './components/GameArea'
 import RightMenu from './components/RightMenu'
+import Popup from './components/Popup'
 import PropTypes from 'prop-types'
 import { withRouter } from "react-router-dom"
 import './index.scss'
@@ -17,7 +18,8 @@ class FreeCell extends Component {
 		this.handleAdd = this.handleAdd.bind(this)
 		this.state = {
 			showDetail: false,
-			detailType: 0
+			detailType: 0,
+			result: ''
 		}
 	}
 
@@ -84,6 +86,9 @@ class FreeCell extends Component {
 					<GameArea cardLines={cardLines} />
 				</div>					
 				<RightMenu />
+				{this.state.result !== "" &&
+					<Popup type={this.state.result} />
+				}
 			</div>
 		)
 	}
