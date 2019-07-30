@@ -9,6 +9,11 @@ import { withRouter } from "react-router-dom"
 import './index.scss'
 import freeCellLogo from './image/freeCell_logo.png'
 
+import { compose } from 'redux'
+// import { DragDropContext } from 'react-dnd'
+import DragDropContext from 'react-dnd/lib/cjs/DragDropContext.js'
+import HTML5Backend from 'react-dnd-html5-backend'
+
 class FreeCell extends Component {
 	constructor(props) {
 		super(props)
@@ -83,7 +88,7 @@ class FreeCell extends Component {
 							<div className="score">Score: 00</div>
 						</div>
 					</div>
-					<GameArea cardLines={cardLines} />
+					<GameArea cardLines={cardLines}/>
 				</div>					
 				<RightMenu />
 				{this.state.result !== "" &&
@@ -113,4 +118,9 @@ const mapDispatchToProps = dispatch => ({
 	// getInitCardLines: () => dispatch(getInitCardLines())
 });
 
-export default withRouter(connect(mapStateToProps,mapDispatchToProps)(FreeCell));
+export default withRouter(compose(
+	DragDropContext(HTML5Backend),
+	connect(mapStateToProps)
+)(FreeCell))
+// export default withRouter(connect(mapStateToProps)(FreeCell));
+
