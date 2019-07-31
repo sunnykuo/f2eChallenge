@@ -1,0 +1,67 @@
+.mp3Player {
+	.controlArea {
+		background-image: url(./image/player_background.png);
+	    background-size: cover;
+	    position: fixed;
+	    bottom: 0;	
+		width: 100vw;
+		height: 90px;
+		color: #707070;
+		font-size: 14px;
+		padding: 0 5vw;
+
+		img {
+			width: 30px;
+		}
+
+		.albumInfo {
+			width: 20vw;
+			.photo {
+				width: 50px;
+				margin-right: 2vw;
+				img {
+					width: 100%;
+				}
+			}
+			.albumName {
+				text-transform: initial;
+			}
+		}
+
+		.control {
+			width: 80vw;
+			div {
+				margin: 0 1vw;
+			}
+
+			.progressbar {
+			    width: 25vw;
+			    position: relative;
+			    height: 3px;
+			    background: rgba(112,112,112,.4);
+			    border-radius: 10px;
+			    &:after {
+			    	position: absolute;
+			    	content: '';
+			    	width: 40%;
+			    	top: 0;
+			    	left: 0;
+			    	background: #707070;
+			    	height: 3px;
+			    	border-radius: 10px;
+			    }					
+				img {
+				    position: absolute;
+				    width: 3px;
+				    top: -2.5px;	
+				    left: 40%;				
+				}				    
+			}			
+			.volume {
+				.progressbar {
+					width: 8vw;
+				}
+			}
+		}
+	}
+}

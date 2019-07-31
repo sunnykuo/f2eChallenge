@@ -1,0 +1,11 @@
+.mp3Player {
+	&.main {
+		background-color: #FCFBF6;
+		width: 100vw;
+		height: calc(100vh + 300px);
+		position: relative;
+	    text-transform: uppercase;
+	    font-weight: bold;
+	    overflow: auto;
+	}
+}

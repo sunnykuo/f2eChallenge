@@ -1,20 +1,14 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addMission, updateBreakStatus } from './actions'
-import GameArea from './components/GameArea'
-import RightMenu from './components/RightMenu'
-import Popup from './components/Popup'
+import Content from './components/Content'
+import Header from './components/Header' 
+import ControlArea from './components/ControlArea'
 import PropTypes from 'prop-types'
 import { withRouter } from "react-router-dom"
 import './index.scss'
-import freeCellLogo from './image/freeCell_logo.png'
 
-import { compose } from 'redux'
-// import { DragDropContext } from 'react-dnd'
-import DragDropContext from 'react-dnd/lib/cjs/DragDropContext.js'
-import HTML5Backend from 'react-dnd-html5-backend'
-
-class FreeCell extends Component {
+class MP3Player extends Component {
 	constructor(props) {
 		super(props)
 		this.handleChange = this.handleChange.bind(this)
@@ -23,8 +17,7 @@ class FreeCell extends Component {
 		this.handleAdd = this.handleAdd.bind(this)
 		this.state = {
 			showDetail: false,
-			detailType: 0,
-			result: ''
+			detailType: 0
 		}
 	}
 
@@ -70,57 +63,39 @@ class FreeCell extends Component {
 	}	
 
 	handleAdd(newMission) {
-		// this.props.handleAdd(newMission);
+		this.props.handleAdd(newMission);
 	}
 
 	render() {
-		const { cards, cardLines } = this.props
+		const { missions, breakTime, ringtones } = this.props
 		return (
-			<div className="main d-flex justify-content-between">
-				<div className="mainArea flex-fill">
-					<div className="header d-flex justify-content-between align-items-center flex-wrap">
-						<div className="leftSide">
-							<img src={freeCellLogo} width="50vw"/>
-							<span>#6384730</span>
-						</div>
-						<div className="rightSide d-flex">
-							<div className="time">Time: 00:00</div>
-							<div className="score">Score: 00</div>
-						</div>
-					</div>
-					<GameArea cardLines={cardLines}/>
-				</div>					
-				<RightMenu />
-				{this.state.result !== "" &&
-					<Popup type={this.state.result} />
-				}
+			<div className="mp3Player main">
+				<Header switchPage={this.handleDetailPage} handleAdd={this.handleAdd} missions={missions} breakTime={breakTime}/>
+				<Content />			
+				<ControlArea switchPage={this.handleDetailPage} />
 			</div>
 		)
 	}
 }
 
-// FreeCell.propTypes = {
-// 	breakTime: PropTypes.object.isRequired,
-// 	missions: PropTypes.array.isRequired,
-// 	ringtones: PropTypes.object.isRequired
-// }
+MP3Player.propTypes = {
+	breakTime: PropTypes.object.isRequired,
+	missions: PropTypes.array.isRequired,
+	ringtones: PropTypes.object.isRequired
+}
 
 function mapStateToProps(state) {
-	const { cards, cardLines } = state.freeCellReducer
+	const { breakTime, missions, ringtones } = state.mp3PlayerReducer
 	return {
-		cards,
-		cardLines	
+		breakTime,
+		missions,
+		ringtones	
 	}
 }
 
 //for connect
 const mapDispatchToProps = dispatch => ({
-	// getInitCardLines: () => dispatch(getInitCardLines())
+	handleAdd: newMission => dispatch(addMission(newMission))
 });
 
-export default withRouter(compose(
-	DragDropContext(HTML5Backend),
-	connect(mapStateToProps)
-)(FreeCell))
-// export default withRouter(connect(mapStateToProps)(FreeCell));
-
+export default withRouter(connect(mapStateToProps,mapDispatchToProps)(MP3Player));

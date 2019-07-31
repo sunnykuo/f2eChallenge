@@ -70,7 +70,7 @@ class TomatoClock extends Component {
 	render() {
 		const { missions, breakTime, ringtones } = this.props
 		return (
-			<div className="main d-flex justify-content-center align-items-center">
+			<div className="tomatoClock main d-flex justify-content-center align-items-center">
 				<MainTodos switchPage={this.handleDetailPage} handleAdd={this.handleAdd} missions={missions} breakTime={breakTime}/>
 				<RightMenu switchPage={this.handleDetailPage} />
 				<div className="progressArea">

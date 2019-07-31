@@ -6,7 +6,7 @@ import './App.scss'
 
 const store = configureStore()
 
-export default class Root extends Component {
+export default class App extends Component {
 	render(){
 		return (
 			<Provider store={store}>
