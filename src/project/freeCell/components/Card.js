@@ -32,15 +32,14 @@ class Card extends Component {
 		}
 	}
 
-	setCardAnimation(cardname, cardIndex, lineIndex) {
-		console.log('ttt')
+	setCardAnimation(cardname, cardIndex, lineIndex, cardlength) {
 		if (!this.state.init) return;
 		setTimeout(() => {
 			this.refs[cardname].style.top = cardIndex * 25 + 'px';
 			this.refs[cardname].style.opacity = 1;
 		}, cardIndex * lineIndex * 30)
 
-		if (lineIndex == 7 && cardIndex == this.props.cards.length-1) {
+		if (lineIndex == 7 && cardIndex == cardlength-1) {
 			this.setState({
 				init: false
 			})
@@ -50,16 +49,16 @@ class Card extends Component {
 	render() {
 		const { lineIndex, 
 				line, 
-				cards,
+				cardLines,
 				isDragging, // Injected by React DnD
 				connectDragPreview, // Injected by React DnD
 				connectDragSource, // Injected by React DnD			
 			} = this.props;
-			console.log(cards.length)
+
 	return connectDragSource(
 		<div id={line} className="cardline">
-			{cards.map((card, index) => {
-				setTimeout(() => this.setCardAnimation(card.name, index, lineIndex))			
+			{cardLines[line].map((card, index) => {
+				setTimeout(() => this.setCardAnimation(card.name, index, lineIndex, cardLines[line].length))			
 				return <div ref={card.name} key={index} className="card"><img src={`./dist/freeCell/svg/${card.name}.svg`} width="100%" /></div>
 			})}
 		</div>

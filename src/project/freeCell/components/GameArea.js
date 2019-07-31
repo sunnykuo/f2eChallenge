@@ -56,7 +56,6 @@ class GameArea extends Component {
 				connectDropTarget, // Injected by React DnD				
 			} = this.props
 		if (cardLines.length === 0) return;
-		console.log(cardLines.line1.length)
 	return connectDropTarget(
 		<div className="gameArea">
 			<div className="gameArea_head d-flex justify-content-between flex-wrap">
@@ -75,7 +74,7 @@ class GameArea extends Component {
 			</div>
 			<div className="gameArea_card d-flex">
 			{Object.keys(cardLines).map((lineKey, index) => {
-					return <Card lineIndex={index} key={lineKey} line={lineKey} cards={cardLines[lineKey]} />
+					return <Card lineIndex={index} key={lineKey} line={lineKey} cardLines={cardLines} />
 				})				
 			}					
 			</div>						
