@@ -15,10 +15,10 @@
 		.albumName {
 			color: #707070;
 			font-size: 20px;
-			margin: 5px 0;
+			margin: 8px 0;
 		}
 		.date {
-			margin-top: 5px;
+			margin-top: 8px;
 			font-size: 14px;
 		}
 		.musicVideo {
@@ -39,6 +39,9 @@
 	.song {
 		border-bottom: 1px solid #AEAEAE;
 		padding: 20px 10px;
+		.songInfo {
+			cursor: pointer;
+		}
 		.order {
 			color: #AEAEAE;
 			font-weight: normal;
@@ -52,12 +55,14 @@
 	}
 
 	.albumList {
+		margin-top: 50px;
 		.lists {
 			margin-top: 25px;
 			color: #707070;
 			text-align: center;
 			.album {
 				margin: 0 3%;
+				width: 20%;
 				&:first-child {
 					margin-left: 0; 
 				}

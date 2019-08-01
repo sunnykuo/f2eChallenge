@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import { addMission, updateMissionTime, updateCurrentMission, updateBreakStatus } from '../actions'
-import TimeFormat from 'hh-mm-ss'
+import { updateCurrentPage } from '../actions'
 import logoSvg from '../image/logo.svg'
 import memberSvg from '../svg/member.svg'
 

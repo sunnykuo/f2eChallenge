@@ -25,13 +25,13 @@ export default class ControlArea extends Component {
 				</div>							
 			</div>
 			<div className="control d-flex align-items-center">
-				<div className="">
+				<div className="play">
 					<img src={lastsongSvg}/>
 				</div>
-				<div className="">
+				<div className="play">
 					<img src={playSvg}/>
 				</div>
-				<div className="">
+				<div className="play">
 					<img src={nextsongSvg}/>
 				</div>
 				<div className="playProgress d-flex align-items-center">
