@@ -38,9 +38,10 @@
 	}
 	.song {
 		border-bottom: 1px solid #AEAEAE;
-		padding: 20px 10px;
+		padding: 0 10px;
 		.songInfo {
 			cursor: pointer;
+			padding: 20px 0;
 		}
 		.order {
 			color: #AEAEAE;
@@ -51,6 +52,9 @@
 		}
 		.like {
 			cursor: pointer;
+			i {
+				color: #E9CDA8;
+			}
 		}
 	}
 

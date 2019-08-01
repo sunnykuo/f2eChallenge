@@ -10,8 +10,6 @@ import SoulMate from '../image/SoulMate.png'
 import Flower_Bookmark from '../image/Flower_Bookmark.png'
 import CHAT_SHIRE from '../image/CHAT_SHIRE.png'
 import album_musicvideo from '../image/album_musicvideo.png'
-import favoriteSvg from '../svg/favorite.svg'
-import unfavoriteSvg from '../svg/unfavorite.svg'
 
 class Content extends Component {
 	constructor(props) {
@@ -47,22 +45,7 @@ class Content extends Component {
 	}
 
 	handlePlaySong(id,album,song,artist,time) {
-		let currentPlay = {};
-		if (this.props.currentPlay == null) {
-			currentPlay = {
-				id,
-				album,
-				song,
-				artist,
-				time,
-				playtime: '00:00',
-				loop: false,
-				random: false,
-				volume: 0
-			}
-		} else {
-			currentPlay = Object.assign({}, this.props.currentPlay, {id,album,song,artist,time});
-		}
+		let currentPlay = Object.assign({}, this.props.currentPlay, {id,album,song,artist,time, playTime: '00:00', play: true});
 		this.props.dispatch(updateCurrentPlay(currentPlay))
 	}
 
@@ -106,7 +89,7 @@ class Content extends Component {
 								<span className="name">{song.name}</span>						
 							</div>
 							<div className="like" onClick={()=> this.handleFavorite(!like, album.name, song.name, album.artist)}>
-								<img src={`${like ? favoriteSvg:unfavoriteSvg}`}/>
+								<i className="material-icons">{`${like ? 'favorite':'favorite_border'}`}</i>
 								</div>
 						</div>						
 					)

@@ -1,4 +1,5 @@
-import { UPDATE_FAVORITE, UPDATE_CURRENT_PLAY, UPDATE_CURRENT_PAGE, UPDATE_CURRENT_ALBUM } from '../constants/constants'
+import { UPDATE_FAVORITE, UPDATE_CURRENT_PLAY, UPDATE_CURRENT_PAGE, UPDATE_CURRENT_ALBUM, 
+UPDATE_PLAY_TIME, UPDATE_PLAY_LOOP, UPDATE_PLAY_RANDOM, UPDATE_PLAY_VOLUME, UPDATE_PLAY_STATUS } from '../constants/constants'
 
 const initialState = {
 	albums: [
@@ -64,12 +65,25 @@ const initialState = {
 		}			
 	],
 	favorite: [],	
-	currentPlay: null,
+	currentPlay: {
+		id: '',
+		album: '',
+		song: '',
+		artist: '',
+		time: '00:00',
+		playtime: '00:00',
+		loop: 0,
+		random: false,
+		volume: 0,
+		play: false		
+	},
 	currentPage: 'music',
 	currentAlbum: null
 }
 
 const mp3PlayerReducer = (state = initialState, action) => {
+	let currentPlay = null;
+
 	switch (action.type) {		
 		case UPDATE_CURRENT_PLAY:
 			return Object.assign({}, state, {currentPlay: action.playInfo})
@@ -78,7 +92,22 @@ const mp3PlayerReducer = (state = initialState, action) => {
 		case UPDATE_FAVORITE:			
 			return Object.assign({}, state, {favorite: action.favorite})			
 		case UPDATE_CURRENT_ALBUM:
-			return Object.assign({}, state, {currentAlbum: action.album})			
+			return Object.assign({}, state, {currentAlbum: action.album})
+		case UPDATE_PLAY_TIME:			
+			currentPlay = Object.assign({}, state.currentPlay, {playtime: action.time})
+			return Object.assign({}, state, {currentPlay: currentPlay})
+		case UPDATE_PLAY_LOOP:			
+			currentPlay = Object.assign({}, state.currentPlay, {loop: action.loop})
+			return Object.assign({}, state, {currentPlay: currentPlay})			
+		case UPDATE_PLAY_RANDOM:
+			currentPlay = Object.assign({}, state.currentPlay, {random: action.random})
+			return Object.assign({}, state, {currentPlay: currentPlay})
+		case UPDATE_PLAY_VOLUME:
+			currentPlay = Object.assign({}, state.currentPlay, {volume: action.volume})
+			return Object.assign({}, state, {currentPlay: currentPlay})
+		case UPDATE_PLAY_STATUS:
+			currentPlay = Object.assign({}, state.currentPlay, {play: action.status, playtime: action.time})
+			return Object.assign({}, state, {currentPlay: currentPlay})											
 		default:
 			return state
 	}

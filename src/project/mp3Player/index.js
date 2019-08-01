@@ -76,7 +76,7 @@ class MP3Player extends Component {
 			<div className="mp3Player main">
 				<Header switchPage={this.handleDetailPage}/>
 				<Content {...this.props}/>			
-				<ControlArea currentPlay={currentPlay} switchPage={this.handleDetailPage} />
+				<ControlArea {...this.props} switchPage={this.handleDetailPage} />
 				{this.state.showAd &&
 					<Ad handleAdPopup={this.handleAdPopup} />
 				}
