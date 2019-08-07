@@ -1,0 +1,82 @@
+.payment .menus {
+	color: #000;
+	background-color: #A8D574;
+	width: 40vw;
+
+	h1 {
+		font-weight: normal;
+		margin-bottom: 4vh;
+	}
+
+	.banner {
+		background-image: url(./image/banner.png);
+	    background-size: cover;
+	    background-position: center;
+	    height: 30vh;
+	}
+
+	.menu_container {
+		padding-bottom: 2vh;
+	}
+
+	.order {
+		padding: 2vh 5vw 1vh 7vw;
+		div {
+			margin-bottom: 1vh;
+
+			&.content {
+				margin-bottom: 3vh;
+			}
+		}
+		.title.price {
+			margin: 5vh 0 2vh;
+		}
+		.content.price {
+			text-align: right;
+			span {
+				margin-right: 7%;
+			}
+		}
+	}
+
+	.content {
+		font-weight: normal;
+		font-size: 20px;
+	}
+	.pay {
+		margin: 0 0 3vh 7vw;
+
+		.title {
+			margin-bottom: 5%;
+		}
+		.item {
+			font-weight: normal;
+			background-color: #F0F0F0;
+			color: #707070;
+			font-size: 20px;
+			padding: 2.5vh 2vw;
+			margin-bottom: 1vh;
+			margin-right: 5vw;
+			.desc {
+				font-size: 12px;
+			}
+
+			&.active {
+				margin-right: 0;
+				padding-right: 7vw;
+				background-color: #343434;
+				color: #fff;
+				box-shadow: 0 4px 4px rgba(0,0,0, .25);
+			}
+		}
+	}
+
+	.logo {
+		width: 10vw;
+		margin-left: 3vw;
+
+		img {
+			width: 100%;
+		}
+	}
+}

@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const WebpackIconfontPluginNodejs = require('webpack-iconfont-plugin-nodejs');
 
 // const merge = require('webpack-merge');
 // const tomatoClock_config = require('./webpackConfig/webpack.tomatoClock.js')
@@ -168,11 +169,39 @@ const moduleConfig = {
 					}
 				}
 			] 
-		}										
+		},			
+		{
+			test: /\.(png|jpg|svg)$/, 
+			include: [path.resolve(__dirname, 'src/project/payment/image')],
+			use: [
+				{
+					loader: 'file-loader',
+					options: {
+						name: '[name].[ext]',
+						outputPath: 'payment/image/',							
+						publicPath: 'dist/payment/image/',
+					}
+				}
+			] 
+		},	
+		{ 
+			test: /\.(woff|woff2|eot|ttf|svg)$/, 
+			include: [path.resolve(__dirname, 'src/project/payment/font')],
+			use: [
+				{
+					loader: 'file-loader',
+					options: {
+						name: '[name].[ext]',
+						outputPath: 'payment/font/',							
+						publicPath: 'dist/payment/font/',
+					}
+				}
+			] 
+		},											
 	]
 }
 
-let mp3FontDir = 'src/project/mp3Player';
+let paymentFontDir = 'src/project/payment';
 module.exports = {
 	mode: 'development',
 	entry: './src/index.js',
@@ -190,6 +219,16 @@ module.exports = {
 		port: 9000
 	},
 	plugins: [
-		new webpack.HotModuleReplacementPlugin()        
+		new webpack.HotModuleReplacementPlugin(),
+        // new WebpackIconfontPluginNodejs({
+        //     fontName: 'payfont',
+        //     // template: path.join(dir, 'src/fonts/css.njk'),
+        //     svgs: path.join(paymentFontDir, 'svg/*.svg'),
+        //     fontsOutput: path.join(paymentFontDir, 'font/'),
+        //     cssOutput: path.join(paymentFontDir, 'css/payfont.scss'),
+        //     htmlOutput: false,
+        //     //formats: ['ttf', 'woff2', 'woff', 'svg'],
+        //     cssPrefix: ''
+        // })		       
 	]		
 };

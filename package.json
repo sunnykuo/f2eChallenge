@@ -48,6 +48,7 @@
     "webpack": "^4.35.3",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2",
+    "webpack-iconfont-plugin-nodejs": "^1.0.16",
     "webpack-merge": "^4.2.1"
   }
 }

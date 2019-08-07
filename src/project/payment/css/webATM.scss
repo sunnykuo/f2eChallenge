@@ -1,0 +1,47 @@
+.payment .webATM {
+	.mainTitle {
+		color: #fff;
+		font-weight: normal;
+		text-align: left;
+		width: 100%;
+	}
+
+	.bankArea {
+		margin-top: 1vh;
+
+		.title {
+			color: #A8D574;
+			font-weight: bold;
+		}
+		.bankList {
+			margin: 5% 0;
+		}
+		.bank {
+			cursor: default;
+			font-size: 19px;
+			color: #707070;
+			border: 2px solid #707070;
+			padding: 10px;
+			width: 46%;
+			min-width: 115px;
+			margin: 1.5vh 0;
+			text-align: center;
+			&.active {
+				color: #A8D574;
+				border-color: #A8D574;
+			}
+		}
+
+		.desc {
+			color: #FFD065;
+			font-size: 12px;
+			margin-left: 13px;
+			margin-bottom: 3vh;
+
+			li {
+				list-style-type: decimal;
+				line-height: 20px;
+			}
+		}
+	}
+}

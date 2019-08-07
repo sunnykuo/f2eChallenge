@@ -1,0 +1,44 @@
+.payment .successPage {
+	
+	.logo {
+		margin: 5vh 10vw;
+		img {
+			width: 30vw;
+			max-width: 250px;
+		}
+	}
+
+	.banner {
+		background-image: url(./image/banner.png);
+	    background-size: cover;
+	    background-position: center;
+	    height: 30vh;		
+	}
+
+	.text {
+		text-align: center;
+    	padding: 3vh 2vw 5vh;		
+
+    	.mainTitle {
+    		font-weight: normal;
+    	}
+    	.price {
+    		font-size: 20px;
+    		margin: 5vh 0;
+    	}
+		.title {
+			margin-bottom: 1vh;
+		}    	
+		.content {
+			font-weight: normal;
+			font-size: 20px;
+			margin-bottom: 4vh;
+		}    	
+		.return {
+			margin: 10vh 0 5vh;
+			 &.content {
+			 	margin-bottom: 3vh;
+			 }
+		}
+	}	
+}
