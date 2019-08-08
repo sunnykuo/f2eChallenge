@@ -3,6 +3,10 @@
 	background-color: #A8D574;
 	width: 40vw;
 
+	@include mobile-screen {
+		width: 100vw;
+	}
+
 	h1 {
 		font-weight: normal;
 		margin-bottom: 4vh;
@@ -46,27 +50,70 @@
 	.pay {
 		margin: 0 0 3vh 7vw;
 
+		.mobileArea {
+			margin-bottom: 1vh;
+
+			.creditCard, .webATM {
+				@include desktop-screen {
+					display: none !important;
+				}	
+
+				@include mobile-screen {
+					h1 {
+						position: relative;
+						i {
+							position: absolute;
+							right: 0;
+							color: #707070;
+							font-size: 29px;
+							cursor: default;
+						}
+					}					
+				}			
+			}
+		}
+
+		@include mobile-screen {
+			margin-left: 0;
+		}
+
 		.title {
 			margin-bottom: 5%;
+
+			@include mobile-screen {
+				&.menuTitle {
+					margin-left: 7vw;
+				}
+			}
 		}
 		.item {
 			font-weight: normal;
 			background-color: #F0F0F0;
 			color: #707070;
-			font-size: 20px;
-			padding: 2.5vh 2vw;
-			margin-bottom: 1vh;
-			margin-right: 5vw;
+			font-size: 28px;
+			padding: 2.5vh 7vw;
+
 			.desc {
 				font-size: 12px;
 			}
 
-			&.active {
-				margin-right: 0;
-				padding-right: 7vw;
-				background-color: #343434;
-				color: #fff;
-				box-shadow: 0 4px 4px rgba(0,0,0, .25);
+			@include mobile-screen {
+				&.active {
+					display: none !important;
+				}				
+			}
+			
+			@include desktop-screen {
+				font-size: 20px;
+				padding: 2.5vh 2vw;
+				margin-right: 5vw;
+				&.active {
+					margin-right: 0;
+					padding-right: 7vw;
+					background-color: #343434;
+					color: #fff;
+					box-shadow: 0 4px 4px rgba(0,0,0, .25);
+				}
 			}
 		}
 	}
@@ -74,6 +121,11 @@
 	.logo {
 		width: 10vw;
 		margin-left: 3vw;
+
+		@include mobile-screen {
+			width: 130px;
+			margin-left: 7vw;
+		}
 
 		img {
 			width: 100%;

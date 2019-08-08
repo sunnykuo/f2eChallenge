@@ -17,7 +17,7 @@ class Payment extends Component {
 		this.handleSuccessPopup = this.handleSuccessPopup.bind(this)
 		this.state = {
 			showSuccess: false,
-			detailType: 2
+			detailType: 1
 		}
 	}
 

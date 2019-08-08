@@ -14,12 +14,12 @@ class WebATM extends Component {
 	}
 
 	render() {
-
+		const { handleDetailPage, handleSuccessPopup } = this.props;
 		let banks = ['兆豐國際商銀','台灣土地銀行','永豐銀行','台灣銀行','國泰世華銀行','中國信託','玉山銀行','第一銀行','台北富邦','台新銀行','其他金融機構']
-		let currentBankIndex = 0;
+		let currentBankIndex = null;
 	return(
 		<div className="inner webATM d-flex flex-column align-items-center justify-content-between">
-			<h1 className="mainTitle">網路ATM</h1>
+			<h1 className="mainTitle">網路ATM<i className="material-icons" onClick={() => handleDetailPage()}>close</i></h1>
 			<div className="bankArea">
 				<div className="title">請選擇以下網路銀行付款</div>
 				<div className="bankList d-flex flex-wrap justify-content-between">

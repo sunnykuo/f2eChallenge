@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { updateCurrentPage } from '../actions'
+import CreditCard from './CreditCard'
+import WebATM from './WebATM'
 import logo from '../image/Logo.png'
 
 class Menu extends Component {
@@ -26,9 +28,15 @@ class Menu extends Component {
 					<div className="content price"><span>1,250</span>元</div>
 				</div>
 				<div className="pay">
-					<div className="title">支付方式</div>
-					<div className={`item ${type === 1 ? 'active':''}`} onClick={()=> handleDetailPage(1)}>信用卡</div>
-					<div className={`item d-flex align-items-end justify-content-between ${type === 2 ? 'active':''}`} onClick={()=> handleDetailPage(2)}><div>網路ATM</div><div className="desc">(晶片讀卡機轉帳)</div></div>
+					<div className="title menuTitle">支付方式</div>
+					<div className="mobileArea">
+						<div className={`item ${type === 1 ? 'active':''}`} onClick={()=> handleDetailPage(1)}>信用卡</div>
+						{type === 1 && <CreditCard {...this.props} />}
+					</div>
+					<div className="mobileArea">
+						<div className={`item d-flex align-items-end justify-content-between ${type === 2 ? 'active':''}`} onClick={()=> handleDetailPage(2)}><div>網路ATM</div><div className="desc">(晶片讀卡機轉帳)</div></div>
+						{type === 2 && <WebATM {...this.props} />}
+					</div>
 					<div className={`item d-flex align-items-end justify-content-between ${type === 3 ? 'active':''}`}><div>ATM櫃員機</div><div className="desc">(實體ATM及網銀)</div></div>
 				</div>
 				<div className="logo"><img src={logo} /></div>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import CreditCard from './CreditCard'
 import Menu from './Menu'
+import CreditCard from './CreditCard'
 import WebATM from './WebATM'
 
 class PayDetail extends Component {
@@ -11,8 +11,10 @@ class PayDetail extends Component {
 	return(	
 		<div className="payDetail d-flex align-items-stretch">
 			<Menu {...this.props}/>
-			{type === 1 && <CreditCard {...this.props}/>}
-			{type === 2 && <WebATM {...this.props}/>}		
+			<div className="rightSide">
+				{type === 1 && <CreditCard {...this.props}/>}
+				{type === 2 && <WebATM {...this.props}/>}		
+			</div>
 		</div>
 )}
 }

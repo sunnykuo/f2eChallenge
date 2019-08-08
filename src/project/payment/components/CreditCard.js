@@ -2,67 +2,38 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import { updateCurrentPlay, updateCurrentAlbum, updateFavorite } from '../actions'
-
-// import orangeMoon from '../image/orangeMoon.png'
+import creditCardType, { types as CardType } from 'credit-card-type'
 
 class CreditCard extends Component {
 	constructor(props) {
 		super(props)
-		// this.handleFavorite = this.handleFavorite.bind(this)
-		// this.handleSwitchAlbum = this.handleSwitchAlbum.bind(this)
-		// this.handlePlaySong = this.handlePlaySong.bind(this)
+		this.handleCardNumberChange = this.handleCardNumberChange.bind(this)
+		this.state = {
+			cardNumber: [],
+			cardType: null
+		}
 	}	
 
-	// handleFavorite(status, album, song, artist) {
-	// 	let favorite = Object.assign([], this.props.favorite)
-	// 	if (status) {
-	// 		favorite.push({
-	// 			album,
-	// 			song,
-	// 			artist
-	// 		})
-	// 	} else {
-	// 		favorite = this.props.favorite.filter((item) => {
-	// 			return !(item.album == album && item.song == song && item.artist == artist); 
-	// 		})
-	// 	}
-
-	// 	this.props.dispatch(updateFavorite(favorite))
-	// }
-
-	// handleSwitchAlbum(album, artist) {
-	// 	let currentAlbum = {
-	// 		album,
-	// 		artist
-	// 	}
-	// 	this.props.dispatch(updateCurrentAlbum(currentAlbum))
-	// }
-
-	// handlePlaySong(id,album,song,artist,time) {
-	// 	let currentPlay = Object.assign({}, this.props.currentPlay, {id,album,song,artist,time, playTime: '00:00', play: true});
-	// 	this.props.dispatch(updateCurrentPlay(currentPlay))
-	// }
+	handleCardNumberChange(index, e) {
+		let value = e.target.value.trim();
+		let cardInfo = creditCardType(value)
+		if (index == 1 && cardInfo.length > 0){
+			this.setState({
+				cardType: cardInfo[0].type
+			})
+		}
+	}
 
 	render() {
-		const { albums, currentPlay, currentPage, favorite, currentAlbum } = this.props
-		// let currentAlbumInfo = currentAlbum !== null ? currentAlbum : {album: albums[0].name,artist: albums[0].artist}
-
-		// let album = albums.find((item) => {
-		// 	return (item.name == currentAlbumInfo.album && item.artist == currentAlbumInfo.artist);
-		// })
-
-		// let albumLists = albums.filter((item) => {
-		// 	return !(item.name == currentAlbumInfo.album && item.artist == currentAlbumInfo.artist);
-		// })
-
+		const { handleDetailPage, handleSuccessPopup } = this.props
 	return(
 		<div className="inner creditCard d-flex flex-column align-items-center justify-content-between">
-			<h1 className="title">信用卡</h1>
-			<div className="creditCardType d-flex justify-content-between">
-				<div className="type active"><i className="payfont-Visa" /></div>
-				<div className="type"><i className="payfont-MasterCard" /></div>
-				<div className="type"><i className="payfont-JCB" /></div>
-				<div className="type"><i className="payfont-UnionPay" /></div>
+			<h1 className="title">信用卡<i className="material-icons" onClick={() => handleDetailPage()}>close</i></h1>
+			<div className="creditCardType d-flex">
+				<div className={`type ${this.state.cardType === CardType.VISA ? 'active': '' }`}><i className="payfont-Visa" /></div>
+				<div className={`type ${this.state.cardType === CardType.MASTERCARD ? 'active': '' }`}><i className="payfont-MasterCard" /></div>
+				<div className={`type ${this.state.cardType === CardType.JCB ? 'active': '' }`}><i className="payfont-JCB" /></div>
+				<div className={`type ${this.state.cardType === CardType.UNIONPAY ? 'active': '' }`}><i className="payfont-UnionPay" /></div>
 			</div>
 			<div className="userInfo">
 				<div className="inputArea">
@@ -73,7 +44,7 @@ class CreditCard extends Component {
 				<div className="inputArea">
 					<div className="title"><span>*</span>信用卡號</div>
 					<div className="cardInfo d-flex align-items-center justify-content-between">
-						<input ref="cardNumber1" className="cardNumber" type="text" maxLength="4" />
+						<input ref="cardNumber1" className="cardNumber" type="text" maxLength="4" onChange={e => this.handleCardNumberChange(1,e)}/>
 						<div>-</div>
 						<input ref="cardNumber2" className="cardNumber" type="text" maxLength="4" />
 						<div>-</div>
@@ -98,7 +69,7 @@ class CreditCard extends Component {
 				</div>
 				<div className="inputArea">
 					<div className="title"><span>*</span>手機號碼</div>
-					<input ref="phone" className="phone" type="text" />
+					<input ref="phone" className="phone" type="tel" />
 					<div className="desc">
 						<div>如非台灣手機號碼請加國碼，如香港為852，則輸入852123456789。</div>
 						<div>若刷卡驗證採簡訊驗證，簡訊將發送至您於發卡銀行留存的手機號碼。</div>

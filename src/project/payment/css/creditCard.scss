@@ -10,11 +10,19 @@
 		margin: 1vh 0;
 		width: 100%;
 		.type {
-			font-size: 7vw;
+			font-size: 50px;
+			margin-right: 1.5vw;
 			&.active {
 				color: #A8D574;
 			}
 		}
+
+	    @media only screen and (max-width: 500px) {
+			justify-content: space-between;
+			.type {
+				font-size: 13vw;
+			}	    	
+	    }		
 	}
 
 	.inputArea {
@@ -22,9 +30,11 @@
 
 		.title {
 			color: #A8D574;
-			font-size: 1rem;
 			margin-bottom: 1vh;
 
+			@include mobile-screen {
+				font-size: 12px;
+			}
 			span {
 				color: #FF521A;
 				font-size: 12px;
@@ -53,6 +63,7 @@
 				width: 20%;
 				text-align: center;
 			}
+
 			&.lastNumber {
 				width: 45%;
 				text-align: center;
@@ -61,13 +72,19 @@
 			&.error {
 				border-color: #FF521A;
 			}
+
+			@include mobile-screen {
+				&.date {
+					padding: 10px 5px;
+				}
+			}
 		}
 
 		.desc {
 			color: #FFD065;
 			font-size: 13px;
 			margin: 2vh 0;
-    		line-height: 3vh;
+    		line-height: 20px;
 		}
 		.reminder {
 			color: #FF521A;
