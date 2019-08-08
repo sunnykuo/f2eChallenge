@@ -6,17 +6,24 @@ import logo from '../image/Logo.png'
 class WebATM extends Component {
 	constructor(props) {
 		super(props)		
-		this.handleSubscribe = this.handleSubscribe.bind(this);
+		this.state = {
+			currentBankIndex: null
+		}
 	}
 
-	handleSubscribe() {
+	handleBankChange(value) {
+		this.setState({
+			currentBankIndex: value
+		})
+	}
 
+	handleSubmit() {
+		if (this.state.currentBankIndex == null) return;
 	}
 
 	render() {
 		const { handleDetailPage, handleSuccessPopup } = this.props;
 		let banks = ['兆豐國際商銀','台灣土地銀行','永豐銀行','台灣銀行','國泰世華銀行','中國信託','玉山銀行','第一銀行','台北富邦','台新銀行','其他金融機構']
-		let currentBankIndex = null;
 	return(
 		<div className="inner webATM d-flex flex-column align-items-center justify-content-between">
 			<h1 className="mainTitle">網路ATM<i className="material-icons" onClick={() => handleDetailPage()}>close</i></h1>
@@ -24,7 +31,7 @@ class WebATM extends Component {
 				<div className="title">請選擇以下網路銀行付款</div>
 				<div className="bankList d-flex flex-wrap justify-content-between">
 				{banks.map((item,i) => {
-						return(<div key={i} className={`bank ${i===currentBankIndex ? 'active':''}`}>{item}</div>)
+						return(<div key={i} className={`bank ${i===this.state.currentBankIndex ? 'active':''}`} onClick={() => this.handleBankChange(i)}>{item}</div>)
 					})
 				}
 				</div>							
@@ -36,7 +43,7 @@ class WebATM extends Component {
 					</li>
 				</ul>
 			</div>
-			<button className="btn confirm">確認送出</button>
+			<button className="btn confirm" onClick={() => this.handleSubmit()}>確認送出</button>
 		</div>
 )}
 }
