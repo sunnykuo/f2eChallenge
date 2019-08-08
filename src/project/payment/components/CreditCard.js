@@ -128,11 +128,14 @@ class CreditCard extends Component {
 				validation
 			})
 			return
+		} else {
+			this.props.handleDetailPage()
+			this.props.handleSuccessPopup(true)
 		}
 	}		
 
 	render() {
-		const { handleDetailPage, handleSuccessPopup } = this.props
+		const { handleDetailPage } = this.props
 		const { cardNumber, cardName, validDate, cvc, phone, validation } = this.state;
 
 	return(

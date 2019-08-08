@@ -3,14 +3,15 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import logo from '../image/Logo.png'
 
-class Success extends Component {
+export default class Success extends Component {
 	constructor(props) {
 		super(props)		
-		this.handleSubscribe = this.handleSubscribe.bind(this);
 	}
 
-	handleSubscribe() {
-
+	componentDidMount() {
+		setTimeout(() => {
+			this.props.handleSuccessPopup(false)
+		},5000)
 	}
 
 	render() {
@@ -36,10 +37,6 @@ class Success extends Component {
 		</div>
 )}
 }
-Success = connect()(Success)
-export default Success
-// Success.propTypes = {
-// 	type: PropTypes.number.isRequried,
-// 	switchPage: PropTypes.func.isRequried
-// }
+
+
 

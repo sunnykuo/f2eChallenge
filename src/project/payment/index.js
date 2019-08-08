@@ -77,7 +77,7 @@ class Payment extends Component {
 						handleSuccessPopup={this.handleSuccessPopup}
 						handleDetailPage={this.handleDetailPage}/>
 				}
-				{this.state.showSuccess && <Success />}
+				{this.state.showSuccess && <Success handleSuccessPopup={this.handleSuccessPopup}/>}
 			</div>
 		)
 	}
