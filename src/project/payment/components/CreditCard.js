@@ -170,8 +170,8 @@ class CreditCard extends Component {
 						<Reminder text="必填欄位"/>
 					}					
 				</div>
-				<div className="inputArea d-flex align-items-center">
-					<div className="">
+				<div className="inputArea d-flex align-items-center justify-content-between">
+					<div style={{width:'40%'}}>
 						<div className="title"><span>*</span>有效日期</div>
 						<div className="validDate d-flex align-items-center">
 							<input ref="validMonth" className={`date ${validation.validDate ? '':'error'}`} type="text" placeholder="MM" maxLength="2" value={validDate.month} onChange={e => this.handleDateChange('month',e)} />
@@ -182,12 +182,14 @@ class CreditCard extends Component {
 							<Reminder text="必填欄位"/>
 						}						
 					</div>
-					<div className="">
+					<div style={{width:'40%'}}>
 						<div className="title"><span>*</span>信用卡背面末三碼</div>
-						<input ref="lastNumber" className={`lastNumber ${validation.cvc ? '':'error'}`} type="text" maxLength="3" value={cvc} onChange={e => this.handleCodeChange(e)}/>
-						{!validation.cvc &&
-							<Reminder text="必填欄位"/>
-						}						
+						<div className="lastNumber">
+							<input ref="lastNumber" className={`lastNumberInput ${validation.cvc ? '':'error'}`} type="text" maxLength="3" value={cvc} onChange={e => this.handleCodeChange(e)}/>
+							{!validation.cvc &&
+								<Reminder text="必填欄位"/>
+							}	
+						</div>					
 					</div>												
 				</div>
 				<div className="inputArea">
@@ -211,7 +213,7 @@ const Reminder = ({text}) => {
 	return (
 		<div className="reminder d-flex align-items-center justify-content-between">
 			<div className="text">{text}</div>
-			<div className=""><i className="material-icons">warning</i></div>
+			<div><i className="material-icons">warning</i></div>
 		</div>		
 	)
 }
