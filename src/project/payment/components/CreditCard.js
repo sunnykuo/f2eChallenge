@@ -98,6 +98,13 @@ class CreditCard extends Component {
 		let canSubmit = true;
 		const { cardNumber, cardName, validDate, cvc, phone, validation } = this.state;
 
+		//reset validation
+		validation.cardName = true;
+		validation.cardNumber = true;
+		validation.validDate = true;
+		validation.cvc = true;
+		validation.phone = true;
+
 		if ( isEmpty(cardName) ) {
 			canSubmit = false
 			validation.cardName = false
@@ -170,7 +177,7 @@ class CreditCard extends Component {
 						<Reminder text="必填欄位"/>
 					}					
 				</div>
-				<div className="inputArea d-flex align-items-center justify-content-between">
+				<div className="inputArea d-flex justify-content-between">
 					<div style={{width:'40%'}}>
 						<div className="title"><span>*</span>有效日期</div>
 						<div className="validDate d-flex align-items-center">
