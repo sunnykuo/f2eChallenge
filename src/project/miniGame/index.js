@@ -17,7 +17,15 @@ export default class Minigame extends Component {
 			width: 1200,
 			height: 768,
 			parent: "minigame",
-			scene: [gameStart],
+		     physics: {
+		        default: 'arcade',
+		        arcade: {
+		            gravity: {
+		                y: 0
+		            }
+		        }
+		     },			
+			scene: [gamePlay]
 	    };
 
 	    new Phaser.Game(config);		
