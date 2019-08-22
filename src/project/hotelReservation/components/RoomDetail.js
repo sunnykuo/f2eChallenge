@@ -210,7 +210,7 @@ class RoomDetail extends Component {
 					<div className="desc">{room.description}</div>
 				</div>
 			</div>
-			<div className="reserve-area d-flex justify-content-between">
+			<div className="reserve-area d-flex justify-content-center">
 				<div className="calenderArea">
 					<div>- 此房型可預訂狀態</div>
 					<DayPicker className="Selectable" 
@@ -274,7 +274,7 @@ class Reserve extends Component {
 						{!validation.phone && <Reminder text="必填欄位" />}
 					</div>
 					<div className="input date">
-						<div><span>日期</span><input readOnly type="text" ref="start_date" value={from == null ? '' : moment(from).format('YYYY-MM-DD')} /><span className="dateText">至</span><input readOnly type="text" ref="end_date" value={to == null ? '' : moment(to).format('YYYY-MM-DD')} /></div>
+						<div><span>日期</span><input readOnly type="text" value={from == null ? '' : moment(from).format('YYYY-MM-DD')} /><span className="dateText">至</span><input readOnly type="text" value={to == null ? '' : moment(to).format('YYYY-MM-DD')} /></div>
 						{!validation.date && <Reminder text={`${validation.dateOverRange ? '預訂日期不可超過90天': validation.dateExisted ? '部份日期已被預訂' : '必填欄位'}`} />}
 					</div>	
 					{activeReserveBtn &&

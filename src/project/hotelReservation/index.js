@@ -17,20 +17,16 @@ import Icon_Instagram from  './image/Icon_Instagram.svg'
 class HotelReservation extends Component {
 	constructor(props) {
 		super(props)
-		this.handleChange = this.handleChange.bind(this)
 		this.handleDetailPage = this.handleDetailPage.bind(this)
 		this.state = {
 			showDetail: false
 		}
+		this.listRef = React.createRef()
 	}
 
 	componentDidMount() {
 		const { dispatch } = this.props
 		dispatch(fetchRoomsIfNeeded())
-	}
-
-	handleChange(nextSubreddit) {
-		// this.props.dispatch(selectSubreddit(nextSubreddit))
 	}
 
 	handleDetailPage(status, id = "") {
@@ -39,8 +35,17 @@ class HotelReservation extends Component {
 		})
 		if (status) {
 			this.props.dispatch(fetchRoomDetail(id))
-		}		
+		}
+		window.scrollTo(0, 0)		
 	}	
+
+    scrollToRoomList() {
+    	console.log(this.listRef)
+        window.scrollTo({
+            top: this.listRef.current.offsetTop - 90, 
+            behavior: "smooth"
+        });
+    }	
 
 	render() {
 		const { isFetching, roomList, roomDetail, isBooking, bookResult } = this.props
@@ -57,8 +62,8 @@ class HotelReservation extends Component {
 								<img src={Icon_facebook} />
 							</div>
 						</div>
-						<div className="down"><img src={Icon_chevronsdown} /></div>
-						<RoomList roomList={roomList} handleDetailPage={this.handleDetailPage}/>
+						<div className="down" onClick={() => this.scrollToRoomList()}><img src={Icon_chevronsdown} /></div>
+						<RoomList ref={this.listRef} roomList={roomList} handleDetailPage={this.handleDetailPage}/>
 					</div>
 				}
 				{this.state.showDetail && !isFetching &&
