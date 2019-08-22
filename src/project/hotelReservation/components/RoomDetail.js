@@ -50,7 +50,8 @@ class RoomDetail extends Component {
 				name: true,
 				phone: true,
 				date: true,
-				dateOverRange: false
+				dateOverRange: false,
+				dateExisted: false
 			},
 			activeReserveBtn: false			
 		}			
@@ -85,7 +86,7 @@ class RoomDetail extends Component {
 		})
 	}  	
 
-	handleSubmit(id) {
+	handleSubmit(id, bookedList) {
 		//checkEmpty
 		let canSubmit = true;
 		const { name, from, to, phone, validation, activeReserveBtn } = this.state;
@@ -95,6 +96,9 @@ class RoomDetail extends Component {
 		validation.phone = true;
 		validation.date = true;
 		validation.dateOverRange = false;
+		validation.dateExisted = false;
+
+		let reserveDays = [];
 
 		if ( isEmpty(name) ) {
 			canSubmit = false
@@ -107,9 +111,20 @@ class RoomDetail extends Component {
 		}
 
 		if (validation.date) {
+			reserveDays = getDates(from, to);
 			if ((moment(from).diff(moment(),'days') > 90) || (moment(to).diff(moment(),'days') > 90)) {
+				canSubmit = false;
 				validation.date = false
 				validation.dateOverRange = true
+			} else {
+				for(let i = 0; i < bookedList.length; i++) {
+					if (reserveDays.indexOf(bookedList[i].date) > -1) {
+						canSubmit = false
+						validation.date = false
+						validation.dateExisted = true
+						break;
+					}		
+				}
 			}
 		}
 
@@ -140,7 +155,7 @@ class RoomDetail extends Component {
 			let data = {
 				name,
 				tel: phone,
-				date: getDates(from, to)
+				date: reserveDays
 			}
 
 			this.props.dispatch(bookRoom(id, data))
@@ -206,7 +221,7 @@ class RoomDetail extends Component {
 					/>
 				</div>
 				<div>
-				<Reserve {...this.state} isBooking={isBooking} bookResult={bookResult} room={room} handleNameChange={this.handleNameChange} handlePhoneChange={this.handlePhoneChange} handleSubmit={this.handleSubmit} />
+				<Reserve {...this.state} isBooking={isBooking} bookResult={bookResult} room={room} booked={booked} handleNameChange={this.handleNameChange} handlePhoneChange={this.handlePhoneChange} handleSubmit={this.handleSubmit} />
 				</div>
 			</div>
 			<Providers amenities = {room.amenities}/>
@@ -220,7 +235,7 @@ class Reserve extends Component {
 	}
 
 	render() {
-		const {activeReserveBtn, name, phone, from, to, validation, isBooking, bookResult, room, handlePhoneChange, handleNameChange, handleSubmit } = this.props;
+		const {activeReserveBtn, name, phone, from, to, validation, isBooking, bookResult, room, booked, handlePhoneChange, handleNameChange, handleSubmit } = this.props;
 
 		if (bookResult !== null && bookResult.success) {
 			return (
@@ -260,13 +275,13 @@ class Reserve extends Component {
 					</div>
 					<div className="input date">
 						<div><span>日期</span><input readOnly type="text" ref="start_date" value={from == null ? '' : moment(from).format('YYYY-MM-DD')} /><span className="dateText">至</span><input readOnly type="text" ref="end_date" value={to == null ? '' : moment(to).format('YYYY-MM-DD')} /></div>
-						{!validation.date && <Reminder text={`${validation.dateOverRange ? '預定日期不可超過90天':'必填欄位'}`} />}
+						{!validation.date && <Reminder text={`${validation.dateOverRange ? '預訂日期不可超過90天': validation.dateExisted ? '部份日期已被預訂' : '必填欄位'}`} />}
 					</div>	
 					{activeReserveBtn &&
 						<PriceDetail from={from} to={to}  room={room} />
 					}
 					<div className="btnReserve d-flex justify-content-center">
-						<button className={`btn d-flex ${isBooking ? 'disabled':''}`} onClick={() => handleSubmit(room.id)}><div>預約</div>{isBooking && <ReactLoading type="spinningBubbles" color="#fff" height={'18px'} width={'18px'} />}</button>
+						<button className={`btn d-flex ${isBooking ? 'disabled':''}`} onClick={() => handleSubmit(room.id,booked)}><div>預約</div>{isBooking && <ReactLoading type="spinningBubbles" color="#fff" height={'18px'} width={'18px'} />}</button>
 					</div>						
 				</div>		
 			)			
