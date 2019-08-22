@@ -6,8 +6,9 @@ import missionReducer from './project/tomatoClock/reducers'
 import freeCellReducer from './project/freeCell/reducers'
 import mp3PlayerReducer from './project/mp3Player/reducers'
 import paymentReducer from './project/payment/reducers'
+import hotelReducer from './project/hotelReservation/reducers'
 
-const allReducers = combineReducers({ exampleReducer, missionReducer, freeCellReducer, mp3PlayerReducer, paymentReducer })
+const allReducers = combineReducers({ exampleReducer, missionReducer, freeCellReducer, mp3PlayerReducer, paymentReducer, hotelReducer })
 const loggerMiddleware = createLogger()
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const enhancer = composeEnhancers(

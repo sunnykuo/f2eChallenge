@@ -1,0 +1,237 @@
+.hotelReservation .roomDetail {
+    width: 100%;
+    padding: 100px 5vw 20px;
+
+    .roomInfo {
+    	align-items: flex-end;	  
+
+    	.carousel-outside {
+    		width: 50%;
+
+    		.carousel {
+    			width: 29vw;
+
+    			.flickity-prev-next-button {
+				    width: 35px;
+				    height: 35px;
+				    background: transparent;
+				    top: 60%;
+
+				    &.previous {
+				    	left: -67px;
+				    }
+				    &.next {
+				    	right: -67px;
+				    }
+    			}
+    		}
+    	}
+
+    	.details {
+    		width: 50%;
+    		.checkTime {
+			    background-color: #fff;
+			    border-radius: 10px;
+			    position: relative;
+			    padding: 0 10px;
+
+    			.checkin {
+					border-right: 1px solid #aaa;
+    			}
+    			.time {
+				    margin: 15px 0;
+				    font-size: 13px;
+				    text-align: center;
+				    padding: 3px 13px;    				
+    			}
+
+    			&:before {
+    				content: '';
+    				position: absolute;
+    				border: 3px solid #aaa;
+    				border-radius: 10px;
+					width: calc(100% - 13px);
+					height: calc(100% - 13px);
+					top: 4px;
+					left: 4px;
+    			}
+    		}
+
+    		.info {
+    			font-size: 13px;
+    			line-height: 19px;
+    		}
+
+    		.desc {
+				margin-top: 8%;
+    			line-height: 17px;    			
+    			font-size: 13px;
+    		}
+    	}  	
+    }
+
+    .reserve-area {
+    	margin: 10% 10% 5%;
+
+    	.calenderArea {
+    		.DayPicker {
+    			margin-top: 15px;
+    			background-color: #fff;
+    			box-shadow: 0 3px 6px rgba(0,0,0, .3);
+    		}
+    	}
+
+    	.reserve {
+    		background-color: #fff;
+    		box-shadow: 0 3px 6px rgba(0,0,0, .3);
+    		padding: 25px 40px;
+
+    		.title {
+    			font-size: 20px;
+    			margin-top: 0;
+    			i {
+    				color: #61CF68;
+    				vertical-align: text-top;
+    				margin-left: 5px;
+    			}
+    		}
+    		.input {
+    			margin: 15px 0;
+				span {
+					font-size: 13px;
+					margin-right: 2vw;
+				}    			
+    			input {
+    				border: none;
+    				border-bottom: 1px solid #666;
+    				font-size: 13px;
+    				width: 150px;
+    			}
+
+    			&.date {
+    				input {
+    					width: 77px;
+    				}
+    				.dateText {
+    					margin: 0 1vw;
+    				}
+    			}
+    		}
+    		.btnReserve {
+    			margin-top: 27px;
+	    		.btn {
+	    			background-color: #000;
+	    			border-radius: 20px;
+	    			color: #fff;
+					padding: 5px 40px;
+				    font-size: 15px; 
+				    box-shadow: 0 2px 6px rgba(0,0,0, .3); 
+
+				    &.disabled{
+				    	pointer-events: none;
+				    }  			
+	    		}
+
+	    		.finalBtn {
+	    			width: 100%;
+	    			font-size: 12px;
+		    		.cancel {
+		    			color: #666666;
+		    			text-decoration: underline;
+		    		}
+		    		.contact {
+		    			background-color: #E1E1E1;
+		    			color: #000;
+		    			padding: 5px;
+		    		}	    			
+	    		}
+    		}
+    	}
+
+    	.reminder {
+    		color: red;
+    		font-size: 12px;
+    		margin-top: 5px;
+    		i {
+    			font-size: 17px;
+    			margin-right: 5px;
+    		}
+    	}
+
+    	.priceDetail {
+    		font-size: 13px;
+    		.detail {
+    			border-top: 1px dashed #666;
+    			border-bottom: 1px dashed #666;
+    			padding: 20px 10px 10px;
+    			margin: 40px 0 20px;
+    		}
+    		.price {
+    			margin-bottom: 10px; 
+    		}
+    		.finalPrice {
+    			padding: 0 10px;
+    		}
+    	}
+    }
+    .providers {
+    	margin: 0 10% 10%;
+    	.title {
+    		font-size: 19px;
+    	}
+    	.items {
+    		margin-top: 20px;
+    		width: 50%;
+    		li {
+    			margin-bottom: 10px;
+    			color: #888;
+
+    			&.active {
+    				color: #000;
+    			}
+
+    			i {
+					vertical-align: bottom;
+					font-size: 17px;
+					margin-right: 5px; 
+					font-weight: bold;   				
+    			}
+    		}
+    	}
+    }
+
+	.room {
+		margin-top: 0;
+		cursor: default;
+
+		.photo {
+			width: 29vw;
+			height: 29vw;
+		}
+
+		.name {
+			font-size: 19px;
+		}
+
+		.date {
+			margin-top: 9px;
+			font-size: 12px;
+		}
+	}
+
+	.Selectable .DayPicker-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+		background-color: #f0f8ff !important;
+		color: #4a90e2;
+	}
+	.Selectable .DayPicker-Day {
+		border-radius: 0 !important;
+	}
+	.Selectable .DayPicker-Day--start {
+		border-top-left-radius: 50% !important;
+		border-bottom-left-radius: 50% !important;
+	}
+	.Selectable .DayPicker-Day--end {
+		border-top-right-radius: 50% !important;
+		border-bottom-right-radius: 50% !important;
+	}	
+}

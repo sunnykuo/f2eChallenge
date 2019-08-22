@@ -67,7 +67,7 @@ const moduleConfig = {
 			}
 		},
 		{
-			test: /\.(scss)$/, 
+			test: /\.(scss|css)$/, 
 			include: [path.resolve(__dirname, 'src')],
             // use: ExtractTextPlugin.extract({
             //     fallback: 'style-loader',
@@ -198,6 +198,24 @@ const moduleConfig = {
 				}
 			] 
 		},											
+		{
+			test: /\.(png|jpg|svg)$/, 
+			include: [path.resolve(__dirname, 'src/project/hotelReservation/image')],
+			use: [
+				{
+					loader: 'file-loader',
+					options: {
+						name: '[name].[ext]',
+						outputPath: 'hotelReservation/image/',							
+						publicPath: 'dist/hotelReservation/image/',
+					}
+				}
+			] 
+		},
+		{
+			test: /node_modules\/flickity/,
+			loader: 'imports-loader?define=>undefined'
+		}			
 	]
 }
 
