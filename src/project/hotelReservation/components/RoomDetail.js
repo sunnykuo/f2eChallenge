@@ -170,7 +170,8 @@ class RoomDetail extends Component {
 
 	    const { from, to, name, phone, validation } = this.state;
 	    const modifiers = { start: from, end: to };
-	    const disabledDays = [
+	    const disabledDays = [,
+	    		new Date(),
 	    		{
 	    			before: new Date()
 	    		}
@@ -213,7 +214,7 @@ class RoomDetail extends Component {
 			<div className="reserve-area d-flex justify-content-center">
 				<div className="calenderArea">
 					<div>- 此房型可預訂狀態</div>
-					<DayPicker className="Selectable" 
+					<DayPicker showOutsideDays className="Selectable" 
 						onDayClick={this.handleDayClick} 
 						selectedDays={[from, { from, to }]} 
 						modifiers={modifiers}

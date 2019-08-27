@@ -10,6 +10,7 @@
 		margin-top: 30px;
 		box-shadow: 0 3px 6px rgba(0,0,0, .3);
 		cursor: pointer;
+		opacity: 0;
 
 		.photo {
 			width: 21vw;
@@ -25,4 +26,19 @@
 			font-size: 12px;
 		}
 	}
+
+	.showAnimate .room {
+		animation: fadeIn 1s;
+		opacity: 1;
+	}
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

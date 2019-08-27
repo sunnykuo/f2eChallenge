@@ -18,8 +18,10 @@ class HotelReservation extends Component {
 	constructor(props) {
 		super(props)
 		this.handleDetailPage = this.handleDetailPage.bind(this)
+		this.handleScroll = this.handleScroll.bind(this)
 		this.state = {
-			showDetail: false
+			showDetail: false,
+			showAnimate: false
 		}
 		this.listRef = React.createRef()
 	}
@@ -27,11 +29,31 @@ class HotelReservation extends Component {
 	componentDidMount() {
 		const { dispatch } = this.props
 		dispatch(fetchRoomsIfNeeded())
+		window.addEventListener('scroll', this.handleScroll, true);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.handleScroll);
+	}		
+
+	handleScroll() {
+		if (this.state.showAnimate || this.state.showDetail) return;
+
+		const winScroll =
+		    document.body.scrollTop || document.documentElement.scrollTop		
+
+    	if (winScroll >= 200) {
+    		this.listRef.current.classList.add('showAnimate');
+    		this.setState({
+    			showAnimate: true
+    		})
+    	}
 	}
 
 	handleDetailPage(status, id = "") {
 		this.setState({
-			showDetail: status
+			showDetail: status,
+			showAnimate: false
 		})
 		if (status) {
 			this.props.dispatch(fetchRoomDetail(id))
@@ -40,7 +62,6 @@ class HotelReservation extends Component {
 	}	
 
     scrollToRoomList() {
-    	console.log(this.listRef)
         window.scrollTo({
             top: this.listRef.current.offsetTop - 90, 
             behavior: "smooth"
