@@ -1,0 +1,26 @@
+.mp3Player {
+	.header {
+		background-color: #FCFBF6;
+		width: 100vw;
+		height: 85px;
+		padding: 10px 3vw;
+		position: fixed;
+		top: 0;
+		.logo {
+			margin-right: 2vw;
+		}
+		.menu {
+			color: #AEAEAE;
+			font-size: 14px;
+			margin: 0 2vw;
+			cursor: pointer;
+			&.active {
+				color: #707070;
+			}
+		}
+		.member {
+			color: #E9C79A;
+			font-size: 40px;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.ad {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.16);
+	padding: 10%;
+
+	.ad_inner {
+		position: relative;
+		min-width: 350px;
+		
+		img {
+			width: 100%;
+		}	
+
+		.ad_text {
+			position: absolute;
+			bottom: 10%;
+			right: 5%;
+			font-size: 14px;
+			text-transform: initial;
+			color: #fff;
+			font-weight: normal;
+			text-align: center;
+			width: 160px;
+
+			.btn {
+				background-color: #d1c1ac;
+				border-radius: 20px;
+				color: #fff;
+				font-weight: bold;
+				font-size: 14px;
+				margin: 8px 0 10px;
+				cursor: pointer;
+				width: 150px;
+			}
+			.laterBtn {
+				text-decoration: underline;
+				color: #AEAEAE;
+				font-size: 12px;
+				cursor: pointer;
+			}
+		}
+	}
+}

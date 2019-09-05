@@ -1,0 +1,83 @@
+.musicContent {
+	margin: 85px 15% 90px;
+	padding: 20px 0;
+	text-transform: initial;
+	color: #707070;	
+	.albumInfo {
+		width: 35%;
+		color: #AEAEAE;
+		font-size: 16px;
+		margin-right: 8%;
+
+		.albumCover {
+			text-align: center;
+		}
+		.albumName {
+			color: #707070;
+			font-size: 20px;
+			margin: 8px 0;
+		}
+		.date {
+			margin-top: 8px;
+			font-size: 14px;
+		}
+		.musicVideo {
+			margin-top: 25px;
+			color: #707070;
+			.videoImg {
+				margin-top: 15px;
+			}
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+	.songList {
+		width: 65%;
+	}
+	.song {
+		border-bottom: 1px solid #AEAEAE;
+		padding: 0 10px;
+		.songInfo {
+			cursor: pointer;
+			padding: 20px 0;
+		}
+		.order {
+			color: #AEAEAE;
+			font-weight: normal;
+		}
+		.name {
+			margin: 0 15px;
+		}
+		.like {
+			cursor: pointer;
+			i {
+				color: #E9CDA8;
+			}
+		}
+	}
+
+	.albumList {
+		margin-top: 50px;
+		.lists {
+			margin-top: 25px;
+			color: #707070;
+			text-align: center;
+			.album {
+				margin: 0 3%;
+				width: 20%;
+				&:first-child {
+					margin-left: 0; 
+				}
+			}
+			img {
+				width: 100%;
+				margin-bottom: 10px;
+			}			
+			.name {
+				font-size: 12px;
+			}
+		}
+	}
+}

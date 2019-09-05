@@ -1,0 +1,39 @@
+.nav {
+	li {
+		background-color: #556F96;
+		color: #fff;		
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		margin-right: 15px;
+		cursor: pointer;
+
+		&.active {
+			background-color: #fff;
+			color: #000;
+
+			div {
+		    	border-left: 8px solid #556F96;
+			}
+		}
+
+		div {
+		    padding: 5px 50px;
+		    margin: 10px 0;			
+		}
+
+		&.viewType {
+			padding: 3px 3px 0;
+			background-color: #d0d0d0;
+			border-radius: 0;
+			margin-right: 0;
+			i {
+				color: #556F96;
+				font-size: 20px;
+			}
+
+			&.active {
+				background-color: #fff;
+			}
+		}
+	}
+}
