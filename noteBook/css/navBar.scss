@@ -1,0 +1,35 @@
+.nav {
+	width: 100%;
+
+	li {		
+		margin-right: 15px;
+		cursor: pointer;
+
+		padding: 10px 20px;
+
+		&.active {
+			background-color: #fff;
+
+			.dark & {
+				background-color: #272727;
+			}
+		}
+
+		&.addCategory {
+			color: #BFBFBF;
+			i {
+				color: #BFBFBF;
+				vertical-align: text-bottom;
+				font-size: 20px;
+				margin-right: 5px;
+			}
+
+			.dark & {
+				color: rgba(255,255,255,.8);
+				i {
+					color: rgba(255,255,255,.8);
+				}
+			}
+		}
+	}
+}

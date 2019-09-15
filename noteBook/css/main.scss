@@ -1,0 +1,22 @@
+.noteBook {
+	position: relative;
+    overflow: auto;
+    font-size: 15px;
+    min-width: 1200px;
+
+    background-color: #F5F5F5;
+    color: #000;
+
+    i {
+        color: #000;
+    }
+
+    &.dark {
+        background-color: #000;
+        color: #fff;
+
+        i {
+            color: #fff;
+        }
+    }
+}

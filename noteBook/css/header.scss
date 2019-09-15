@@ -1,0 +1,29 @@
+.header {
+	margin: 15px 25px;
+
+	.left {
+		width: 110px;
+		font-size: 25px;
+		font-weight: bold;
+	}
+
+	.right {
+
+		.setting {
+			margin: 0 30px;
+		}
+		.darkMode {			
+			i {
+				margin-right: 7px;
+				cursor: default;
+			}
+		}
+		.account {
+			i {
+				font-size: 35px;
+				margin-left: 7px;
+			}
+		}
+	}
+
+}
