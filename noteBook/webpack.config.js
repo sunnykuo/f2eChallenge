@@ -48,7 +48,21 @@ const moduleConfig = {
 					}
 				}
 			] 
-		}		
+		},			
+		{ 
+			test: /\.(png)$/, 
+			include: [path.resolve(__dirname, 'images')],
+			use: [
+				{
+					loader: 'file-loader',
+					options: {
+						name: '[name].[ext]',
+						outputPath: 'images/',							
+						publicPath: 'dist/images/',
+					}
+				}
+			] 
+		}				
 	]
 }
 
