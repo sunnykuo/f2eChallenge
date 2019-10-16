@@ -3,18 +3,22 @@ import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 // import { updateCurrentPlay, updateCurrentAlbum, updateFavorite } from '../actions'
 
-import Detail from '../Components/Detail'
+import ItemDetail from '../Components/ItemDetail'
 import NoteList from '../Components/NoteList'
 import AddNote from '../Components/AddNote'
 
 class Content extends Component {
 	constructor(props) {
 		super(props)
+		this.state = {
+			detailPage: true,
+			detailInfo: null
+		}
 
 	}	
 
 	render() {
-		const { drives, selectedCategory, selectedItem, viewType, search, typeMapping } = this.props
+		// const { drives, selectedCategory, selectedItem, viewType, search, typeMapping } = this.props
 
 	return(
 		<div className="noteContent d-flex">
@@ -34,7 +38,12 @@ class Content extends Component {
 					</div>					
 				</div>
 			</div>
-			<NoteList />
+			{!this.state.detailPage &&
+				<NoteList />
+			}
+			{this.state.detailPage &&
+				<ItemDetail />
+			}
 		</div>
 	)}
 }
