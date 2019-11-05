@@ -1,15 +1,17 @@
-# Cloud Drive
+# Notebook
 
 ## Functional map
-* 可以在檔案管理區新增資料夾
-* 可以上傳任何檔案，例如圖片、word、pdf、mp4
-* 可以在資料夾裡面新增檔案，進行分類
-* 能透過篩選器 (filter) 來尋找檔案，例如搜尋、時間排序、大小排序等等
-* 可以將檔案打星號
+* 筆記服務請挑選任一操作載體來設計，例：桌面版、網頁版、Mobile APP
+* 可以新增一個筆記，填寫文章內容
+* 可以將筆記打星號，以方便快速搜尋
+* 擁有日/夜間瀏覽模式
+* 網頁版筆記服務，在筆記列表上，至少有兩種以上檢視筆記方式，例如卡片檢視、摘要檢視、純文字列表檢視等等
+* 可以在筆記裡，將文字變成粗體、斜體、下底線等基本樣式，並且載入連結
+* 可以在筆記裡插入圖片、檔案
 
 
 ## Demo
-* [Demo](https://sunnykuo.github.io/f2eChallenge/cloudDrive/#/)
+* [Demo](https://sunnykuo.github.io/f2eChallenge/noteBook/#/)
 
 ## Step
 * npm install

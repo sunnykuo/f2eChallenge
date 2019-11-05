@@ -11,7 +11,7 @@ class Content extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			detailPage: true,
+			detailPage: false,
 			detailInfo: null
 		}
 

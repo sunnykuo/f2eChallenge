@@ -8,7 +8,7 @@ class NoteList extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			viewMode: 1
+			viewMode: 0
 		}
 	}
 
@@ -69,61 +69,27 @@ class NoteList extends Component {
 					<div className="listDetail_outer">
 						<div className="month">August</div>
 						<div className="contentRow">
-							<div className="title">Meeting Record</div>
+							<div className="title">Osaka planning</div>
 							<div className="content">When we talk about dissertation, we focus on teugfd fdshu</div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>08.28.19</div></div>
+							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>08.14.19</div></div>
 						</div>
 					</div>
 					<div className="listDetail_outer">
-						<div className="month">August</div>
-						<div className="contentRow">
-							<div className="title">Meeting Record</div>
-							<div className="content">When we talk about dissertation, we focus on teugfd fdshu</div>
-							<div className="photo"><img src={img1} /></div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>08.28.19</div></div>
-						</div>
-					</div>
-					<div className="listDetail_outer">
-						<div className="month">August</div>
+						<div className="month">July</div>
 						<div className="contentRow">
 							<div className="title">Meeting Record</div>
 							<div className="content">When we talk about dissertation, we focus on teugfd fdshufdshufdshu</div>
 							<div className="photo"><img src={img1} /></div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>08.28.19</div></div>
+							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>07.20.19</div></div>
 						</div>
 					</div>															
 					<div className="listDetail_outer">
-						<div className="month">August</div>
+						<div className="month">July</div>
 						<div className="contentRow">
-							<div className="title">Meeting Record</div>
+							<div className="title">Osaka planning</div>
 							<div className="content">When we talk about dissertation, we focus on teugfd fdshufdshufdshu</div>
 							<div className="photo"><img src={img1} /></div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>08.28.19</div></div>
-						</div>
-					</div>
-					<div className="listDetail_outer">
-						<div className="month">August</div>
-						<div className="contentRow">
-							<div className="title">Meeting Record</div>
-							<div className="content">When we talk about dissertation, we focus on teugfd fdshufdshufdshu</div>
-							<div className="photo"><img src={img1} /></div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>08.28.19</div></div>
-						</div>
-					</div>					
-					<div className="listDetail_outer">
-						<div className="month">August</div>
-						<div className="contentRow">
-							<div className="title">Meeting Record</div>
-							<div className="content">When we talk about dissertation, we focus on teugfd fdshufdshufdshu</div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>08.28.19</div></div>
-						</div>
-					</div>					
-					<div className="listDetail_outer">
-						<div className="month">August</div>
-						<div className="contentRow">
-							<div className="title">Meeting Record</div>
-							<div className="content">When we talk about dissertation, we focus on teugfd fdshufdshufdshu</div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>08.28.19</div></div>
+							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>07.17.19</div></div>
 						</div>
 					</div>					
 				</div>

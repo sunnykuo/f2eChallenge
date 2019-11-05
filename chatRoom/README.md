@@ -1,19 +1,14 @@
-# MP3 Player
+# ChatRoom
 
 ## Functional map
-* 音樂控制
-	* 切換下一首
-	* 切換上一首
-	* 拖動音樂時間軸
-	* 暫停/開始切換
-	* 音量控制
-	* 單曲重複播放 / 隨機播放 / 重複播放
-
-* 廣告機制
-	* 隨機在音樂結束切換時，顯示佔板廣告，引導訂閱　
+* 可以填寫暱稱或匿名形式，不需進行註冊，便可進入聊天室
+* 聊天方式不限，可用大廳模式、一對一模式，或者是系統配對皆可，或者是自創聊天模式皆可
+* 可以上傳附件檔案、圖片
+* 可以使用內建的表情符號
 
 ## Demo
-* [Demo](https://sunnykuo.github.io/f2eChallenge/mp3Player/#/)
+* Demo
+<!-- * [Demo](https://sunnykuo.github.io/f2eChallenge/chatRoom/#/) -->
 
 ## Step
 * npm install
@@ -28,4 +23,3 @@
 * Webpack
 * Sass
 * Bootstrap
-* react-sound
