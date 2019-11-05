@@ -22,7 +22,7 @@ class DriveDetail extends Component {
 
 	render() {
 		const { drives, selectedDrive, selectedItem, viewType, search, typeMapping } = this.props
-		let currentDrive = null;
+		let currentDrive = [];
 		if (selectedDrive === 'importantDrives') {
 
 		} else {
@@ -42,7 +42,7 @@ class DriveDetail extends Component {
 					<div className="size">大小<i className="material-icons order">arrow_drop_down</i></div>
 					<div className="more"></div>
 				</li>
-				{currentDrive !== null && currentDrive.map((item,i) => {
+				{currentDrive.map((item,i) => {
 					let itemType = typeMapping[item.type];
 					return(
 					<li className="row" key={i} onClick={() => this.handleShowDetail(item)} onDoubleClick={() => this.handleDoubleClick(item)}>
