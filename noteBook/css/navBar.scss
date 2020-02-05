@@ -1,5 +1,10 @@
 .nav {
 	width: 100%;
+	background-color: #f5f5f5;
+
+	&.dark {
+		background-color: #000;
+	}
 
 	li {		
 		margin-right: 15px;

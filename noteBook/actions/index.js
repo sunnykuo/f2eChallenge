@@ -1,4 +1,4 @@
-import { UPDATE_SEARCH,UPDATE_SELECTED_DRIVE,UPDATE_SELECTED_ITEM,UPDATE_BOOKMARK,ADD_NEW_ITEM,UPDATE_VIEW_TYPE,DELETE_ITEM } from '../constants/constants'
+import { UPDATE_SEARCH,UPDATE_SELECTED_DRIVE,UPDATE_SELECTED_ITEM,UPDATE_BOOKMARK,ADD_NEW_ITEM,UPDATE_VIEW_TYPE,DELETE_ITEM,ADD_CATEGORY,UPDATE_SELECTED_CATEGORY,UPDATE_SELECTED_NOTE,ADD_NOTE } from '../constants/constants'
 
 export const updateSearch = conditions => ({
 	type: UPDATE_SEARCH,
@@ -37,4 +37,25 @@ export const deleteItem = (drive, item) => ({
 	type: DELETE_ITEM,
 	drive,
 	item
+})
+
+export const addCategory = (item) => ({
+	type: ADD_CATEGORY,
+	item
+})
+
+export const updateSelectedCategory = (category) => ({
+	type: UPDATE_SELECTED_CATEGORY,
+	category
+})
+
+export const updateSelectedNote = (noteId) => ({
+	type: UPDATE_SELECTED_NOTE,
+	noteId
+})
+
+export const addNote = (name, category) => ({
+	type: ADD_NOTE,
+	name,
+	category
 })

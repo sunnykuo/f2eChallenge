@@ -34,7 +34,7 @@
 			background-color: #000;
 			color: #fff;
 			padding: 3px 10px;
-			margin: 10px 0;
+			margin: 10px 0 0;
 			font-size: 16px;
 			.dark & {
 				background-color: #BFBFBF;
@@ -42,7 +42,16 @@
 			}
 		}		
 		.contentRow {
-			padding: 0 30px 10px;
+			cursor: default;
+			padding: 10px 30px;
+			&:hover {
+				background-color: #BFBFBF;
+
+				.dark & {
+					background-color: #000;
+				}
+			}
+
 			div {
 				padding: 0 5px;
 				flex:1;
@@ -68,6 +77,7 @@
 
 	.listDetailMode {
 		.listDetail_outer {
+			cursor: default;
 			margin: 0 5px 20px;
 			border: 2px solid #000;
 			width: calc(100% / 4 - 10px);
@@ -109,11 +119,16 @@
 				.date {
 					font-size: 13px;
 					margin: 5px 20px 0;
+					text-align: center;
 					i {
 						font-size: 20px;
 						margin-right: 5px;
+						cursor: default;
 					}
 				}
+			}
+			&:hover {
+				transform: translateY(-10px)	
 			}			
 		}
 	}

@@ -1,9 +1,12 @@
 .noteContent {
 	background-color: #fff;
-	padding: 30px 35px;
 
 	.dark & {
 		background-color: #272727;
+	}
+
+	.noteContent-innner {
+		padding: 30px 35px;
 	}
 
 	.recentNote_Area {

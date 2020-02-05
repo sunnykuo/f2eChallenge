@@ -1,14 +1,20 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-// import { updateCurrentPage } from '../actions'
+import { updateSelectedNote } from '../actions'
 import img1 from '../images/image1.png'
+import moment from 'moment'
 
 class NoteList extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			viewMode: 0
+			viewMode: 0,
+			months: [
+		    'January', 'February', 'March', 'April', 'May',
+		    'June', 'July', 'August', 'September',
+		    'October', 'November', 'December'
+		    ]
 		}
 	}
 
@@ -20,78 +26,64 @@ class NoteList extends Component {
 		})
 	}
 
+	handleShowDetailPage(noteId) {
+		this.props.dispatch(updateSelectedNote(noteId))
+	}
+
 	render() {
-		// const { displaySearchPopup } = this.props
+		const { notes, selectedCategory } = this.props
+		let prevMonth = ""
+		let filterNotes = notes
+		filterNotes = filterNotes.sort((a,b) => {
+			return moment(a.create_date, 'MM.DD.YYYY') < moment(b.create_date, 'MM.DD.YYYY') ? 1 : -1
+		})
+		
+		if (selectedCategory !== 'All') {
+			filterNotes = notes.filter((note, i) => {
+				return note.category === selectedCategory
+			})
+		}
+
 	return(
 		<div className="noteList d-flex">
 			<div className="list">		
 			{this.state.viewMode == 0 && 
 				<div className="listMode">
-					<div className="month">August</div>
-					<div className="contentRow d-flex align-items-center justify-content-between">
-						<div className="date">08.28.19</div>
-						<div className="title">Meeting Record</div>
-						<div className="type">Work</div>
-						<div className="favorite material-icons">star_border</div>
-					</div>
-					<div className="contentRow d-flex align-items-center justify-content-between">
-						<div className="date">08.14.19</div>
-						<div className="title">Osaka planning</div>
-						<div className="type">Travel</div>
-						<div className="favorite material-icons">star</div>
-					</div>
-					<div className="month">July</div>
-					<div className="contentRow d-flex align-items-center justify-content-between">
-						<div className="date">07.20.19</div>
-						<div className="title">Meeting Record</div>
-						<div className="type">Work</div>
-						<div className="favorite material-icons">star_border</div>
-					</div>
-					<div className="contentRow d-flex align-items-center justify-content-between">
-						<div className="date">07.17.19</div>
-						<div className="title">Osaka planning</div>
-						<div className="type">Travel</div>
-						<div className="favorite material-icons">star</div>
-					</div>											
+					{filterNotes.map((note, i) => {
+						let noteMonth = moment(note.create_date,'MM.DD.YYYY').month()
+						let monthName = this.state.months[noteMonth]
+						let monthRow = ""
+						if (prevMonth === '' || noteMonth !== prevMonth) {
+							prevMonth = noteMonth
+							monthRow = (<div className="month">{monthName}</div>)
+						}
+						return (<div key={i}>
+						{monthRow}
+						<div className="contentRow d-flex align-items-center justify-content-between" onClick={() => this.handleShowDetailPage(note.id)}>
+						<div className="date">{note.create_date}</div>
+						<div className="title">{note.title}</div>
+						<div className="type">{note.category}</div>
+						</div>
+						</div>)						
+					})
+					}											
 				</div>
 			}
 			{this.state.viewMode == 1 &&
-				<div className="listDetailMode d-flex flex-wrap justify-content-between align-items-start">
-					<div className="listDetail_outer">
-						<div className="month">August</div>
-						<div className="contentRow">
-							<div className="title">Meeting Record</div>
-							<div className="content">When we talk about dissertation, we focus on teugfd fdshu</div>
-							<div className="photo"><img src={img1} /></div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>08.28.19</div></div>
-						</div>
-					</div>
-					<div className="listDetail_outer">
-						<div className="month">August</div>
-						<div className="contentRow">
-							<div className="title">Osaka planning</div>
-							<div className="content">When we talk about dissertation, we focus on teugfd fdshu</div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>08.14.19</div></div>
-						</div>
-					</div>
-					<div className="listDetail_outer">
-						<div className="month">July</div>
-						<div className="contentRow">
-							<div className="title">Meeting Record</div>
-							<div className="content">When we talk about dissertation, we focus on teugfd fdshufdshufdshu</div>
-							<div className="photo"><img src={img1} /></div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>07.20.19</div></div>
-						</div>
-					</div>															
-					<div className="listDetail_outer">
-						<div className="month">July</div>
-						<div className="contentRow">
-							<div className="title">Osaka planning</div>
-							<div className="content">When we talk about dissertation, we focus on teugfd fdshufdshufdshu</div>
-							<div className="photo"><img src={img1} /></div>
-							<div className="date d-flex align-items-center"><i className="material-icons">star_border</i><div>07.17.19</div></div>
-						</div>
-					</div>					
+				<div className="listDetailMode d-flex flex-wrap justify-content-start align-items-start">
+					{filterNotes.map((note, i) => {
+						return(
+						<div key={i} className="listDetail_outer" onClick={() => this.handleShowDetailPage(note.id)}>
+							<div className="month">{note.category}</div>
+							<div className="contentRow">
+								<div className="title">{note.title}</div>
+								<div className="content">{note.content}</div>
+								<div className="photo"><img src={img1} /></div>
+								<div className="date">{note.create_date}</div>
+							</div>
+						</div>)
+					})
+					}					
 				</div>
 			}
 			</div>

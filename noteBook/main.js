@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 // import { addMission, updateBreakStatus } from './actions'
 import Content from './components/Content'
 import Header from './components/Header' 
-import NavBar from './Components/NavBar'
 import PropTypes from 'prop-types'
 import './index.scss'
 
@@ -28,8 +27,7 @@ class NoteBook extends Component {
 		return (
 			<div className={`noteBook d-flex flex-column ${this.state.darkMode ? 'dark':''}`}>
 				<Header {...this.props} darkMode={this.state.darkMode} changeViewMode={this.handleChangeViewMode} />
-				<NavBar selectedCategory={selectedCategory}/>
-				<Content {...this.props} />
+				<Content {...this.props} darkMode={this.state.darkMode}/>
 			</div>
 		)
 	}
@@ -43,13 +41,13 @@ class NoteBook extends Component {
 // }
 
 function mapStateToProps(state) {
-	const { drives, selectedCategory, selectedItem, viewType, search, typeMapping } = state
+	const { notes, selectedCategory, selectedNote, viewType, search, category } = state
 	return {
-		drives,
+		notes,
 		selectedCategory,
-		selectedItem,	
+		selectedNote,	
 		search,
-		typeMapping,
+		category,
 		viewType
 	}
 }

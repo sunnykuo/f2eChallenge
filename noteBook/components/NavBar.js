@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
-import { updateViewType, updateSelectedDrive } from '../actions'
+import { updateViewType, updateSelectedCategory } from '../actions'
 
 class NavBar extends Component {
 	constructor(props) {
@@ -13,18 +13,23 @@ class NavBar extends Component {
 		this.props.dispatch(updateViewType(type))
 	}
 
-	handleSwitchDrive(dirveName) {
-		if (dirveName === this.props.selectedDrive) return;
-		this.props.dispatch(updateSelectedDrive(dirveName))
+	handleSwitchCategory(category) {
+		if (category === this.props.selectedCategory) return;
+		this.props.dispatch(updateSelectedCategory(category))
 	}	
 
 	render() {
-		const { selectedCategory } = this.props
+		const { category, selectedCategory, darkMode, handleAddCategoryPopup } = this.props
+
 	return(
-		<ul className="nav d-flex align-items-end justify-content-center">
-			<li className={`${selectedCategory === 'all' ? 'active':''}`}>All</li>
-			<li className={`${selectedCategory === 'travel' ? 'active':''}`}>Travel</li>
-			<li className="addCategory"><i className="material-icons">add_circle_outline</i>Add new category</li>
+		<ul className={`nav d-flex align-items-end justify-content-center ${darkMode ? 'dark':''}`}>
+			<li className={`${selectedCategory === 'All' ? 'active':''}`} onClick={() => this.handleSwitchCategory('All')}>All</li>
+			{
+				category.map((item, i) => {
+					return (<li key={i} className={`${selectedCategory === item ? 'active':''}`} onClick={() => this.handleSwitchCategory(item)}>{item}</li>)
+				})
+			}
+			<li className="addCategory" onClick={() => handleAddCategoryPopup(true)}><i className="material-icons">add_circle_outline</i>Add new category</li>
 		</ul>
 )}
 }

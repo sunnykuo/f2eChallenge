@@ -24,7 +24,7 @@ class Header extends Component {
 	render() {
 		const { darkMode } = this.props
 	return(
-		<div className="header d-flex align-items-center justify-content-between">
+		<div className={`header d-flex align-items-center justify-content-between ${darkMode ? 'dark':''}`}>
 			<div className="left d-flex align-items-center">QuickNote</div>
 			<div className="right d-flex align-items-center">
 				<div className="darkMode d-flex align-items-center">
