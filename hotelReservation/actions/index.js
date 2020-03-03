@@ -35,13 +35,12 @@ const fetchRooms = () => {
 }
 
 const shouldFetchRooms = (state) => {
- 	const rooms = state.roomsReducer
-	if (!rooms) {
+	if (!state) {
 		return true
-	} else if (rooms.isFetching) {
+	} else if (state.isFetching) {
 		return false
 	} else {
-		return rooms.roomList
+		return state.roomList
 	}
 }
 

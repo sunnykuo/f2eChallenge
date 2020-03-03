@@ -16,6 +16,7 @@ class AddNote extends Component {
 		if (this.state.noteName === '') return
 		this.props.dispatch(addNote(this.state.noteName, this.state.selectedCategory))
 		this.props.handleAddNotePopup()
+		this.props.handleDetailPage(true)
 	}
 
 	handleInputChange(e) {

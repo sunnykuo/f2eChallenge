@@ -33,7 +33,7 @@ class Header extends Component {
 				</div>
 				<div className="setting">Settings</div>
 				<div className="account d-flex align-items-center">
-					<div>Jessy</div>
+					<div>Sunny</div>
 					<i className="material-icons">account_circle</i>
 				</div>
 			</div>

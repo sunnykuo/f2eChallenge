@@ -20,6 +20,7 @@ class Content extends Component {
 		}
 		this.handleAddCategoryPopup = this.handleAddCategoryPopup.bind(this)
 		this.handleAddNotePopup = this.handleAddNotePopup.bind(this)
+		this.handleDetailPage = this.handleDetailPage.bind(this)
 	}	
 
 	handleAddCategoryPopup(display = false) {
@@ -32,43 +33,31 @@ class Content extends Component {
 		this.setState({
 			addNotePopup: display
 		})
+	}
+
+	handleDetailPage(display) {
+		this.setState({
+			detailPage: display
+		})
 	}		
 
 	render() {
-		const { notes, category, selectedCategory } = this.props
+		const { notes, category, selectedCategory, selectedNote } = this.props
 
 	return(
 		<div className="noteContent">
-			<NavBar category={category} selectedCategory={this.props.selectedCategory} darkMode={this.props.darkMode} handleAddCategoryPopup={this.handleAddCategoryPopup}/>		
-			<div className="noteContent-innner d-flex">
-				<div className="recentNote_Area">
-					<button className="btn addBtn" onClick={() => this.handleAddNotePopup(true)}><i className="material-icons">add</i>Add Note</button>
-					<div className="recentNote_List">
-						<div className="title">Recent Notes</div>
-						<div className="noteCard">
-							<div className="cardTitle">Meeting Record</div>
-							<div className="content">We’ll have a meeting about searching the references of dissertation. AT That time, we shouldAT That time, we shouldAT That time, we should</div>
-							<div className="more">See More<i className="material-icons">navigate_next</i></div>
-						</div>
-						<div className="noteCard">
-							<div className="cardTitle">Meeting Record</div>
-							<div className="content">We’ll have a meeting about searching the references of dissertation. AT That time, we should,We’ll have a meeting about searching the references of dissertation.</div>
-							<div className="more">See More<i className="material-icons">navigate_next</i></div>
-						</div>					
-					</div>
-				</div>
-				{!this.state.detailPage &&
-					<NoteList notes={notes} selectedCategory={selectedCategory}/>
-				}
-				{this.state.detailPage &&
-					<ItemDetail />
-				}				
-			</div>			
+			<NavBar category={category} selectedCategory={this.props.selectedCategory} darkMode={this.props.darkMode} handleAddCategoryPopup={this.handleAddCategoryPopup} handleDetailPage={this.handleDetailPage}/>		
+			{!this.state.detailPage &&
+				<NoteList notes={notes} selectedCategory={selectedCategory} handleAddNotePopup={this.handleAddNotePopup} handleDetailPage={this.handleDetailPage}/>
+			}
+			{this.state.detailPage &&
+				<ItemDetail notes={notes} category={category} selectedCategory={selectedCategory} selectedNote={selectedNote} handleAddNotePopup={this.handleAddNotePopup} handleDetailPage={this.handleDetailPage} />
+			}		
 			{this.state.addCategoryPopup &&
 				<AddCategory handleAddCategoryPopup={this.handleAddCategoryPopup} category={category} />
 			}
 			{this.state.addNotePopup &&
-				<AddNote handleAddNotePopup={this.handleAddNotePopup} category={category} />
+				<AddNote handleAddNotePopup={this.handleAddNotePopup} category={category}  handleDetailPage={this.handleDetailPage}/>
 			}			
 		</div>
 	)}

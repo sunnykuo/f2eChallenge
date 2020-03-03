@@ -5,12 +5,13 @@
 		background-color: #272727;
 	}
 
-	.noteContent-innner {
+	.noteContent-inner {
 		padding: 30px 35px;
 	}
 
 	.recentNote_Area {
 		width: 20%;
+		margin-right: 5%;
 		.addBtn {
 			background-color: #000;
 			color: #fff;
@@ -33,48 +34,10 @@
 				}
 			}
 		}
-		.recentNote_List {
-			.title {
-				color: #BFBFBF;
-				margin: 0 10px 5px;
-			}
-			.noteCard {
-				background-color: #fff;
-				box-shadow: 0 3px 6px rgba(0,0,0,.2);
-				padding: 15px 10px 10px;
-				width: 180px;
-				margin-bottom: 20px;
-				.dark & {
-					background-color: #383838;
-				}
-				.cardTitle {
-					margin-bottom: 10px;
-					font-weight: bold;
-				}
-				.content {
-					font-size: 12px;
-					line-height: 19px;
-					margin-bottom: 10px;
-					display: -webkit-box;
-					-webkit-box-orient: vertical;
-					-webkit-line-clamp: 5;
-					overflow: hidden;					
-				}
-				.more {
-					font-size: 13px;
-					text-align: right;
-					cursor: pointer;
-					i {
-						vertical-align: middle;
-						font-size: 19px;
-					}
-				}
-			}
-		}
 	}
 
 	.noteList {
-		width: 80%;
+		width: 100%;
 	}
 
 	.detail {

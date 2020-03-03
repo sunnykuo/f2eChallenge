@@ -16,6 +16,7 @@ class NavBar extends Component {
 	handleSwitchCategory(category) {
 		if (category === this.props.selectedCategory) return;
 		this.props.dispatch(updateSelectedCategory(category))
+		this.props.handleDetailPage(false)
 	}	
 
 	render() {

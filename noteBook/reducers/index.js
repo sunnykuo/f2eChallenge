@@ -1,4 +1,4 @@
-import { UPDATE_SEARCH,UPDATE_SELECTED_DRIVE,UPDATE_SELECTED_ITEM,UPDATE_BOOKMARK,ADD_NEW_ITEM,UPDATE_VIEW_TYPE,DELETE_ITEM,ADD_CATEGORY,UPDATE_SELECTED_CATEGORY,UPDATE_SELECTED_NOTE,ADD_NOTE } from '../constants/constants'
+import { UPDATE_SELECTED_ITEM,UPDATE_BOOKMARK,UPDATE_VIEW_TYPE,DELETE_ITEM,ADD_CATEGORY,UPDATE_SELECTED_CATEGORY,UPDATE_SELECTED_NOTE,ADD_NOTE,UPDATE_NOTE } from '../constants/constants'
 import moment from 'moment'
 
 const initialState = {
@@ -40,7 +40,6 @@ const initialState = {
 	selectedItem: null,
 	selectedNote: null,	
 	viewType: 0,
-	search: null,	
 	category: ['Work','Travel']
 }
 
@@ -50,11 +49,6 @@ const noteBookReducer = (state = initialState, action) => {
 	let newDrive = null;
 	let garbages = null;
 	switch (action.type) {		
-		case UPDATE_SEARCH:
-			return Object.assign({}, state, {search: action.conditions})
-
-		case UPDATE_SELECTED_DRIVE:			
-			return Object.assign({}, state, {selectedDrive: action.drive, selectedItem: null})
 
 		case UPDATE_SELECTED_ITEM:			
 			return Object.assign({}, state, {selectedItem: action.item})
@@ -68,12 +62,6 @@ const noteBookReducer = (state = initialState, action) => {
 			})
 			newDrive = Object.assign({}, state.drives, {[action.drive]: currentDrive})
 			return Object.assign({}, state, {drives: newDrive})
-
-		case ADD_NEW_ITEM:			
-			currentDrive = Object.assign({}, state.drives[action.drive])
-			currentDrive.push(action.item)
-			newDrive = Object.assign({}, state.drives, {[action.drive]: currentDrive})
-			return Object.assign({}, state, {drives: newDrive})	
 
 		case UPDATE_VIEW_TYPE: 
 			return Object.assign({}, state, {viewType: action.viewType})
@@ -94,17 +82,30 @@ const noteBookReducer = (state = initialState, action) => {
 			return Object.assign({}, state, {category: currentCategory})				
 
 		case ADD_NOTE:
-			let currentNotes = Object.assign([], state.notes)
+			currentNotes = Object.assign([], state.notes)
 			let maxID = currentNotes.reduce((accumulator, currentValue) => {
 			  return Math.max(accumulator, currentValue.id)
 			},0)
+			let newID = maxID + 1
+
 			currentNotes.push({
-				id: maxID + 1,
+				id: newID,
 				title: action.name,
 				content: '',
 				category: action.category,
 				cover: null,
 				create_date: moment().format('MM.DD.YYYY')
+			})
+			return Object.assign({}, state, {notes: currentNotes, selectedNote: newID})
+
+		case UPDATE_NOTE: 
+			currentNotes = Object.assign([], state.notes)
+			currentNotes.map((item, i) => {
+				if (item.id === action.id) {
+					item.title = action.title
+					item.content = action.content
+					item.category = action.category
+				}
 			})
 			return Object.assign({}, state, {notes: currentNotes})
 
