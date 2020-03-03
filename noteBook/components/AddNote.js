@@ -32,7 +32,7 @@ class AddNote extends Component {
 	}
 
 	render() {
-		const { category, handleAddNotePopup } = this.props
+		const { category, selectedCategory, handleAddNotePopup } = this.props
 		
 	return(
 		<div className="addNote d-flex align-items-center justify-content-center">
@@ -45,7 +45,7 @@ class AddNote extends Component {
 				</div>
 				<div className="content">
 					<div>Category:</div>
-					<select name="category" className="input" onChange={e => this.handleChangeCategory(e)}>
+					<select name="category" className="input" value={selectedCategory !== 'All' ? selectedCategory : category[0]} onChange={e => this.handleChangeCategory(e)}>
 					{category.map((item, i) => {
 						if (item === 'All') return
 						return(<option key={i} value={item}>{item}</option>)

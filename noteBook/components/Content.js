@@ -57,7 +57,7 @@ class Content extends Component {
 				<AddCategory handleAddCategoryPopup={this.handleAddCategoryPopup} category={category} />
 			}
 			{this.state.addNotePopup &&
-				<AddNote handleAddNotePopup={this.handleAddNotePopup} category={category}  handleDetailPage={this.handleDetailPage}/>
+				<AddNote handleAddNotePopup={this.handleAddNotePopup} category={category} selectedCategory={selectedCategory} handleDetailPage={this.handleDetailPage}/>
 			}			
 		</div>
 	)}
