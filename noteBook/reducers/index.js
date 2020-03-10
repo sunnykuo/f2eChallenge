@@ -1,4 +1,4 @@
-import { UPDATE_SELECTED_ITEM,UPDATE_BOOKMARK,UPDATE_VIEW_TYPE,DELETE_ITEM,ADD_CATEGORY,UPDATE_SELECTED_CATEGORY,UPDATE_SELECTED_NOTE,ADD_NOTE,UPDATE_NOTE } from '../constants/constants'
+import { UPDATE_SELECTED_ITEM,UPDATE_VIEW_TYPE,ADD_CATEGORY,UPDATE_SELECTED_CATEGORY,UPDATE_SELECTED_NOTE,ADD_NOTE,UPDATE_NOTE } from '../constants/constants'
 import moment from 'moment'
 
 const initialState = {
@@ -44,37 +44,13 @@ const initialState = {
 }
 
 const noteBookReducer = (state = initialState, action) => {
-	let currentDrive = null;
 	let currentNotes = null;
-	let newDrive = null;
-	let garbages = null;
 	switch (action.type) {		
-
 		case UPDATE_SELECTED_ITEM:			
 			return Object.assign({}, state, {selectedItem: action.item})
 
-		case UPDATE_BOOKMARK:
-			currentDrive = Object.assign({}, state.drives[action.drive])
-			currentDrive.map((item, i) => {
-				if (item.name == action.item.name && item.type == action.item.type && item.owner == action.item.owner) {
-					item.bookMark = action.bookMark
-				}
-			})
-			newDrive = Object.assign({}, state.drives, {[action.drive]: currentDrive})
-			return Object.assign({}, state, {drives: newDrive})
-
 		case UPDATE_VIEW_TYPE: 
 			return Object.assign({}, state, {viewType: action.viewType})
-
-		case DELETE_ITEM: 
-			currentDrive = Object.assign({}, state.drives[action.drive])
-			currentDrive.filter((item, i) => {
-				return !(item.name == action.item.name && item.type == action.item.type && item.owner == action.item.owner)
-			})
-			let garbagesDrive = Object.assign({}, state.drives.garbages)
-			garbagesDrive.push(action.item)
-			newDrive = Object.assign({}, state.drives, {[action.drive]: currentDrive, garbages: garbagesDrive})		
-			return Object.assign({}, state, {drives: newDrive})	
 
 		case ADD_CATEGORY:			
 			let currentCategory = Object.assign([], state.category)

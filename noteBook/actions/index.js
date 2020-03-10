@@ -1,26 +1,13 @@
-import { UPDATE_SELECTED_ITEM,UPDATE_BOOKMARK,UPDATE_VIEW_TYPE,DELETE_ITEM,ADD_CATEGORY,UPDATE_SELECTED_CATEGORY,UPDATE_SELECTED_NOTE,ADD_NOTE,UPDATE_NOTE } from '../constants/constants'
+import { UPDATE_SELECTED_ITEM,UPDATE_VIEW_TYPE,ADD_CATEGORY,UPDATE_SELECTED_CATEGORY,UPDATE_SELECTED_NOTE,ADD_NOTE,UPDATE_NOTE } from '../constants/constants'
 
 export const updateSelectedItem = item => ({
 	type: UPDATE_SELECTED_ITEM,
 	item
 })
 
-export const updateBookmark = (drive, item, bookmark) => ({
-	type: UPDATE_BOOKMARK,
-	drive,
-	item,
-	bookmark
-})
-
 export const updateViewType = viewType => ({
 	type: UPDATE_VIEW_TYPE,
 	viewType
-})
-
-export const deleteItem = (drive, item) => ({
-	type: DELETE_ITEM,
-	drive,
-	item
 })
 
 export const addCategory = (item) => ({

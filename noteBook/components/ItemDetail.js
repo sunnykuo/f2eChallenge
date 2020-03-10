@@ -108,7 +108,7 @@ class ItemDetail extends Component {
 						<textarea value={this.state.currentNote.content}
 							onChange={e => this.handleContentChange(e)} 
 							onBlur={() => this.handleEditBarDisplay(false)}
-							onFocus={() => this.handleEditBarDisplay(true)}>
+							onFocus={() => this.handleEditBarDisplay(false)}>
 						</textarea>
 					</div>
 				</div>
