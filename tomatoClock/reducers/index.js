@@ -4,8 +4,8 @@ import { ADD_MISSION, UPDATE_MISSION_TIME, UPDATE_CURRENT_MISSION, UPDATE_BREAK_
 const initialState = {
 	missions: [],
 	ringtones: {
-		work: 'none',
-		break: 'none'
+		work: 0,
+		break: 0
 	},
 	breakTime: {
 		status: false,
@@ -13,21 +13,24 @@ const initialState = {
 	}
 }
 
-const missions = (state = initialState.missions, action) => {
+const missionReducer = (state = initialState, action) => {
+	let missions = []
 	switch (action.type) {
 		case ADD_MISSION:
-			return [
-				...state,
-				action.mission
-			]
-		case UPDATE_MISSION_TIME:
-			return state.map((todo, i) => 
-				i === action.index ? (action.time === 1500 ? { ...todo, completedTime: action.time, current: false} : { ...todo, completedTime: action.time}) : todo
-			)		
-		case UPDATE_CURRENT_MISSION: 
-			return state.map((todo, i) => 
-				i === action.index ? { ...todo, current: true} : (todo.current === true ? {...todo, current: false} : todo)
-			)			
+			missions = Object.assign([], state.missions)
+			missions.push(action.mission)
+			return Object.assign({}, state, {missions: missions})
+			
+		// case UPDATE_MISSION_TIME:
+		// 	return state.map((todo, i) => 
+		// 		i === action.index ? (action.time === 1500 ? { ...todo, completedTime: action.time, current: false} : { ...todo, completedTime: action.time}) : todo
+		// 	)		
+		// case UPDATE_CURRENT_MISSION: 
+		// 	return state.map((todo, i) => 
+		// 		i === action.index ? { ...todo, current: true} : (todo.current === true ? {...todo, current: false} : todo)
+		// 	)	
+		case UPDATE_RINGTONES: 
+			return Object.assign({}, state, {ringtones: action.ringtones})				
 		// case RECEIVE_POSTS:
 		// 	return Object.assign({}, state, {
 		//         isFetching: false,
@@ -39,31 +42,5 @@ const missions = (state = initialState.missions, action) => {
 			return state
 	}
 }
-
-const breakTime = (state = initialState.breakTime, action) => {
-	switch (action.type) {
-		case ADD_MISSION:
-			// return [
-			// 	...state,
-			// 	action.mission
-			// ]
-		default:
-			return state
-	}
-}
-
-const ringtones = (state = initialState.ringtones, action) => {
-	switch (action.type) {
-		// case ADD_MISSION:
-		// 	return [
-		// 		...state,
-		// 		action.mission
-		// 	]
-		default:
-			return state
-	}
-}
-
-const missionReducer = combineReducers({ missions, breakTime, ringtones})
 
 export default missionReducer

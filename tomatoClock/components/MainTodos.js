@@ -31,6 +31,7 @@ class MainTodos extends Component {
 
 	render() {
 		const { switchPage, missions, breakTime } = this.props
+
 		let currentMission = missions.find((item) => {
 			return item.current === true;
 		})

@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Todos from './Todos'
 import Analytics from './Analytics'
 import Ringtones from './Ringtones'
 
-export default class DetailPage extends Component {
+class DetailPage extends Component {
 	render() {
 		const { type, switchPage, data } = this.props
 		let currentMission = data.missions.find((item) => {
@@ -33,13 +34,16 @@ export default class DetailPage extends Component {
 		<div className="details flex-fill">
 			{type === 0 && <Todos missions={data.missions} />}
 			{type === 1 && <Analytics missions={data.missions} />}
-			{type === 2 && <Ringtones/>}
+			{type === 2 && <Ringtones ringtones={data.ringtones} />}
 		</div>
 		<i className="material-icons close_button" onClick={() => switchPage(false)}>close</i>
 		<div className="project_name">pomodoro</div>		
 	</div>
 )}
 }
+
+DetailPage = connect()(DetailPage)
+export default DetailPage
 
 // DetailPage.propTypes = {
 // 	type: PropTypes.number.isRequried,

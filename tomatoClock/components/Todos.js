@@ -25,8 +25,8 @@ class Todos extends Component {
 			current: this.props.missions.length === 0 ? true : false
 		}
 
-		this.refs.input_new_mission.value = '';
-		this.props.dispatch(addMission(newMission));
+		this.refs.input_new_mission.value = ''
+		this.props.dispatch(addMission(newMission))
 	}
 
 	handleCompleteMission(index) {

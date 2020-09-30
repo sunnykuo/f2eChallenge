@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 import Sound from 'react-sound'
 import { updateRingTones } from '../actions'
@@ -12,51 +13,57 @@ import clock from '../ringtones/Clock.mp3'
 import digital from '../ringtones/Digital.mp3'
 
 
-export default class Ringtones extends Component {
+class Ringtones extends Component {
 
 	constructor(props) {
 		super(props)
 		this.handleControlSound = this.handleControlSound.bind(this)
 		this.state = {
+			ringtones: this.props.ringtones,
 			playStatus: 'stop',
-			playId: 0
+			playType: 'work',
+			ringtones_option: [
+				{id: 0, name: 'none', ringtone: ''},
+				{id: 1, name: 'default', ringtone: 'alarm'},
+				{id: 2, name: 'alert', ringtone: 'alert'},
+				{id: 3, name: 'beep', ringtone: 'beep'},
+				{id: 4, name: 'bell', ringtone: 'bell'},
+				{id: 5, name: 'bugle', ringtone: 'bugle'},
+				{id: 6, name: 'clock', ringtone: 'clock'},
+				{id: 7, name: 'digital', ringtone: 'digital'}			
+			]
 		}
 	}
 
-	handleControlSound(id, status) {
+	handleControlSound(type, id, status) {
+		if (status === 'play') {
+			let ringtones = this.props.ringtones
+			ringtones[type] = id		
+			this.props.dispatch(updateRingTones(ringtones))
+		}
 		this.setState({
 			playStatus: status,
-			playId: id
-		})
+			playType: type
+		})			
 	}
 
 	render() {
-		// const { value, onChange, options} = this.props
+		const { ringtones } = this.props
+		let self = this
 
-		const ringtones_option = [
-			{name: 'none', ringtone: ''},
-			{name: 'default', ringtone: 'alarm'},
-			{name: 'alert', ringtone: 'alert'},
-			{name: 'beep', ringtone: 'beep'},
-			{name: 'bell', ringtone: 'bell'},
-			{name: 'bugle', ringtone: 'bugle'},
-			{name: 'clock', ringtone: 'clock'},
-			{name: 'digital', ringtone: 'digital'}
-		]
-		let self = this;
 	return(
 	<div className="section_ringtones">
 		<div className="ringtones_work">
 			<div className="tab">work</div>
 			<div className="options d-flex align-items-center flex-wrap">
-			{ringtones_option.map(function(item,i){
+			{this.state.ringtones_option.map(function(item,i){
 				return (
-					<div key={i} className="ringtone_option">
-						<i className="material-icons" onClick={() => self.handleControlSound(i, 'play')}>radio_button_unchecked</i>{item.name}
+					<div key={i} className="ringtone_option" onClick={() => self.handleControlSound('work', item.id, 'play')}>
+						<i className="material-icons">{ringtones.work === item.id ? 'radio_button_checked' : 'radio_button_unchecked'}</i>{item.name}
 						{item.name !== "none" && 
-							<Sound url={`./dist/ringtones/${item.ringtone}.mp3`} playStatus={`${self.state.playId === i && self.state.playStatus == 'play' ? Sound.status.PLAYING : Sound.status.STOPPED}`} 
+							<Sound url={`./dist/ringtones/${item.ringtone}.mp3`} playStatus={`${ringtones.work === item.id && self.state.playStatus == 'play' && self.state.playType == 'work' ? Sound.status.PLAYING : Sound.status.STOPPED}`} 
 							onPlaying={({position,duration}) => { 
-								if(position>=5000) {self.handleControlSound(i,'stop')}}}/>
+								if(position>=5000) {self.handleControlSound('work', item.id,'stop')}}}/>
 						}
 					</div>)
 			})}				
@@ -65,14 +72,14 @@ export default class Ringtones extends Component {
 		<div className="ringtones_break">
 			<div className="tab">break</div>
 			<div className="options d-flex align-items-center flex-wrap">
-			{ringtones_option.map(function(item,i){
+			{this.state.ringtones_option.map(function(item,i){
 				return (
-					<div key={i} className="ringtone_option">
-						<i className="material-icons" onClick={() => self.handleControlSound(i, 'play')}>radio_button_unchecked</i>{item.name}
+					<div key={i} className="ringtone_option" onClick={() => self.handleControlSound('break', item.id, 'play')}>
+						<i className="material-icons">{ringtones.break === item.id ? 'radio_button_checked' : 'radio_button_unchecked'}</i>{item.name}
 						{item.name !== "none" && 
-							<Sound url={`./dist/ringtones/${item.ringtone}.mp3`} playStatus={`${self.state.playId === i && self.state.playStatus == 'play' ? Sound.status.PLAYING : Sound.status.STOPPED}`} 
+							<Sound url={`./dist/ringtones/${item.ringtone}.mp3`} playStatus={`${ringtones.break === item.id && self.state.playStatus == 'play' && self.state.playType == 'break' ? Sound.status.PLAYING : Sound.status.STOPPED}`} 
 							onPlaying={({position,duration}) => { 
-								if(position>=5000) {self.handleControlSound(i,'stop')}}}/>
+								if(position>=5000) {self.handleControlSound('break', item.i,'stop')}}}/>
 						}
 					</div>)
 			})}				
@@ -81,6 +88,8 @@ export default class Ringtones extends Component {
 	</div>
 )}
 }
+Ringtones = connect()(Ringtones)
+export default Ringtones
 
 // DetailPage.propTypes = {
 // 	options: PropTypes.arrayOf(

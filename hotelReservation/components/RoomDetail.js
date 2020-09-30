@@ -66,6 +66,7 @@ class RoomDetail extends Component {
 	}
 
 	handleDayClick(day, modifiers = {}) {
+		if (this.state.activeReserveBtn) return;
 		if (modifiers.disabled) return;
 	    const range = DateUtils.addDayToRange(day, this.state);
 	    this.setState(range);
@@ -222,7 +223,7 @@ class RoomDetail extends Component {
 					/>
 				</div>
 				<div>
-				<Reserve {...this.state} isBooking={isBooking} bookResult={bookResult} room={room} booked={booked} handleNameChange={this.handleNameChange} handlePhoneChange={this.handlePhoneChange} handleSubmit={this.handleSubmit} />
+				<Reserve {...this.state} isBooking={isBooking} bookResult={bookResult} room={room} booked={booked} handleNameChange={this.handleNameChange} handlePhoneChange={this.handlePhoneChange} handleSubmit={this.handleSubmit} handleDetailPage={handleDetailPage} />
 				</div>
 			</div>
 			<Providers amenities = {room.amenities}/>
@@ -236,7 +237,7 @@ class Reserve extends Component {
 	}
 
 	render() {
-		const {activeReserveBtn, name, phone, from, to, validation, isBooking, bookResult, room, booked, handlePhoneChange, handleNameChange, handleSubmit } = this.props;
+		const {activeReserveBtn, name, phone, from, to, validation, isBooking, bookResult, room, booked, handlePhoneChange, handleNameChange, handleSubmit, handleDetailPage } = this.props;
 
 		if (bookResult !== null && bookResult.success) {
 			return (
@@ -255,11 +256,11 @@ class Reserve extends Component {
 					</div>	
 					<PriceDetail from={from} to={to}  room={room} />
 					<div className="btnReserve d-flex justify-content-center">
-						<div className="finalBtn d-flex align-items-center justify-content-between">
-							<div className="cancel">取消訂單</div>
-							<div className="contact">聯絡我們</div>
+						<div className="finalBtn d-flex align-items-center justify-content-end">
+							<div className="contact" onClick={() => handleDetailPage(false)}>回首頁</div>
 						</div>
 					</div>						
+
 				</div>		
 			)		
 		} else {
